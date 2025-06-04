@@ -3,28 +3,28 @@ const projects = [
   {
     title: 'Interactive Retail AR App',
     description: 'An augmented reality app for furniture visualization in consumer homes.',
-    thumbnail: 'https://via.placeholder.com/300x200/FF5733/FFFFFF?text=AR+Retail',
+    thumbnail: 'https://placehold.co/600x400/000000/FFF',
     technologies: ['ARKit', 'Unity', 'C#'],
     caseStudyLink: '#'
   },
   {
     title: 'VR Training Simulator',
     description: 'A virtual reality experience for employee onboarding and safety training.',
-    thumbnail: 'https://via.placeholder.com/300x200/33FF57/FFFFFF?text=VR+Training',
+    thumbnail: 'https://placehold.co/600x400/000000/FFF',
     technologies: ['Unity', 'C#', 'Meta Quest SDK'],
     caseStudyLink: '#'
   },
   {
     title: 'Mobile AR Game',
     description: 'A location-based augmented reality game for exploring local landmarks.',
-    thumbnail: 'https://via.placeholder.com/300x200/3357FF/FFFFFF?text=AR+Game',
+    thumbnail: 'https://placehold.co/600x400/000000/FFF',
     technologies: ['ARCore', 'Unity', 'Google Maps API'],
     caseStudyLink: '#'
   },
   {
     title: '3D Product Configurator',
     description: 'An interactive 3D application allowing users to customize products in real-time.',
-    thumbnail: 'https://via.placeholder.com/300x200/FF33CC/FFFFFF?text=3D+Configurator',
+    thumbnail: 'https://placehold.co/600x400/000000/FFF',
     technologies: ['Three.js', 'Vue.js'],
     caseStudyLink: '#'
   }
