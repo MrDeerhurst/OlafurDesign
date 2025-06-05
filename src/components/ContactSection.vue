@@ -39,15 +39,15 @@ const submitForm = () => {
         </form>
         <div class="contact-info">
           <h3>Direct Contact</h3>
-          <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> (Optional)</p>
+          <p>Email: <a href="Design@olafur.design.com">Design@olafur.design.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p>
           <p>Schedule a call: <a href="https://calendly.com/your-username" target="_blank" rel="noopener noreferrer">Book Here</a></p>
           <div class="social-links">
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://behance.net/yourprofile" target="_blank" rel="noopener noreferrer">Behance</a>
-            <a href="https://x.com/yourprofile" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+            <a href="https://bsky.app/profile/wolaf.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
           </div>
-          <p class="location">Serving clients globally from [Your City/Country].</p>
+          <p class="location">Serving clients globally from Reykjavik, Iceland.</p>
         </div>
       </div>
     </div>

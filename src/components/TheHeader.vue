@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import EmailButton from './EmailButton.vue';
 
 const isMobileMenuOpen = ref(false);
 
@@ -17,13 +18,16 @@ const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
   document.body.style.overflow = ''; // Restore body scrolling
 };
+
+
 </script>
 
 <template>
   <header class="header">
     <div class="container">
       <div class="logo">
-        <a href="/">Your Logo</a>
+        <img src="../assets/images/OKA_logo.png">
+        <a href="/">Olafur Design</a>
       </div>
 
       <nav class="main-nav">
@@ -36,7 +40,7 @@ const closeMobileMenu = () => {
         </ul>
       </nav>
 
-      <button class="cta-button desktop-cta">Request a Quote</button>
+      <button class="cta-button desktop-cta" href="#contact">Contact me</button>
 
       <div class="hamburger" @click="toggleMobileMenu" :class="{ 'is-active': isMobileMenuOpen }">
         <span></span>
@@ -53,7 +57,7 @@ const closeMobileMenu = () => {
           <li><a href="#about" @click="closeMobileMenu">About</a></li>
           <li><a href="#testimonials" @click="closeMobileMenu">Testimonials</a></li>
           <li><a href="#contact" @click="closeMobileMenu">Contact</a></li>
-          <li><button class="cta-button mobile-cta" @click="closeMobileMenu">Request a Quote</button></li>
+          <li><button class="cta-button mobile-cta" @click="closeMobileMenu">Contact me</button></li>
         </ul>
       </nav>
     </transition>
@@ -76,7 +80,20 @@ const closeMobileMenu = () => {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo img {
+  display: flex;
+  max-width: 4rem;
+  min-width: 2rem;
+}
+
 .logo a {
+  display: flex;
   font-family: var(--font-heading); /* Use heading font for logo text */
   font-size: 1.8rem;
   font-weight: 700;

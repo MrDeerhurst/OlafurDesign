@@ -173,7 +173,7 @@ const breakpoints = {
 .service-block p {
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.0;
   color: var(--text-medium-gray);
   flex-grow: 1; /* Allows the paragraph to take up remaining space */
 }

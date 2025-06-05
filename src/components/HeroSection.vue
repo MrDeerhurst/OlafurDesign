@@ -1,16 +1,40 @@
+<script>
+
+import portfolio from './PortfolioSection.vue'; // Adjust path if needed
+import services from './ServicesSection.vue';
+
+export default {
+  components: {
+    portfolio,
+    services
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth', // This makes the scroll animated
+          block: 'start'      // Aligns the top of the element with the top of the viewport
+        });
+      }
+    }
+  }
+};
+</script>
+
 <template>
   <section id="hero" class="hero-section">
     <video autoplay muted loop playsinline class="video-background">
       <!-- <source src="https://example.com/your-vr-ar-demo-video.mp4" type="video/mp4"> -->
       
     </video>
-    <img src="https://www.gethow.org/wp-content/uploads/2018/06/augmented-virtual-reality-education.jpg" alt="Immersive VR/AR Solutions" class="fallback-hero-image">
+    <img src="https://www.ptc.com/-/media/Images/blog/post/ar-blog/what-is-augmented-reality-Image4-900x450.jpg" alt="Immersive VR/AR Solutions" class="fallback-hero-image">
     <div class="hero-content">
-      <h1>Transforming Ideas into Immersive Mobile VR/AR Experiences.</h1>
+      <h1>Transforming Ideas into Immersive VR/AR Experiences.</h1>
       <p>Specializing in engaging, high-performance virtual and augmented reality applications for iOS and Android.</p>
       <div class="hero-ctas">
-        <button class="cta-primary">View My Portfolio</button>
-        <button class="cta-secondary">Learn More About My Services</button>
+        <button class="cta-primary" @click="scrollToSection('portfolio')" >View My Portfolio</button>
+        <button class="cta-secondary" @click="scrollToSection('services')"  >Learn More About My Services</button>
       </div>
     </div>
   </section>

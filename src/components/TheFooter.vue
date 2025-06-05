@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <p>&copy; {{ currentYear }} [Your Name/Company Name]. All Rights Reserved.</p>
+      <p>&copy; {{ currentYear }} Olafur Design. All Rights Reserved.</p>
       <nav class="footer-nav">
         <ul>
           <li><a href="/privacy-policy">Privacy Policy</a></li>

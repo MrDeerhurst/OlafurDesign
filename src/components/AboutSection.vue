@@ -4,10 +4,11 @@
       <h2>About Me</h2>
       <p class="section-intro">My journey into VR/AR and my commitment to innovation.</p>
       <div class="about-content">
-        <p>Hello! I'm [Your Name], a passionate freelance developer specializing in cutting-edge mobile Virtual and Augmented Reality solutions. My journey into immersive technologies began [mention brief origin, e.g., "during my studies in computer science," or "several years ago after witnessing the potential of AR in a gaming context"]. I'm driven by the desire to create truly engaging and valuable experiences that leverage the power of VR/AR on mobile devices.</p>
-        <p>My philosophy is rooted in a collaborative approach, ensuring transparent communication and client involvement at every stage. I'm committed to delivering not just functional apps, but impactful solutions that solve real-world problems and open up new possibilities for your business.</p>
-        <p>I continuously explore new technologies and best practices in the VR/AR space to ensure my clients always receive the most innovative and optimized solutions.</p>
-        <p><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></p>
+        <p>Hi, I'm Ólafur a UX designer and developer with a deep passion for creating meaningful experiences through Virtual and Augmented Reality. My journey into immersive media began during my academic path in computer science and interactive media technology, where I discovered how spatial computing could reshape the way we learn, interact, and solve problems.</p>
+        <p>Since then, I’ve been dedicated to designing and building mobile-first VR/AR solutions that are not only technically sound but human-centered and purposeful. Whether it’s crafting simulations, prototypes, or tools for education and industry, I aim to bridge innovation with real-world utility.</p>
+        <p>I believe the best work happens through open collaboration. That’s why I emphasize clear communication, shared understanding, and iterative design ensuring each solution is grounded in your goals and shaped by user needs.</p>
+        <p>Always learning, always testing, I stay at the edge of XR development to bring forward-thinking, reliable experiences to every project.</p>
+        <p><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Let’s connect on LinkedIn</a></p>
       </div>
     </div>
   </section>
@@ -22,7 +23,7 @@
   max-width: 800px;
   margin: 0 auto;
   margin-top: 50px;
-  text-align: left;
+  text-align: justify;
 }
 
 .about-content p {

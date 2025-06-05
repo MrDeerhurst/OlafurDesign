@@ -1,12 +1,12 @@
 <script setup>
 const testimonials = [
   {
-    quote: "Working with [Your Name] on our AR marketing campaign was a game-changer. The app was incredibly smooth and truly captured our brand's essence.",
+    quote: "Working with Ólafur on our AR marketing campaign was a game-changer. The app was incredibly smooth and truly captured our brand's essence.",
     name: "Jane Doe",
     company: "Marketing Innovations Inc."
   },
   {
-    quote: "The VR training simulator developed by [Your Name] significantly reduced our onboarding time and improved retention. Professional and highly skilled!",
+    quote: "The VR training simulator developed by Ólafur significantly reduced our onboarding time and improved retention. Professional and highly skilled!",
     name: "John Smith",
     company: "Global Logistics Co."
   },
