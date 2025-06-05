@@ -13,9 +13,11 @@ import TheFooter from './components/TheFooter.vue'
 </script>
 
 <template>
-  <div id="app">
+  
+  
     <TheHeader />
     <main>
+      
       <HeroSection />
       <ServicesSection />
       
@@ -27,8 +29,10 @@ import TheFooter from './components/TheFooter.vue'
       <ContactSection />
     </main>
     <TheFooter />
-  </div>
+  
 </template>
+
+
 
 <style>
 /* ------------------------------------ */
