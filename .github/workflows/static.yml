@@ -31,6 +31,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Setup Node.js # Sets up the Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.1.0' # Use the Node.js version your project uses (e.g., '18', '20', '22')
+      - name: Install dependencies # Installs your npm packages (from package.json)
+        run: npm install
+      - name: Build project # Runs your 'npm run build' command to create the 'dist' folder
+        run: npm run build
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
