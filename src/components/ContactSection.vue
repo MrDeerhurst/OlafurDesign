@@ -43,8 +43,8 @@ const submitForm = () => {
           <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p>
           <p>Schedule a call: <a href="https://calendly.com/your-username" target="_blank" rel="noopener noreferrer">Book Here</a></p>
           <div class="social-links">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://behance.net/yourprofile" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://www.linkedin.com/in/olafur-konrad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <!-- <a href="https://behance.net/yourprofile" target="_blank" rel="noopener noreferrer">Behance</a> -->
             <a href="https://bsky.app/profile/wolaf.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
           </div>
           <p class="location">Serving clients globally from Reykjavik, Iceland.</p>
@@ -118,6 +118,9 @@ const submitForm = () => {
 
 .form-group textarea {
   resize: vertical;
+}
+.contact-info {
+  
 }
 
 .contact-info h3 {

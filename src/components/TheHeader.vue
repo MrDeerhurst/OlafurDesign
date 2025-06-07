@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import EmailButton from './EmailButton.vue';
+
 
 const isMobileMenuOpen = ref(false);
 
@@ -21,12 +21,11 @@ const closeMobileMenu = () => {
 
 
 </script>
-
 <template>
   <header class="header">
     <div class="container">
       <div class="logo">
-        <img src="../assets/images/OKA_logo.png">
+        <!-- <img src="../assets/images/OKA_logoLetters2.png"> -->
         <a href="/">Olafur Design</a>
       </div>
 
@@ -90,13 +89,17 @@ const closeMobileMenu = () => {
   display: flex;
   max-width: 4rem;
   min-width: 2rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5rem;
 }
 
 .logo a {
   display: flex;
   font-family: var(--font-heading); /* Use heading font for logo text */
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-charcoal);
   text-decoration: none;
 }
@@ -118,12 +121,12 @@ const closeMobileMenu = () => {
   font-weight: 500;
   color: var(--text-charcoal);
   transition: color 0.3s ease;
-  padding: 10px 0;
+  padding: 10px 4px;
   display: block;
 }
 
 .main-nav a:hover {
-  color: var(--primary-blue); /* Highlight with primary blue */
+  color: var(--charcoal); /* Highlight with primary blue */
 }
 
 .desktop-cta {

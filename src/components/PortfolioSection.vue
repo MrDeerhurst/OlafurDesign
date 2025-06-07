@@ -1,31 +1,31 @@
 <script setup>
 const projects = [
   {
-    title: 'Interactive Retail AR App',
-    description: 'An augmented reality app for furniture visualization in consumer homes.',
-    thumbnail: 'https://placehold.co/600x400/000000/FFF',
+    title: 'Mobile AR Gear Assembly Instructions',
+    description: 'An augmented reality app for detecting an image in paper instructions and span an interactive assembly instructions.',
+    thumbnail: 'https://i.imgur.com/Ngn5g9V.gif',
     technologies: ['ARKit', 'Unity', 'C#'],
     caseStudyLink: '#'
   },
   {
-    title: 'VR Training Simulator',
-    description: 'A virtual reality experience for employee onboarding and safety training.',
-    thumbnail: 'https://placehold.co/600x400/000000/FFF',
+    title: 'VR Industry Training Research',
+    description: 'A virtual reality experience for employee onboarding and safety training research.',
+    thumbnail: 'https://i.imgur.com/zD0JDdV.gif',
     technologies: ['Unity', 'C#', 'Meta Quest SDK'],
     caseStudyLink: '#'
-  },
+  },/*
   {
-    title: 'Mobile AR Game',
-    description: 'A location-based augmented reality game for exploring local landmarks.',
-    thumbnail: 'https://placehold.co/600x400/000000/FFF',
-    technologies: ['ARCore', 'Unity', 'Google Maps API'],
+    title: 'Product Impact Website',
+    description: 'Redesign of a  product impact website tool for outreach for the company DTE Metals Intelligence.',
+    thumbnail: 'https://images.squarespace-cdn.com/content/v1/655c8be2b316370dccfbbc4e/0e566b01-8e41-43c9-a6e7-eb9c8b866935/DTE-logo-n%C3%BDtt.png?format=1500w',
+    technologies: ['React','CSS','HTML'],
     caseStudyLink: '#'
-  },
+  }, */
   {
-    title: '3D Product Configurator',
-    description: 'An interactive 3D application allowing users to customize products in real-time.',
-    thumbnail: 'https://placehold.co/600x400/000000/FFF',
-    technologies: ['Three.js', 'Vue.js'],
+    title: '3D Bottom Trawl Simulation',
+    description: 'Simulation of a new type of bottom trawl that uses lasers instead of scraping the bottom for Optitog.',
+    thumbnail: 'https://i.imgur.com/x7Big3d.gif',
+    technologies: ['Unity', 'C#'],
     caseStudyLink: '#'
   }
 ];
@@ -35,7 +35,7 @@ const projects = [
   <section id="portfolio" class="portfolio-section">
     <div class="container">
       <h2>My Latest Work</h2>
-      <p class="section-intro">A showcase of innovative projects that demonstrate my capabilities.</p>
+      <p class="section-intro">A showcase of some of the innovative projects that demonstrate my capabilities.</p>
       <div class="portfolio-grid">
         <div v-for="project in projects" :key="project.title" class="portfolio-item">
           <img :src="project.thumbnail" :alt="project.title" class="project-thumbnail" loading="lazy">
@@ -45,7 +45,7 @@ const projects = [
             <div class="technologies">
               <span v-for="tech in project.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
             </div>
-            <a :href="project.caseStudyLink" class="view-case-study-button">View Case Study</a>
+            <!--<a :href="project.caseStudyLink" class="view-case-study-button">View Case Study</a> -->
           </div>
         </div>
       </div>

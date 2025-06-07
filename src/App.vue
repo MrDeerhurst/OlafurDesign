@@ -203,7 +203,7 @@ button:hover {
   font-size: 1.2rem;
   color: var(--text-medium-gray);
   max-width: 700px;
-  margin: 20px auto 60px auto;
+  margin: 20px auto 20px auto;
 }
 @media (max-width: 768px) {
   .section-intro {

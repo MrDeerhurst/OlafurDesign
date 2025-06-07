@@ -12,8 +12,8 @@ const services = [
   },
   {
     icon: '🌐',
-    title: 'Mobile Virtual Reality (VR) Development',
-    description: 'Immersive VR experiences for mobile VR headsets, training simulations, virtual tours, educational content.'
+    title: 'Virtual Reality (VR) Development',
+    description: 'Immersive VR experiences for mobile or VR headsets for training simulations, virtual tours or educational content.'
   },
   {
     icon: '✨',
@@ -60,14 +60,14 @@ const breakpoints = {
 <template>
   <section id="services">
     <div class="container">
-      <h2>My Mobile VR/AR Services</h2>
+      <h2>My VR/AR Services</h2>
       <p class="section-intro">Bringing your vision to life with specialized virtual and augmented reality solutions.</p>
 
       <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel" >
         <Slide v-for="(service, index) in services" :key="index">
           <div class="carousel__item">
             <div class="service-block">
-              <div class="service-icon">{{ service.icon }}</div>
+              <div class="service-icon" >{{ service.icon }}</div>
               <h3>{{ service.title }}</h3>
               <p class="fit-content-paragraph">{{ service.description }}</p>
             </div>

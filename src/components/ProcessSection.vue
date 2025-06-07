@@ -93,7 +93,7 @@ h2 {
   font-size: 1.1em;
   color: #666;
   max-width: 800px;
-  margin: 10px auto 30px auto;
+  margin: 30px auto 30px auto;
 }
 
 .process-steps {

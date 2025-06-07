@@ -5,12 +5,12 @@
       <p class="section-intro">Unlock new possibilities for your business with my specialized expertise.</p>
       <div class="differentiators-grid">
         <div class="differentiator-item">
-          <h3>Deep Mobile VR/AR Specialization</h3>
-          <p>My entire focus is on creating exceptional virtual and augmented reality experiences optimized for mobile devices.</p>
+          <h3>Deep VR/AR Specialization</h3>
+          <p>My entire focus is on creating exceptional virtual and augmented reality experiences optimized for mobile or VR/AR devices.</p>
         </div>
         <div class="differentiator-item">
           <h3>Performance & Optimization</h3>
-          <p>I prioritize delivering smooth, high-performing applications that work flawlessly across a range of mobile hardware.</p>
+          <p>I prioritize delivering smooth, high-performing applications that work flawlessly across a range of mobile, desktop or VR/AR hardware.</p>
         </div>
         <div class="differentiator-item">
           <h3>User-Centric Design</h3>

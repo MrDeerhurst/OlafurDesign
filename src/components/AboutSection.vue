@@ -8,7 +8,7 @@
         <p>Since then, I’ve been dedicated to designing and building mobile-first VR/AR solutions that are not only technically sound but human-centered and purposeful. Whether it’s crafting simulations, prototypes, or tools for education and industry, I aim to bridge innovation with real-world utility.</p>
         <p>I believe the best work happens through open collaboration. That’s why I emphasize clear communication, shared understanding, and iterative design ensuring each solution is grounded in your goals and shaped by user needs.</p>
         <p>Always learning, always testing, I stay at the edge of XR development to bring forward-thinking, reliable experiences to every project.</p>
-        <p><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Let’s connect on LinkedIn</a></p>
+        <p><a href="https://www.linkedin.com/in/olafur-konrad/" target="_blank" rel="noopener noreferrer">Let’s connect on LinkedIn</a></p>
       </div>
     </div>
   </section>
