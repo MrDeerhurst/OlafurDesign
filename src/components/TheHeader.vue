@@ -1,12 +1,25 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'; // Import ref for reactive variables
 
+// Reactive state for the mobile menu
+const isMobileMenuOpen = ref(false); // Declared as a ref, initialized to false
 
-const isMobileMenuOpen = ref(false);
+// Method for smooth scrolling to sections
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
 
+// Method to toggle the mobile menu state
 const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value;
-  // Prevent body scrolling when mobile menu is open
+  isMobileMenuOpen.value = !isMobileMenuOpen.value; // Access ref value with .value
+
+  // Prevent/allow body scrolling
   if (isMobileMenuOpen.value) {
     document.body.style.overflow = 'hidden';
   } else {
@@ -14,13 +27,35 @@ const toggleMobileMenu = () => {
   }
 };
 
+// Method to close the mobile menu
 const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false;
+  isMobileMenuOpen.value = false; // Access ref value with .value
   document.body.style.overflow = ''; // Restore body scrolling
 };
 
+// --- Optional: Listen for screen resize to close menu on desktop ---
+// This is good practice to ensure menu closes if screen size changes
+import { onMounted, onBeforeUnmount } from 'vue';
+
+const handleResize = () => {
+  // Assuming 768px is your breakpoint for mobile menu
+  if (window.innerWidth > 768 && isMobileMenuOpen.value) {
+    closeMobileMenu();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleResize);
+});
+
 
 </script>
+
+
 <template>
   <header class="header">
     <div class="container">
@@ -35,11 +70,12 @@ const closeMobileMenu = () => {
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          
         </ul>
       </nav>
-
-      <button class="cta-button desktop-cta" href="#contact">Contact me</button>
+        <button class="cta-button desktop-cta" @click="() => { scrollToSection('contact'); closeMobileMenu(); }">
+            Let’s Talk
+        </button>
 
       <div class="hamburger" @click="toggleMobileMenu" :class="{ 'is-active': isMobileMenuOpen }">
         <span></span>
@@ -56,7 +92,10 @@ const closeMobileMenu = () => {
           <li><a href="#about" @click="closeMobileMenu">About</a></li>
           <li><a href="#testimonials" @click="closeMobileMenu">Testimonials</a></li>
           <li><a href="#contact" @click="closeMobileMenu">Contact</a></li>
-          <li><button class="cta-button mobile-cta" @click="closeMobileMenu">Contact me</button></li>
+          <li><button class="cta-button mobile-cta" @click="() => { scrollToSection('contact'); closeMobileMenu(); }">
+                  Let’s Talk
+              </button>
+          </li>
         </ul>
       </nav>
     </transition>
@@ -74,9 +113,10 @@ const closeMobileMenu = () => {
 }
 
 .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -117,6 +157,7 @@ const closeMobileMenu = () => {
 }
 
 .main-nav a {
+  display: flex;
   font-size: 1rem; /* Slightly smaller for nav */
   font-weight: 500;
   color: var(--text-charcoal);
@@ -130,7 +171,13 @@ const closeMobileMenu = () => {
 }
 
 .desktop-cta {
-  display: block;
+    display: flex;
+    width: 15%;
+    height: 20%;
+    padding: 1rem 1.5rem;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hamburger Icon */

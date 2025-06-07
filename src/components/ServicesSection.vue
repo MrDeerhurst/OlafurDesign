@@ -68,7 +68,7 @@ const breakpoints = {
           <div class="carousel__item">
             <div class="service-block">
               <div class="service-icon" >{{ service.icon }}</div>
-              <h3>{{ service.title }}</h3>
+              <h3 >{{ service.title }}</h3>
               <p class="fit-content-paragraph">{{ service.description }}</p>
             </div>
           </div>
@@ -87,15 +87,7 @@ const breakpoints = {
 </template>
 
 <style scoped>
-.fit-content-paragraph {
 
-  display: inline-block; /* Takes only the width it needs, but respects padding/margin */
-  /* display: inline; */ /* Also takes only width it needs, but ignores vertical padding/margin */
-  margin: 0; /* Remove default paragraph margin */
-  /* Text resizing (as discussed in previous answer) */
-  font-size: 1vw; /* This will make the text size relative to the viewport width */
-  line-height: 1.4;
-}
 
 /* Remove the previous grid layout for services, as carousel handles it */
  .services-grid {
@@ -143,7 +135,7 @@ const breakpoints = {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Retain subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 280px; /* Give a consistent minimum height to cards */
-  max-height: 400px; /* Give a consistent minimum height to cards */
+  max-height: 600px; /* Give a consistent minimum height to cards */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -172,8 +164,9 @@ const breakpoints = {
 
 .service-block p {
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.0;
+  font-size: clamp(16px, calc(20px + (36 - 20) * (100vw - 768px) / (1920 - 768)), 1rem);
+  
+  line-height: 1;
   color: var(--text-medium-gray);
   flex-grow: 1; /* Allows the paragraph to take up remaining space */
 }
@@ -260,6 +253,7 @@ const breakpoints = {
   .service-block {
     padding: 25px;
     min-height: 100px; /* Adjust height for smaller screens */
+    max-height: 700px;
   }
   .service-icon {
     font-size: 2.8rem;
@@ -270,6 +264,7 @@ const breakpoints = {
   .service-block {
     padding: 20px;
     min-height: 100px; /* Further adjust height for tiny screens */
+    
   }
   .service-icon {
     font-size: 2.5rem;

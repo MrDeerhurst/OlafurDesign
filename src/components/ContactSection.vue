@@ -20,7 +20,7 @@ const submitForm = () => {
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Ready to Build Your Next Reality?</h2>
-      <p class="section-intro">Let's collaborate on your innovative VR/AR mobile solution.</p>
+      <p class="section-intro">Let's collaborate on your innovative VR/AR solutions.</p>
       <div class="contact-grid">
         <form @submit.prevent="submitForm" class="contact-form">
           <div class="form-group">

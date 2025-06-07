@@ -1,16 +1,23 @@
 <script setup>
+import ProgressiveImage from './reusable/ProgressiveImage.vue';
+
+
 const projects = [
   {
     title: 'Mobile AR Gear Assembly Instructions',
-    description: 'An augmented reality app for detecting an image in paper instructions and span an interactive assembly instructions.',
-    thumbnail: 'https://i.imgur.com/Ngn5g9V.gif',
+    short_description: 'An augmented reality app for detecting an image in paper instructions and span an interactive assembly instructions.',
+    Long_description: '',
+    image: "https://i.imgur.com/49MVi84.png",
+    gif: "https://i.imgur.com/Ngn5g9V.gif",
     technologies: ['ARKit', 'Unity', 'C#'],
     caseStudyLink: '#'
   },
   {
     title: 'VR Industry Training Research',
-    description: 'A virtual reality experience for employee onboarding and safety training research.',
-    thumbnail: 'https://i.imgur.com/zD0JDdV.gif',
+    short_description: 'A virtual reality experience for employee onboarding and safety training research.',
+    Long_description: '',
+    image: "https://i.imgur.com/WEBm5LN.png",
+    gif: "https://i.imgur.com/zD0JDdV.gif",
     technologies: ['Unity', 'C#', 'Meta Quest SDK'],
     caseStudyLink: '#'
   },/*
@@ -23,8 +30,10 @@ const projects = [
   }, */
   {
     title: '3D Bottom Trawl Simulation',
-    description: 'Simulation of a new type of bottom trawl that uses lasers instead of scraping the bottom for Optitog.',
-    thumbnail: 'https://i.imgur.com/x7Big3d.gif',
+    short_description: 'Simulation of a new type of bottom trawl that uses lasers instead of scraping the bottom for Optitog.',
+    Long_description: '',
+    image: "https://i.imgur.com/JnOtHst.png",
+    gif: 'https://i.imgur.com/x7Big3d.gif',
     technologies: ['Unity', 'C#'],
     caseStudyLink: '#'
   }
@@ -38,10 +47,15 @@ const projects = [
       <p class="section-intro">A showcase of some of the innovative projects that demonstrate my capabilities.</p>
       <div class="portfolio-grid">
         <div v-for="project in projects" :key="project.title" class="portfolio-item">
-          <img :src="project.thumbnail" :alt="project.title" class="project-thumbnail" loading="lazy">
+          <ProgressiveImage
+            :placeholder-png= "project.image"
+            :full-gif="project.gif"
+            :class="project.gif"
+          ></ProgressiveImage>
+          <!--<img :src="project.thumbnail" :alt="project.title" class="project-thumbnail" loading="lazy">-->
           <div class="item-content">
             <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
+            <p>{{ project.short_description }}</p>
             <div class="technologies">
               <span v-for="tech in project.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
             </div>

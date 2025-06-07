@@ -111,13 +111,19 @@ h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--text-charcoal);
   line-height: 1.2;
-  margin-top: 0;
+  
   margin-bottom: 20px; /* Consistent margin */
 }
 
-h1 { font-size: 3.5rem; font-weight: 700; }
-h2 { font-size: 2.8rem; font-weight: 700; }
-h3 { font-size: 2.1rem; font-weight: 600; }
+h1 { font-size: 3.5rem; font-weight: 700; 
+     margin-top: 0;
+}
+h2 { font-size: 2.8rem; font-weight: 700;
+     margin-top: 4rem; /* for navigation scroll to show the top of the content*/
+}
+h3 { font-size: 2.1rem; font-weight: 600;
+     margin-top: 0;
+}
 
 @media (max-width: 1024px) {
   h1 { font-size: 3rem; }
