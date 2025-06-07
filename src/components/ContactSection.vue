@@ -119,9 +119,7 @@ const submitForm = () => {
 .form-group textarea {
   resize: vertical;
 }
-.contact-info {
-  
-}
+
 
 .contact-info h3 {
   font-family: var(--font-heading);
