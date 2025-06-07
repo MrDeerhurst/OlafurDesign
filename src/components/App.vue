@@ -9,7 +9,7 @@ import TestimonialsSection from './components/TestimonialsSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import TheFooter from './components/TheFooter.vue'
-import testPart from './components/testPart.vue'
+
 </script>
 
 <template>

@@ -1,15 +1,14 @@
 <template>
   <div class="progressive-image-container" :style="containerStyle">
     <img
-      v-if="!gifLoaded && !gifError"
+      v-if="( isSmallScreen || !gifLoaded )"
       :src="placeholderPng"
       :alt="altText"
       class="progressive-image-placeholder"
       @error="handlePlaceholderError"
     />
-
     <img
-      v-else-if="gifLoaded && !gifError"
+      v-else-if="(gifLoaded && !gifError )"
       :src="fullGif"
       :alt="altText"
       class="progressive-image-full"
@@ -22,15 +21,18 @@
       </slot>
     </div>
 
-    <div v-if="!gifLoaded && !gifError" class="progressive-image-spinner">
+    <div v-if="!gifLoaded && !gifError && !isSmallScreen" class="progressive-image-spinner">
       <slot name="loadingSpinner">
         <div class="default-spinner"></div>
       </slot>
     </div>
   </div>
+  
 </template>
 
 <script>
+
+
 export default {
   name: 'ProgressiveImage', // Good practice to name your components
   props: {
@@ -46,6 +48,7 @@ export default {
       type: String,
       default: 'Animated content',
     },
+
     // Optional: Fixed dimensions for the container to prevent layout shift
     width: {
       type: [String, Number],
@@ -66,6 +69,9 @@ export default {
       gifError: false,
       placeholderError: false, // Track if placeholder itself fails
       imageLoader: null, // To manage the Image object
+      isSmallScreen: false, // This will be true if screen width is <= 480px
+      mediaQueryList: null  // To store the MediaQueryList object
+      
     };
   },
   computed: {
@@ -95,12 +101,28 @@ export default {
   },
   mounted() {
     this.preloadGif();
+    // Define the media query string you want to monitor
+    const mediaQueryString = '(max-width: 480px)';
+
+    // Initialize the MediaQueryList object
+    this.mediaQueryList = window.matchMedia(mediaQueryString);
+
+    // Set the initial value of the isSmallScreen data property
+    this.updateIsSmallScreen();
+
+    // Add an event listener to update the variable whenever the media query's status changes
+    // The 'change' event on MediaQueryList is efficient; it only fires when the match status changes.
+    this.mediaQueryList.addEventListener('change', this.updateIsSmallScreen);
   },
   beforeUnmount() {
     if (this.imageLoader) {
       this.imageLoader.onload = null;
       this.imageLoader.onerror = null;
       this.imageLoader = null;
+    }
+    // Clean up: Remove the event listener to prevent memory leaks
+    if (this.mediaQueryList) {
+      this.mediaQueryList.removeEventListener('change', this.updateIsSmallScreen);
     }
   },
   methods: {
@@ -123,13 +145,14 @@ export default {
       };
 
       this.imageLoader.onerror = () => {
-        //console.error('Failed to load GIF:', this.fullGif);
+        console.error('Failed to load GIF:', this.fullGif);
         this.gifError = true;
         this.imageLoader = null; // Clean up
       };
+
     },
     handlePlaceholderError() {
-      //console.error('Failed to load placeholder PNG:', this.placeholderPng);
+      console.error('Failed to load placeholder PNG:', this.placeholderPng);
       this.placeholderError = true;
       // If placeholder fails, and GIF hasn't loaded/failed yet, consider
       // displaying a generic broken image icon or a fallback message.
@@ -138,12 +161,31 @@ export default {
     onGifDisplay() {
       // Emit an event if the parent component needs to know the GIF has displayed
       this.$emit('gif-displayed');
+    },
+    // Function to update the isSmallScreen data property
+    updateIsSmallScreen() {
+      // Access the 'matches' property of the MediaQueryList object
+      this.isSmallScreen = this.mediaQueryList.matches;
+      console.log(`Media query '(max-width: 480px)' matches:`, this.isSmallScreen);
     }
+  
   }
 };
 </script>
 
 <style scoped>
+.responsive-component-example {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 700px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
 .progressive-image-container {
   position: relative;
   overflow: hidden; /* Important to clip overflowing spinners/images if not fixed size */
@@ -220,4 +262,5 @@ export default {
   background-color: #ffe6e6;
   border: 1px dashed #ff4d4d;
 }
+
 </style>

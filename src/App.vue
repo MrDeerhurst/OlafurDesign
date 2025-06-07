@@ -107,7 +107,7 @@ section {
 /* ------------------------------------ */
 /* Global Typography */
 /* ------------------------------------ */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: var(--font-heading);
   color: var(--text-charcoal);
   line-height: 1.2;
@@ -122,19 +122,25 @@ h2 { font-size: 2.8rem; font-weight: 700;
      margin-top: 4rem; /* for navigation scroll to show the top of the content*/
 }
 h3 { font-size: 2.1rem; font-weight: 600;
+     margin-top: 1.5rem;
+}
+h4 { font-size: 1.1rem; font-weight: 600;
      margin-top: 0;
 }
+
 
 @media (max-width: 1024px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.4rem; }
   h3 { font-size: 1.9rem; }
+  h4 { font-size: 1.3rem; }
 }
 
 @media (max-width: 768px) {
   h1 { font-size: 2.4rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.6rem; }
+  h4 { font-size: 0.9rem; }
   body { line-height: 1.7; }
 }
 
@@ -142,6 +148,7 @@ h3 { font-size: 2.1rem; font-weight: 600;
   h1 { font-size: 2rem; }
   h2 { font-size: 1.8rem; }
   h3 { font-size: 1.4rem; }
+  h4 { font-size: 1.0rem; }
   body { font-size: 0.95rem; line-height: 1.6; } /* Slightly smaller base font on tiny screens */
 }
 

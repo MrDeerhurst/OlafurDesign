@@ -91,8 +91,8 @@ onBeforeUnmount(() => {
           <li><a href="#portfolio" @click="closeMobileMenu">Portfolio</a></li>
           <li><a href="#about" @click="closeMobileMenu">About</a></li>
           <li><a href="#testimonials" @click="closeMobileMenu">Testimonials</a></li>
-          <li><a href="#contact" @click="closeMobileMenu">Contact</a></li>
-          <li><button class="cta-button mobile-cta" @click="() => { scrollToSection('contact'); closeMobileMenu(); }">
+          
+          <li><button class="cta-button mobile-cta" @click="() => { closeMobileMenu(); scrollToSection('contact'); }">
                   Let’s Talk
               </button>
           </li>
