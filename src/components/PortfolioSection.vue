@@ -1,5 +1,4 @@
 <script setup>
-import ProgressiveImage from './reusable/ProgressiveImage.vue';
 import expanedProjectCard from './reusable/ExpanedProjectCard.vue';
 import { projectsList } from "./contentFolder/Content"
 </script>

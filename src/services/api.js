@@ -10,19 +10,15 @@ const baseURL = isProduction
 
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000/api', // Base URL for your backend API
+  baseURL: 'http://localhost:3000/', // Base URL for your backend API
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
     // Add any other headers like authorization tokens here
   },
-
-  
+ 
 });
 
 export default {
-  getProducts() {
-    return apiClient.get('/products');
-  },
   submitContactForm(formData) {
     // This function now handles the API call for the contact form
     return apiClient.post('/api/contact', formData)

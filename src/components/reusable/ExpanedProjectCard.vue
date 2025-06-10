@@ -1,53 +1,20 @@
 
 <template>
 <div class="portfolio-grid">
-    <div v-for="(project, index) in projects" :key="index" class="card" @click="openCard(index)">
+    <div v-for="(singleProject, index) in projects" :key="index" class="card"> <!-- @click="openCard(index)">-->
         <ProgressiveImage
-            :placeholder-png= "project.image"
-            :full-gif="project.gif"
-            :class="card-thumbnail"
+            :placeholder-png= "singleProject.image"
+            :full-gif="singleProject.gif"
        ></ProgressiveImage> 
-    
       <div class="cardText">
-        <h3 class="card-title">{{ project.title }}</h3>
-        <p class="card-desc">{{ project.short_description }}</p>
+        <h3 class="card-title">{{ singleProject.title }}</h3>
+        <p class="card-desc">{{ singleProject.short_description }}</p>
         <div class="tech-tags">
-          <span v-for="(technologies, i) in project.technologies" :key="i" class="tag">{{ technologies }}</span>
+          <span v-for="(technologies, i) in singleProject.technologies" :key="i" class="tag">{{ technologies }}</span>
         </div>
       </div>
     </div>
     
-<!--
-        <div v-if="activeCard !== null" class="overlay">
-      <div class="overlay-content">
-        <button class="close-btn" @click="closeCard">×</button>
-        <h2 class="overlay-title">{{ projects[activeCard].title }}</h2>
-        <p class="overlay-subtitle">{{ projects[activeCard].shortDescription }}</p>
-        
-        <div class="overlay-section">
-          <h4>Overview</h4>
-          <p>{{ projects[activeCard].overview }}</p>
-        </div>
-        <div class="overlay-section">
-        <img :src="projects[activeCard].image" alt="Project Thumbnail" class="card-thumbnail" />
-          <h4>Key Contributions</h4>
-          <ul>
-            <li v-for="(point, i) in projects[activeCard].expandedPoints" :key="i">• {{ point }}</li>
-          </ul>
-        </div>
-        <div class="overlay-section">
-          <h4>Skills Applied</h4>
-          <div class="tech-tags">
-            <span v-for="(skill, i) in projects[activeCard].skills" :key="i" class="tag">{{ skill }}</span>
-          </div>
-        </div>
-        <div class="nav-buttons">
-          <button @click="prevCard" :disabled="activeCard === 0">←</button>
-          <button @click="nextCard" :disabled="activeCard === projects.length - 1">→</button>
-        </div>
-      </div>
-    </div>
-    -->
   </div>
 
 </template>
@@ -83,20 +50,7 @@ function prevCard() {
 </script>
 
 <style scoped>
-.cardText{
-  display: flex ;
-  flex-direction: column;
-  margin: 8px;
-}
-.card-title {
-display: flex ;
-justify-content: center; 
-}
 
-.card-desc{
-display: flex ;
-margin-inline: 4px;
-}
 
 .portfolio-grid {
   display: grid;
@@ -116,10 +70,21 @@ margin-inline: 4px;
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.card-thumbnail {
-  width: 100%;
-  border-radius: 8px;
+.cardText{
+  display: flex ;
+  flex-direction: column;
+  margin: 8px;
 }
+.card-title {
+display: flex ;
+justify-content: center; 
+}
+
+.card-desc{
+display: flex ;
+margin-inline: 4px;
+}
+
 .tech-tags {
   margin-top: 12px;
   margin-left: 12px;
