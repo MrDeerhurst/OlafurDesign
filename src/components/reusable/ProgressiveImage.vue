@@ -145,14 +145,14 @@ export default {
       };
 
       this.imageLoader.onerror = () => {
-        console.error('Failed to load GIF:', this.fullGif);
+       // console.error('Failed to load GIF:', this.fullGif);
         this.gifError = true;
         this.imageLoader = null; // Clean up
       };
 
     },
     handlePlaceholderError() {
-      console.error('Failed to load placeholder PNG:', this.placeholderPng);
+     // console.error('Failed to load placeholder PNG:', this.placeholderPng);
       this.placeholderError = true;
       // If placeholder fails, and GIF hasn't loaded/failed yet, consider
       // displaying a generic broken image icon or a fallback message.
@@ -166,7 +166,7 @@ export default {
     updateIsSmallScreen() {
       // Access the 'matches' property of the MediaQueryList object
       this.isSmallScreen = this.mediaQueryList.matches;
-      console.log(`Media query '(max-width: 480px)' matches:`, this.isSmallScreen);
+     // console.log(`Media query '(max-width: 480px)' matches:`, this.isSmallScreen);
     }
   
   }

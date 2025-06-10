@@ -10,12 +10,12 @@ const form = ref({
 
 const submitForm = async () => {
   try {
-    console.log('Submitting form with data:', form.value);
+    //console.log('Submitting form with data:', form.value);
 
     // Call the service function to send the data
     const response = await apiService.submitContactForm(form.value);
 
-    console.log('Backend response:', response.data);
+   // console.log('Backend response:', response.data);
 
     if (response.data.success) {
       alert(response.data.message);
@@ -27,7 +27,7 @@ const submitForm = async () => {
       alert(`Error: ${response.data.message}`);
     }
   } catch (error) {
-    console.error('Error submitting form:', error);
+   // console.error('Error submitting form:', error);
     if (error.response) {
       alert(`Failed to send message: ${error.response.data.message || 'An unexpected error occurred.'}`);
     } else {

@@ -5,7 +5,7 @@ import axios from 'axios';
 const isProduction = import.meta.env.PROD; // Vite's way to check for production mode
 
 const baseURL = isProduction
-  ? 'https://olafur-design-backend.onrender.com/api' // Replace with your actual Render URL, e.g., 'https://olafur-design-backend.onrender.com/api'
+  ? 'https://olafur-design-backend.onrender.com' // Replace with your actual Render URL, e.g., 'https://olafur-design-backend.onrender.com/api'
   : 'http://localhost:3000/api'; // Your local backend URL (Node.js)
 
 
