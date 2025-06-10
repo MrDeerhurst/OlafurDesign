@@ -7,12 +7,32 @@ const form = ref({
   message: ''
 });
 
-const submitForm = () => {
-  console.log('Form Submitted:', form.value);
-  alert('Thank you for your message! I will get back to you soon.');
-  form.value.name = '';
-  form.value.email = '';
-  form.value.message = '';
+const submitForm = async () => {
+  try {
+    console.log('Submitting form with data:', form.value);
+
+    // Call the service function to send the data
+    const response = await apiService.submitContactForm(form.value);
+
+    console.log('Backend response:', response.data);
+
+    if (response.data.success) {
+      alert(response.data.message);
+      // Clear the form fields
+      form.value.name = '';
+      form.value.email = '';
+      form.value.message = '';
+    } else {
+      alert(`Error: ${response.data.message}`);
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    if (error.response) {
+      alert(`Failed to send message: ${error.response.data.message || 'An unexpected error occurred.'}`);
+    } else {
+      alert('Failed to send message. Please try again later.');
+    }
+  }
 };
 </script>
 
@@ -39,22 +59,53 @@ const submitForm = () => {
         </form>
         <div class="contact-info">
           <h3>Direct Contact</h3>
-          <p>Email: <a href="Design@olafur.design.com">Design@olafur.design.com</a></p>
-          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p>
-          <p>Schedule a call: <a href="https://calendly.com/your-username" target="_blank" rel="noopener noreferrer">Book Here</a></p>
+          <p>📧 Email: <a href="Design@olafur.design.com">Design@olafur.design.com</a></p>
+          <p>📱 Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p>
+          <p>📅 Schedule a call: <a href="https://calendly.com/design-olafur" target="_blank" rel="noopener noreferrer">Book Here</a></p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/olafur-konrad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/olafur-konrad/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
             <!-- <a href="https://behance.net/yourprofile" target="_blank" rel="noopener noreferrer">Behance</a> -->
-            <a href="https://bsky.app/profile/wolaf.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+            <a href="https://bsky.app/profile/wolaf.bsky.social" target="_blank" rel="noopener noreferrer"> Bluesky</a>
           </div>
           <p class="location">Serving clients globally from Reykjavik, Iceland.</p>
         </div>
       </div>
     </div>
+   
   </section>
 </template>
 
 <style scoped>
+.fa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  font-size: 1.0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-bluesky {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

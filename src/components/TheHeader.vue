@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'; // Import ref for reactive variables
 
+
 // Reactive state for the mobile menu
 const isMobileMenuOpen = ref(false); // Declared as a ref, initialized to false
 
@@ -76,7 +77,7 @@ onBeforeUnmount(() => {
         <button class="cta-button desktop-cta" @click="() => { scrollToSection('contact'); closeMobileMenu(); }">
             Let’s Talk
         </button>
-
+      
       <div class="hamburger" @click="toggleMobileMenu" :class="{ 'is-active': isMobileMenuOpen }">
         <span></span>
         <span></span>
@@ -190,6 +191,7 @@ onBeforeUnmount(() => {
   height: 25px;
   padding: 5px 0;
   z-index: 1001;
+  margin-right: 8px;
 }
 
 .hamburger span {

@@ -121,12 +121,12 @@ h1 { font-size: 3.5rem; font-weight: 700;
 h2 { font-size: 2.8rem; font-weight: 700;
      margin-top: 4rem; /* for navigation scroll to show the top of the content*/
 }
-h3 { font-size: 2.1rem; font-weight: 600;
-     margin-top: 1.5rem;
+h3 { font-size: 1.5rem; font-weight: 600;
+      margin-top: 0;
 }
 h4 { font-size: 1.1rem; font-weight: 600;
      margin-top: 0;
-}
+} 
 
 
 @media (max-width: 1024px) {
@@ -221,13 +221,11 @@ button:hover {
 @media (max-width: 768px) {
   .section-intro {
     font-size: 1.1rem;
-    margin-bottom: 40px;
-  }
-}
+}}
 @media (max-width: 480px) {
   .section-intro {
     font-size: 1rem;
     margin-bottom: 30px;
   }
-}
+} 
 </style>

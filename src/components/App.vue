@@ -113,18 +113,18 @@ h1, h2, h3 {
 
 h1 { font-size: 3.5rem; font-weight: 700; }
 h2 { font-size: 2.8rem; font-weight: 700; }
-h3 { font-size: 2.1rem; font-weight: 600; }
+h3 { font-size: 1.5rem; font-weight: 600; }
 
 @media (max-width: 1024px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.4rem; }
-  h3 { font-size: 1.9rem; }
+  h3 { font-size: 1.7rem; }
 }
 
 @media (max-width: 768px) {
   h1 { font-size: 2.4rem; }
   h2 { font-size: 2rem; }
-  h3 { font-size: 1.6rem; }
+  h3 { font-size: 1.5rem; }
   body { line-height: 1.7; }
 }
 

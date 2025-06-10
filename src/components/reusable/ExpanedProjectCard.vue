@@ -8,10 +8,12 @@
             :class="card-thumbnail"
        ></ProgressiveImage> 
     
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.short_description }}</p>
-      <div class="tech-tags">
-        <span v-for="(technologies, i) in project.technologies" :key="i" class="tag">{{ technologies }}</span>
+      <div class="cardText">
+        <h3 class="card-title">{{ project.title }}</h3>
+        <p class="card-desc">{{ project.short_description }}</p>
+        <div class="tech-tags">
+          <span v-for="(technologies, i) in project.technologies" :key="i" class="tag">{{ technologies }}</span>
+        </div>
       </div>
     </div>
     
@@ -81,6 +83,21 @@ function prevCard() {
 </script>
 
 <style scoped>
+.cardText{
+  display: flex ;
+  flex-direction: column;
+  margin: 8px;
+}
+.card-title {
+display: flex ;
+justify-content: center; 
+}
+
+.card-desc{
+display: flex ;
+margin-inline: 4px;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -90,7 +107,7 @@ function prevCard() {
 .card {
   background: white;
   border-radius: 12px;
-  padding: 16px;
+  padding: 0px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.3s;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -105,6 +122,7 @@ function prevCard() {
 }
 .tech-tags {
   margin-top: 12px;
+  margin-left: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;

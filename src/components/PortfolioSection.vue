@@ -37,12 +37,6 @@ import { projectsList } from "./contentFolder/Content"
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow on hover */
 }
 
-.project-thumbnail {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
 
 .item-content {
   padding: 25px;
@@ -123,8 +117,6 @@ import { projectsList } from "./contentFolder/Content"
     max-width: 350px;
     margin: 0 auto;
   }
-  .project-thumbnail {
-    height: 180px;
-  }
+  
 }
 </style>
