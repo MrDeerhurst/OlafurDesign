@@ -1,6 +1,14 @@
 
 
 import { ref } from 'vue';
+import gearsWebm from '@/assets/videos/Gears.webm';
+import gearsMp4 from '@/assets/videos/Gears.mp4';
+import trainingWebm from '@/assets/videos/Training.webm';
+import trainingMp4 from '@/assets/videos/Training.mp4';
+import trawlWebm from '@/assets/videos/Trawl.webm';
+import trawlMp4 from '@/assets/videos/Trawl.mp4';
+
+
 export const globalCounter = ref(0);
 
 export const projectsList = [
@@ -29,7 +37,8 @@ export const projectsList = [
     technologies: ['ARKit', 'Unity', 'C#'],
     caseStudyLink: '#',
     isSmallScreen: false,
-
+    webmLink: gearsWebm,
+    mp4Link: gearsMp4
   },
   {
     title: 'VR Industry Training Research',
@@ -49,6 +58,8 @@ export const projectsList = [
     technologies: ['Unity', 'C#', 'Meta Quest SDK'],
     caseStudyLink: '#',
     isSmallScreen: false,
+    webmLink: trainingWebm,
+    mp4Link: trainingMp4
   },
   {
     title: '3D Bottom Trawl Simulation',
@@ -68,6 +79,8 @@ export const projectsList = [
     technologies: ['Unity', 'C#'],
     caseStudyLink: '#',
     isSmallScreen: false,
+    webmLink: trawlWebm,
+    mp4Link: trawlMp4
   }
 ];
 

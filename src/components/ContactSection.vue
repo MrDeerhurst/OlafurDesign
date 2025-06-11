@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import apiService from '../services/api';
 
+
 const form = ref({
   name: '',
   email: '',
@@ -10,8 +11,7 @@ const form = ref({
 
 const submitForm = async () => {
   try {
-    //console.log('Submitting form with data:', form.value);
-
+    // console.log('Submitting form with data:', form.value);
     // Call the service function to send the data
     const response = await apiService.submitContactForm(form.value);
 
@@ -60,8 +60,8 @@ const submitForm = async () => {
         </form>
         <div class="contact-info">
           <h3>Direct Contact</h3>
-          <p>📧 Email: <a href="Design@olafur.design">design@olafur.design</a></p>
-          <p>📱 Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p>
+          <p>✉️ Email: <a href="Design@olafur.design">design@olafur.design</a></p>
+          <!-- <p>📱 Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p> -->
           <p>📅 Schedule a call: <a href="https://calendly.com/design-olafur" target="_blank" rel="noopener noreferrer">Book Here</a></p>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/olafur-konrad/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>

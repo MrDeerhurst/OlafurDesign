@@ -2,10 +2,12 @@
 <template>
 <div class="portfolio-grid">
     <div v-for="(singleProject, index) in projects" :key="index" class="card"> <!-- @click="openCard(index)">-->
-        <ProgressiveImage
-            :placeholder-png= "singleProject.image"
-            :full-gif="singleProject.gif"
-       ></ProgressiveImage> 
+      <VideoAnimation
+        :webm-src="singleProject.webmLink"
+        :mp4-src="singleProject.mp4Link"
+        :poster-src= "singleProject.image"
+      ></VideoAnimation>    
+      
       <div class="cardText">
         <h3 class="card-title">{{ singleProject.title }}</h3>
         <p class="card-desc">{{ singleProject.short_description }}</p>
@@ -13,21 +15,26 @@
           <span v-for="(technologies, i) in singleProject.technologies" :key="i" class="tag">{{ technologies }}</span>
         </div>
       </div>
-    </div>
-    
   </div>
+    
+</div>
 
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import ProgressiveImage from './ProgressiveImage.vue';
+import VideoAnimation from './VideoComponent.vue';
 
 const props = defineProps({
   projects: {
     type: Array,
     required: true
   }
+});
+
+defineExpose({
+  VideoAnimation
 });
 
 const activeCard = ref(null);
