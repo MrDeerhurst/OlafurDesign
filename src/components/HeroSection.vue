@@ -43,10 +43,10 @@ export default {
   min-height: 500px;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   color: var(--bg-white); /* Ensure text is white */
   overflow: hidden;
-  text-align: left;
+  text-align: center;
   padding: 20px;
   
 }
