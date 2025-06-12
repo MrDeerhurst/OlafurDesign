@@ -61,17 +61,17 @@ onBeforeUnmount(() => {
   <header class="header">
     <div class="container">
       <div class="logo">
-        <!-- <img src="../assets/images/OKA_logoLetters2.png"> -->
+        <!--<img :src=OKA_Logo2  /> -->
         <a href="/">Olafur Design</a>
       </div>
 
       <nav class="main-nav">
         <ul>
           <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          
+          <!--<li><a href="#testimonials">Testimonials</a></li> -->
         </ul>
       </nav>
         <button class="cta-button desktop-cta" @click="() => { scrollToSection('contact'); closeMobileMenu(); }">
@@ -91,7 +91,7 @@ onBeforeUnmount(() => {
           <li><a href="#services" @click="closeMobileMenu">Services</a></li>
           <li><a href="#portfolio" @click="closeMobileMenu">Portfolio</a></li>
           <li><a href="#about" @click="closeMobileMenu">About</a></li>
-          <li><a href="#testimonials" @click="closeMobileMenu">Testimonials</a></li>
+          
           
           <li><button class="cta-button mobile-cta" @click="() => { closeMobileMenu(); scrollToSection('contact'); }">
                   Let’s Talk
@@ -124,6 +124,7 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  
 }
 
 .logo img {
@@ -131,9 +132,7 @@ onBeforeUnmount(() => {
   max-width: 4rem;
   min-width: 2rem;
   border-radius: 50%;
-  border-style: solid;
-  border-color: black;
-  border-width: 0.5rem;
+ 
 }
 
 .logo a {

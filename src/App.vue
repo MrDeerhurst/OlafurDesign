@@ -24,7 +24,7 @@ import TheFooter from './components/TheFooter.vue'
       <ProcessSection />
       <PortfolioSection />
       <DifferentiatorsSection />
-      <TestimonialsSection />
+      
       <AboutSection />
       <ContactSection />
     </main>
@@ -171,6 +171,7 @@ button {
   color: var(--bg-white);
   padding: 14px 30px; /* Larger padding for better touch target */
   border: none;
+  
   border-radius: 8px; /* Slightly more rounded */
   cursor: pointer;
   font-size: 1.1rem; /* Slightly larger font */

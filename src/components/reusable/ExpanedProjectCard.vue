@@ -6,6 +6,7 @@
         :webm-src="singleProject.webmLink"
         :mp4-src="singleProject.mp4Link"
         :poster-src= "singleProject.image"
+        class = ""
       ></VideoAnimation>    
       
       <div class="cardText">
@@ -77,7 +78,7 @@ function prevCard() {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.cardText{
+.cardText{ 
   display: flex ;
   flex-direction: column;
   margin: 8px;

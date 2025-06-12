@@ -24,14 +24,10 @@ export default {
 
 <template>
   <section id="hero" class="hero-section">
-    <video autoplay muted loop playsinline class="video-background">
-      <!-- <source src="https://example.com/your-vr-ar-demo-video.mp4" type="video/mp4"> -->
-      
-    </video>
-    <img src="https://www.ptc.com/-/media/Images/blog/post/ar-blog/what-is-augmented-reality-Image4-900x450.jpg" alt="Immersive VR/AR Solutions" class="fallback-hero-image">
+    <img src="../assets/images/website_cover_image.png" alt="Immersive VR/AR Solutions" class="fallback-hero-image">
     <div class="hero-content">
       <h1>Transforming Ideas into Immersive VR/AR Experiences.</h1>
-      <p>Specializing in engaging, high-performance virtual and augmented reality applications for iOS and Android.</p>
+      <p>Specializing in engaging, high-performance virtual and augmented reality applications.</p>
       <div class="hero-ctas">
         <button class="cta-primary" @click="scrollToSection('portfolio')" >View My Portfolio</button>
         <button class="cta-secondary" @click="scrollToSection('services')"  >Learn More About My Services</button>
@@ -47,11 +43,12 @@ export default {
   min-height: 500px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   color: var(--bg-white); /* Ensure text is white */
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   padding: 20px;
+  
 }
 
 .video-background, .fallback-hero-image {
@@ -63,6 +60,7 @@ export default {
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.4); /* Slightly darker filter for better text contrast */
+  transition:  3s ease-in-out;
 }
 
 .hero-content {
@@ -85,7 +83,7 @@ export default {
   font-size: 1.4rem;
   margin-bottom: 40px;
   opacity: 0.9;
-  color: var(--bg-white); /* Ensure paragraph is white */
+  color: var(black); /* Ensure paragraph is white */
 }
 
 .hero-ctas {

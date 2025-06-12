@@ -7,7 +7,7 @@ import { projectsList } from "./contentFolder/Content"
   <section id="portfolio" class="portfolio-section">
     <div class="container">
       <h2>My Latest Work</h2>
-      <p class="section-intro">A showcase of some of the innovative projects that demonstrate my capabilities.</p>
+      <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
     </div>
   </section>

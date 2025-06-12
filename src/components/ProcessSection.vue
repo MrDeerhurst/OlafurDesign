@@ -3,7 +3,6 @@
     <div class="container">
       <h2>My Streamlined Development Process</h2>
       <p class="section-intro">My collaborative and transparent approach ensures your project's success.</p>
-
       <div class="process-steps">
         <div v-for="(step, index) in processSteps" :key="index" class="process-step">
           <div class="step-header" @click="toggleAccordion(index)">
@@ -28,12 +27,12 @@ export default {
   data() {
     return {
       processSteps: [
-        { title: 'Discovery & Strategy', description: 'We start by understanding your vision, target audience, and business objectives. This phase involves in-depth discussions to define project scope and technical requirements.' },
-        { title: 'Concept & Design', description: 'Next, we translate ideas into tangible concepts. This includes wireframing, prototyping, and creating a visual design that aligns with your brand identity and user experience goals.' },
-        { title: 'Development & Iteration', description: 'Our agile development process brings your concept to life. We work in sprints, constantly testing and iterating based on feedback to ensure a robust and high-quality solution.' },
+        { title: 'Discovery & Strategy', description: 'I start by understanding your vision, target audience, and business objectives. This phase involves in-depth discussions to define project scope and technical requirements.' },
+        { title: 'Concept & Design', description: 'Next, I translate ideas into tangible concepts. This includes wireframing, prototyping, and creating a visual design that aligns with your brand identity and user experience goals.' },
+        { title: 'Development & Iteration', description: 'My agile development process brings your concept to life. I work in sprints, constantly testing and iterating based on feedback to ensure a robust and high-quality solution.' },
         { title: 'Testing & Quality Assurance', description: 'Rigorous testing is performed to identify and fix any bugs, ensuring the application is stable, secure, and performs flawlessly across all target devices and environments.' },
-        { title: 'Deployment & Launch', description: 'We handle the deployment process, ensuring a smooth and successful launch of your VR/AR solution. We manage all technical aspects so you can focus on your business.' },
-        { title: 'Support & Evolution', description: 'Our commitment doesn’t end at launch. We provide ongoing support, maintenance, and analytics to monitor performance and identify opportunities for future enhancements and evolution.' }
+        { title: 'Deployment & Launch', description: 'I handle the deployment process, ensuring a smooth and successful launch of your VR/AR solution. I manage all technical aspects so you can focus on your business.' },
+        { title: 'Support & Evolution', description: 'My commitment doesn’t end at launch. I provide ongoing support, maintenance, and analytics to monitor performance and identify opportunities for future enhancements and evolution.' }
       ],
       activeAccordionIndex: null, // Tracks which accordion item is open. null means all are closed.
       isMobile: false // To conditionally apply accordion behavior

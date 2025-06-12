@@ -3,30 +3,36 @@
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
+import interactivity from '@/assets/images/interactive.png';
+import prototype from '@/assets/images/prototype.png';
+import customVR from '@/assets/images/Custom_VR.png';
+import organisation from '@/assets/images/organisation4.png';
+import UXUI from '@/assets/images/UIUX.png';
+ 
 
 const services = [
   {
-    icon: '💡', // Replace with actual SVG/font icon
-    title: 'Mobile Augmented Reality (AR) Development',
-    description: 'Custom AR app development for iOS (ARKit) & Android (ARCore), interactive marketing experiences, AR filters, product visualization, AR gaming, spatial computing.'
+    icon:customVR ,//'💡', // Replace with actual SVG/font icon
+    title: 'Immersive AR Experiences for Mobile & Beyond',
+    description: 'End-to-end AR app development for iOS (ARKit) & Android (ARCore). From immersive marketing filters to AR product demos and spatial computing interfaces.'
   },
   {
-    icon: '🌐',
-    title: 'Virtual Reality (VR) Development',
+    icon: organisation,//'🌐',
+    title: 'Custom VR Experiences',
     description: 'Immersive VR experiences for mobile or VR headsets for training simulations, virtual tours or educational content.'
   },
   {
-    icon: '✨',
+    icon: interactivity,//'✨',
     title: 'Interactive 3D Experiences',
-    description: 'Creating compelling 3D models, animations, and interactive scenes optimized for mobile VR/AR environments.'
+    description: 'Creating compelling 3D models, animations, and interactive scenes optimized for VR/AR environments.'
   },
   {
-    icon: '📐',
+    icon: prototype,//'📐',
     title: 'Prototyping & Concept Development',
     description: 'From ideation to interactive prototypes, helping clients visualize and validate their VR/AR concepts before full development.'
   },
   {
-    icon: '🎨',
+    icon: UXUI,//'🎨',
     title: 'UI/UX Design for Immersive Experiences',
     description: 'Designing intuitive and engaging user interfaces and experiences specifically tailored for VR and AR environments on mobile devices.'
   }
@@ -62,12 +68,16 @@ const breakpoints = {
     <div class="container">
       <h2>My VR/AR Services</h2>
       <p class="section-intro">Bringing your vision to life with specialized virtual and augmented reality solutions.</p>
-
       <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel" >
         <Slide v-for="(service, index) in services" :key="index">
           <div class="carousel__item">
             <div class="service-block">
-              <div class="service-icon" >{{ service.icon }}</div>
+              <img 
+                :src= service.icon  
+                class="service-icon">
+              </img>
+             
+              
               <h3 >{{ service.title }}</h3>
               <p class="fit-content-paragraph">{{ service.description }}</p>
             </div>
@@ -150,9 +160,12 @@ const breakpoints = {
 }
 
 .service-icon {
+  display: flex;
   font-size: 3.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   color: var(--secondary-teal);
+  width: 50%;
+
 }
 
 .service-block h3 {

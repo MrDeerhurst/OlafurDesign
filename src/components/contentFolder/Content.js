@@ -34,32 +34,11 @@ export const projectsList = [
       'Agile Product Development',
       'Sensor & Ergonomic Awareness'
     ],
-    technologies: ['ARKit', 'Unity', 'C#'],
+    technologies: ['ARKit', 'Unity', 'C#', "Mobile"],
     caseStudyLink: '#',
     isSmallScreen: false,
     webmLink: gearsWebm,
     mp4Link: gearsMp4
-  },
-  {
-    title: 'VR Industry Training Research',
-    short_description: 'A virtual reality experience for employee onboarding and safety training research.',
-    expandedPoints: [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    ,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],
-    image: "https://i.imgur.com/WEBm5LN.png",
-    gif: "https://i.imgur.com/zD0JDdV.gif",
-     skills: [
-      'User-Centered Design (UCD)',
-      'VR Interaction Design',
-      'Quantitative & Qualitative User Research',
-      'Agile Product Development',
-      'Sensor & Ergonomic Awareness'
-    ],
-    technologies: ['Unity', 'C#', 'Meta Quest SDK'],
-    caseStudyLink: '#',
-    isSmallScreen: false,
-    webmLink: trainingWebm,
-    mp4Link: trainingMp4
   },
   {
     title: '3D Bottom Trawl Simulation',
@@ -81,6 +60,27 @@ export const projectsList = [
     isSmallScreen: false,
     webmLink: trawlWebm,
     mp4Link: trawlMp4
+  },
+  {
+    title: 'VR Industry Training Research',
+    short_description: 'A virtual reality experience for employee onboarding and safety training research.',
+    expandedPoints: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    ,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],
+    image: "https://i.imgur.com/WEBm5LN.png",
+    gif: "https://i.imgur.com/zD0JDdV.gif",
+     skills: [
+      'User-Centered Design (UCD)',
+      'VR Interaction Design',
+      'Quantitative & Qualitative User Research',
+      'Agile Product Development',
+      'Sensor & Ergonomic Awareness'
+    ],
+    technologies: ['Unity', 'C#', 'Meta Quest SDK'],
+    caseStudyLink: '#',
+    isSmallScreen: false,
+    webmLink: trainingWebm,
+    mp4Link: trainingMp4
   }
 ];
 
