@@ -89,10 +89,9 @@ onBeforeUnmount(() => {
       <nav v-if="isMobileMenuOpen" class="mobile-nav-overlay">
         <ul>
           <li><a href="#services" @click="closeMobileMenu">Services</a></li>
+          <li><a href="#process" @click="closeMobileMenu">Process</a></li>
           <li><a href="#portfolio" @click="closeMobileMenu">Portfolio</a></li>
           <li><a href="#about" @click="closeMobileMenu">About</a></li>
-          
-          
           <li><button class="cta-button mobile-cta" @click="() => { closeMobileMenu(); scrollToSection('contact'); }">
                   Let’s Talk
               </button>
