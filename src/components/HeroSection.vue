@@ -48,6 +48,10 @@ export default {
   overflow: hidden;
   text-align: left;
   padding: 20px;
+ 
+  background-image: linear-gradient(0deg,#f8f9fa 0%, rgba(253, 187, 45, 0) 100%);
+  
+  
   
 }
 
@@ -59,9 +63,12 @@ export default {
   height: 110%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.4); /* Slightly darker filter for better text contrast */
+  /*filter: brightness(0.4);  Slightly darker filter for better text contrast */
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(0deg,rgba(255, 255, 255, 1) 10%, rgba(253, 187, 45, 0) 100%);
+  
   transition:  3s ease-in-out;
-}
+  }
 
 .hero-content {
   position: relative;
