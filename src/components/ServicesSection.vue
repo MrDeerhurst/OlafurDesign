@@ -6,7 +6,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import interactivity from '@/assets/images/interactive.png';
 import prototype from '@/assets/images/prototype.png';
 import customVR from '@/assets/images/Custom_VR.png';
-import organisation from '@/assets/images/organisation4.png';
+import organisation from '@/assets/images/organisation.png';
 import UXUI from '@/assets/images/UIUX.png';
  
 

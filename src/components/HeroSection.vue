@@ -46,7 +46,7 @@ export default {
   justify-content: center;
   color: var(--bg-white); /* Ensure text is white */
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   
 }
