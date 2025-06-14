@@ -6,20 +6,23 @@
         :webm-src="singleProject.webmLink"
         :mp4-src="singleProject.mp4Link"
         :poster-src= "singleProject.image"
-        class = ""
+       
       ></VideoAnimation>    
-      
-      <div class="cardText">
-        <h3 class="card-title">{{ singleProject.title }}</h3>
-        <p class="card-desc">{{ singleProject.short_description }}</p>
-        <div class="tech-tags">
-          <span v-for="(technologies, i) in singleProject.technologies" :key="i" class="tag">{{ technologies }}</span>
+      <div>
+        <div class="cardText">
+          <h3 class="card-title">{{ singleProject.title }}</h3>
+          <p class="card-desc">{{ singleProject.short_description }}</p>
+        </div>
+        <div class="CardTags">
+          <div class="tech-tags">
+            <span v-for="(technologies, i) in singleProject.technologies" :key="i" class="tag">{{ technologies }}</span>
+          </div>
         </div>
       </div>
-  </div>
-    
-</div>
 
+    </div>
+</div>
+ 
 </template>
 
 <script setup>
@@ -81,6 +84,7 @@ function prevCard() {
 .cardText{ 
   display: flex ;
   flex-direction: column;
+ 
   margin: 8px;
 }
 .card-title {
@@ -99,6 +103,7 @@ margin-inline: 4px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding-bottom: 1rem;
 }
 .tag {
   background: #e0f7fa;

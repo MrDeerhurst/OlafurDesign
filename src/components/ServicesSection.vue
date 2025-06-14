@@ -5,37 +5,37 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import interactivity from '@/assets/images/interactive.png';
 import prototype from '@/assets/images/prototype.png';
-import customVR from '@/assets/images/Custom_VR.png';
-import organisation from '@/assets/images/organisation.png';
+import arDevelopment from '@/assets/images/Custom_VR.png';
+import vrExperiences from '@/assets/images/organisation.png';
 import UXUI from '@/assets/images/UIUX.png';
  
-
 const services = [
-  {
-    icon:customVR ,//'💡', // Replace with actual SVG/font icon
-    title: 'Immersive AR Experiences for Mobile & Beyond',
-    description: 'End-to-end AR app development for iOS (ARKit) & Android (ARCore). From immersive marketing filters to AR product demos and spatial computing interfaces.'
+  { // AR development
+    icon:arDevelopment ,
+    title: 'Immersive AR Development',
+    description: 'Custom-built AR apps for iOS (ARKit) and Android (ARCore) from branded filters and product visualization to spatial interfaces and real-world overlays.'
   },
-  {
-    icon: organisation,//'🌐',
+  { // VR custom content
+    icon: vrExperiences,
     title: 'Custom VR Experiences',
-    description: 'Immersive VR experiences for mobile or VR headsets for training simulations, virtual tours or educational content.'
+    description: 'Create immersive VR simulations, educational content, and virtual tours for headsets and mobile platforms ideal for training, onboarding, or storytelling.'
   },
-  {
-    icon: interactivity,//'✨',
-    title: 'Interactive 3D Experiences',
-    description: 'Creating compelling 3D models, animations, and interactive scenes optimized for VR/AR environments.'
-  },
-  {
-    icon: prototype,//'📐',
-    title: 'Prototyping & Concept Development',
-    description: 'From ideation to interactive prototypes, helping clients visualize and validate their VR/AR concepts before full development.'
-  },
-  {
-    icon: UXUI,//'🎨',
+  { // UI/UX
+    icon: UXUI,
     title: 'UI/UX Design for Immersive Experiences',
-    description: 'Designing intuitive and engaging user interfaces and experiences specifically tailored for VR and AR environments on mobile devices.'
-  }
+    description: 'Designing intuitive and engaging user experiences for AR/VR environments, ensuring natural interactions and clear interface layouts across headsets and mobile.'
+  },
+  { // design and animation
+    icon: interactivity,
+    title: 'Interactive 3D Content',
+    description: 'Model, animate, and optimize 3D assets for immersive use bringing products, environments, and narratives to life across AR and VR platforms.'
+  },
+  { // AR/VR Concept Prototyping
+    icon: prototype,
+    title: 'AR/VR Concept Prototyping',
+    description: 'From napkin sketch to interactive prototype, I help you test, iterate, and refine immersive concepts before committing to full development.'
+  },
+  
 ];
 
 // Define breakpoints for responsive carousel behavior

@@ -11,6 +11,7 @@
       playsinline
       loading="lazy"
       @error="handleVideoError"
+      class="imageSize"
     >
       <source v-if="webmSrc" :src="webmSrc" type="video/webm">
       <source v-if="mp4Src" :src="mp4Src" type="video/mp4">
@@ -89,11 +90,16 @@ export default {
 </script>
 
 <style scoped>
+
+.imageSize {
+  display: flex ;
+  max-height: 18rem;
+}
 /* Scoped styles ensure these styles only apply to this component */
 .video-animation-wrapper {
   /* Add any wrapper styling here, e.g., to control max-width */
   width: 100%; /* Or set a specific max-width */
-  max-width: 600px; /* Example max-width */
+  max-width: 40rem; /* Example max-width */
   margin: 0 auto; /* Center if max-width is set */
 }
 
