@@ -3,33 +3,23 @@ import TheHeader from './components/TheHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import ProcessSection from './components/ProcessSection.vue'
-import PortfolioSection from './components/PortfolioSection.vue'
+import ProjectSection from './components/ProjectSection.vue'
 import DifferentiatorsSection from './components/DifferentiatorsSection.vue'
 import TestimonialsSection from './components/TestimonialsSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import TheFooter from './components/TheFooter.vue'
+import Portfolio from './components/Portfolio.vue'
+import Home from './views/Home.vue'
+
+
 
 </script>
 
 <template>
-  
-  
-    <TheHeader />
-    <main>
-      
-      <HeroSection />
-      <ServicesSection />
-      
-      <ProcessSection />
-      <PortfolioSection />
-      <DifferentiatorsSection />
-      
-      <AboutSection />
-      <ContactSection />
-    </main>
-    <TheFooter />
-  
+
+     <router-view />
+    
 </template>
 
 
@@ -126,7 +116,8 @@ h3 { font-size: 1.5rem; font-weight: 600;
 }
 h4 { font-size: 1.1rem; font-weight: 600;
      margin-top: 0;
-} 
+}
+
 
 
 @media (max-width: 1024px) {
@@ -134,14 +125,16 @@ h4 { font-size: 1.1rem; font-weight: 600;
   h2 { font-size: 2.4rem; }
   h3 { font-size: 1.9rem; }
   h4 { font-size: 1.3rem; }
+
 }
 
 @media (max-width: 768px) {
   h1 { font-size: 2.4rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.6rem; }
-  h4 { font-size: 0.9rem; }
-  body { line-height: 1.7; }
+  h4 { font-size: 1.0rem; }
+  h5 { font-size: 0.8rem; }
+  
 }
 
 @media (max-width: 480px) {
@@ -149,6 +142,7 @@ h4 { font-size: 1.1rem; font-weight: 600;
   h2 { font-size: 1.8rem; }
   h3 { font-size: 1.4rem; }
   h4 { font-size: 1.0rem; }
+  
   body { font-size: 0.95rem; line-height: 1.6; } /* Slightly smaller base font on tiny screens */
 }
 

@@ -15,7 +15,7 @@ export const projectsList = [
   {
     title: 'Mobile AR Gear Assembly Instructions',
     short_description:
-      'An augmented reality app for detecting an image in paper instructions and span an interactive assembly instructions.',
+      'An augmented reality app for deploying an 3D model onto a surface as a part of assembly instructions.',
     image: 'https://i.imgur.com/49MVi84.png',
     gif: "https://i.imgur.com/Ngn5g9V.gif",
     expandedPoints: [
@@ -42,7 +42,7 @@ export const projectsList = [
   },
   {
     title: '3D Bottom Trawl Simulation',
-    short_description: 'Simulation of a new type of bottom trawl that uses lasers instead of scraping the bottom for Optitog.',
+    short_description: 'Simulation of a new type of bottom fising trawl that uses lasers instead of metal rakes that scrape the bottom and destroy the ocean floor.',
     expandedPoints: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],
@@ -62,8 +62,8 @@ export const projectsList = [
     mp4Link: trawlMp4
   },
   {
-    title: 'VR Industry Training Research',
-    short_description: 'A virtual reality experience for employee onboarding and safety training research.',
+    title: 'VR Industry Training Master Theisis Research',
+    short_description: 'Led a comparative UX study of VR hand tracking vs. physical controllers in immersive training scenarios integrating user research, interface design, and interaction testing to inform better HMI decisions in high-stakes environments.',
     expandedPoints: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     ,'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],

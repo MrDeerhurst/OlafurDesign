@@ -1,6 +1,6 @@
 <script>
 
-import portfolio from './PortfolioSection.vue'; // Adjust path if needed
+import portfolio from './ProjectSection.vue'; // Adjust path if needed
 import services from './ServicesSection.vue';
 
 export default {

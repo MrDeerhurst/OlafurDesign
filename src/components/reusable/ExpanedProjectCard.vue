@@ -43,21 +43,6 @@ defineExpose({
 
 const activeCard = ref(null);
 
-function openCard(index) {
-  activeCard.value = index;
-}
-
-function closeCard() {
-  activeCard.value = null;
-}
-
-function nextCard() {
-  if (activeCard.value < props.projects.length - 1) activeCard.value++;
-}
-
-function prevCard() {
-  if (activeCard.value > 0) activeCard.value--;
-}
 </script>
 
 <style scoped>
