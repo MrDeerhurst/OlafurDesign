@@ -232,10 +232,11 @@ import ContactSection from './ContactSection.vue';
 .Ttag {
   background: #e0e3ff;
   color: #000679;
-  padding: 4px 8px;
+  padding: 3px 8px;
   border-radius: 4px;
   
 }
+
 .Stag {
   background: #e0f7fa;
   color: #016559;
@@ -255,7 +256,7 @@ import ContactSection from './ContactSection.vue';
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 1rem;
-  
+   
 }
 
 .tech-tags {
