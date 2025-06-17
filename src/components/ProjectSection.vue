@@ -2,48 +2,28 @@
 import expanedProjectCard from './reusable/ExpanedProjectCard.vue';
 import { projectsList } from "./contentFolder/Content"
 
-// Define props for this component
-const props = defineProps({
-  activeView: {
-    type: String,
-    required: true
-  }
-});
-
-// Define emits for this component
-const emit = defineEmits(['switch-view']);
-
-// Function to emit the event when the button is clicked
-const switchViewToPortfolio = () => {
-  emit('switch-view', 'portfolio');
-};
 </script>
 
 <template>
-  <section id="portfolio" class="portfolio-section">
+  <section id="projects" class="projects-section">
     <div class="container">
-        <h2>My Latest Work</h2>
-      <button v-if="activeView === 'projectSection'" @click="$emit('switch-view', 'portfolio')" class="switch-button">
-          View All Portfolio
-      </button>
-    </div>
+      <h2>My Latest Work</h2>
       <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
-    
-    
+    </div>
   </section>
 </template>
 
 <style scoped>
-.portfolio-grid {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
   margin-bottom: 40px;
 }
 
-.portfolio-item {
+.projects-item {
   background-color: var(--bg-white);
   border-radius: 10px;
   overflow: hidden;
@@ -52,7 +32,7 @@ const switchViewToPortfolio = () => {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-item:hover {
+.projects-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow on hover */
 }
@@ -121,42 +101,14 @@ const switchViewToPortfolio = () => {
   text-align: center;
 }
 
-.view-switcher {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  gap: 15px;
-}
 
-.view-switcher h2 {
-  font-size: 2.5em;
-  color: #00796b;
-  margin: 0;
-}
-
-.switch-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
-}
-
-.switch-button:hover {
-  background-color: #0056b3;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .portfolio-grid {
+  .projects-grid {
     gap: 20px;
   }
-  .portfolio-item {
+  .projects-item {
     min-width: 280px;
   }
   .item-content {
@@ -164,10 +116,10 @@ const switchViewToPortfolio = () => {
   }
 }
 @media (max-width: 480px) {
-  .portfolio-grid {
+  .projects-grid {
     grid-template-columns: 1fr;
   }
-  .portfolio-item {
+  .projects-item {
     width: 90%;
     max-width: 350px;
     margin: 0 auto;

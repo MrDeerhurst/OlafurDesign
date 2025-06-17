@@ -21,7 +21,7 @@ import PortfolioWrapper from '@/components/PortfolioWrapper.vue'
       <HeroSection />
       <ServicesSection />
       <ProcessSection />
-      <ProcessSection />
+      <ProjectSection />
       <DifferentiatorsSection />
       <AboutSection />
       <ContactSection />

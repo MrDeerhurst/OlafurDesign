@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#process">Process</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <!--<li><a href="#testimonials">Testimonials</a></li> -->
         </ul>
@@ -90,7 +90,7 @@ onBeforeUnmount(() => {
         <ul>
           <li><a href="#services" @click="closeMobileMenu">Services</a></li>
           <li><a href="#process" @click="closeMobileMenu">Process</a></li>
-          <li><a href="#portfolio" @click="closeMobileMenu">Portfolio</a></li>
+          <li><a href="#projects" @click="closeMobileMenu">Projects</a></li>
           <li><a href="#about" @click="closeMobileMenu">About</a></li>
           <li><button class="cta-button mobile-cta" @click="() => { closeMobileMenu(); scrollToSection('contact'); }">
                   Let’s Talk
