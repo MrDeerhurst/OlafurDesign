@@ -12,6 +12,7 @@ import TheFooter from '@/components/TheFooter.vue'
 import Portfolio from '@/components/Portfolio.vue'
 import PortfolioWrapper from '@/components/PortfolioWrapper.vue'
 
+
 </script>
 
 <template>
@@ -20,7 +21,7 @@ import PortfolioWrapper from '@/components/PortfolioWrapper.vue'
       <HeroSection />
       <ServicesSection />
       <ProcessSection />
-      <PortfolioWrapper />
+      <ProcessSection />
       <DifferentiatorsSection />
       <AboutSection />
       <ContactSection />
