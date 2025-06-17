@@ -10,7 +10,7 @@ import AboutSection from '@/components/AboutSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import Portfolio from '@/components/Portfolio.vue'
-import PortfolioWrapper from '@/components/PortfolioWrapper.vue'
+
 
 
 </script>

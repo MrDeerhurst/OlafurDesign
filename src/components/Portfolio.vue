@@ -2,10 +2,7 @@
   
     <div class="container">
       <div class="top_elements">
-      <h2 class="portfolio-title">My Projects</h2>
-      <button v-if="props.activeView === 'portfolio'" @click="switchViewToProjectSection" class="switch-button">
-        View Curated Projects
-      </button>
+      <h1 class="portfolio-title">My Projects</h1>
       </div>
       
       <div class="portfolio-grid">
@@ -49,21 +46,7 @@
 import {PorfolioProjectsList} from '@/components/contentFolder/PortfolioDetails'
 import { ref, computed, defineProps, defineEmits } from 'vue';
 
-// Define props for this component
-const props = defineProps({
-  activeView: {
-    type: String,
-    required: true
-  }
-});
-
-// Define emits for this component
-const emit = defineEmits(['switch-view']);
-
-// Reactive state for expand/collapse
-const expanded = ref(false);
-
-// Computed property for projects to show (expand/collapse logic)
+// Computed property for expand/collapse (from previous work)
 const projectsToShow = computed(() => {
   if (expanded.value) {
     return projects.value;
@@ -72,33 +55,17 @@ const projectsToShow = computed(() => {
 });
 
 
-// Function to emit the event when the button is clicked
-const switchViewToProjectSection = () => {
-  emit('switch-view', 'projectSection');
-};
-
 </script>
 
 <style scoped>
+
 
 .top_elements {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.heroSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 20rem;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  margin-top: 0rem;
 }
 
 .portfolio-container {
@@ -140,8 +107,7 @@ const switchViewToProjectSection = () => {
   display: flex;
   flex-direction: row-reverse;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100% ;
-  width: 100%;
+
 }
 
 .portfolio-card:hover {
@@ -390,6 +356,8 @@ const switchViewToProjectSection = () => {
 
   .card-content {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
   }
 
   .card-title {

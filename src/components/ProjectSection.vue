@@ -1,7 +1,22 @@
 <script setup>
+import { ref } from 'vue';
 import expanedProjectCard from './reusable/ExpanedProjectCard.vue';
-import { projectsList } from "./contentFolder/Content"
+import { projectsList } from "./contentFolder/Content";
+import FullScreenOverlay from './FullScreenOverlay.vue'; 
+import Portfolio from './Portfolio.vue';   
 
+// Reactive state to control the visibility of the overlay
+const showPortfolioOverlay = ref(false); // This line uses 'ref'
+
+// Function to open the overlay
+const openPortfolioOverlay = () => {
+  showPortfolioOverlay.value = true;
+};
+
+// Function to close the overlay (called by the overlay component)
+const closePortfolioOverlay = () => {
+  showPortfolioOverlay.value = false;
+};
 </script>
 
 <template>
@@ -11,13 +26,29 @@ import { projectsList } from "./contentFolder/Content"
       <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
     </div>
+    <p class="section-intro">If interested in more in detailed descriptions please </p>
+    <div class="porfolioLink" @click="openPortfolioOverlay"> click here </div>
+
+    <FullScreenOverlay :is-visible="showPortfolioOverlay" @close="closePortfolioOverlay" class="expanded">
+      <Portfolio class="expanded"  />
+    </FullScreenOverlay>
+
   </section>
 </template>
 
 <style scoped>
+.expanded {
+  text-align: left;
+}
+
+.porfolioLink {
+  color: rgb(32, 32, 255);
+  font-size: 1.2rem;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
   margin-bottom: 40px;
