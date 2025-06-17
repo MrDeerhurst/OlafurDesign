@@ -1,11 +1,11 @@
 <script setup>
-import myImage from '@/assets/images/Eg_one.png'
+
 </script>
 
 <template>
   <section id="about" class="about-section">
     <div class="container">
-      <!--<img class="profile_Image"  :src = myImage /> -->
+      
       <h2>About Me</h2>
       <p class="section-intro">My journey into VR/AR and my commitment to innovation.</p>
       <div class="about-content">
