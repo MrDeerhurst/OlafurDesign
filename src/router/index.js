@@ -1,28 +1,31 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import PortfolioPage from '@/views/PortfolioPage.vue';
-import Home from '@/views/Home.vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
+
+import Home from '../views/Home.vue'; // You'll create this or use your existing App.vue if it's simple
+import PortfolioPage from '../views/PortfolioPage.vue'; // The component we discussed earlier
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('@/views/Home.vue') // Example home page
+    path: '/', // The URL path for this route
+    name: 'Home', 
+    component: Home 
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
     component: PortfolioPage
   },
-  // ... other routes
+
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+  history: createWebHashHistory(), // Recommended history mode for clean URLs (e.g., www.mysite.com/portfolio)
+  routes, // Your defined routes
   scrollBehavior (to, from, savedPosition) {
     // Always scroll to top when navigating to a new route
+    // This is good for user experience, especially on mobile
     return { top: 0 }
   }
 });
 
+// 4. Export the router instance
 export default router;
