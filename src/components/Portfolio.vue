@@ -1,16 +1,13 @@
 <template>
   
-    <div class ='heroSection' >
-    
-      <h2 >Portfolio</h2> 
-      <h1>Ólafur</h1>
+    <div class="container">
+      <div class="top_elements">
+      <h2 class="portfolio-title">My Projects</h2>
+      <button v-if="props.activeView === 'portfolio'" @click="switchViewToProjectSection" class="switch-button">
+        View Curated Projects
+      </button>
+      </div>
       
-    </div>
-   
-
-    <AboutSection />
-    <div class="portfolio-container">
-      <h1 class="portfolio-title">My Projects</h1>
       <div class="portfolio-grid">
         <div v-for="(project, index) in PorfolioProjectsList" :key="index" class="portfolio-card">
           <div class="card-image-wrapper">
@@ -26,45 +23,71 @@
             <p class="subtext">{{ project.shortDescription }}</p>
             <div class="card-details">
               <p class ='subtext' > <strong class ="subtitleTitle">Task:</strong> {{ project.task }}</p>
-                 
               <div class ="subtitleTitle">Key Results:</div>
                 <ul>
                   <li v-for="(result, i) in project.keyResults" :key="i" class="subtext">{{ result }}</li>
                 </ul>
-              
                 <p class ='subtext'> <strong class ="subtitleTitle">My Role:</strong> {{ project.myRole }}</p>
-              
                 <div class ="subtitleTitle">Platform:
                 <div class="tech-tags">
                   <span v-for="(technologies, i) in project.technologies" :key="i" class="Ttag">{{ technologies }}</span>
                 </div>
               </div>
-              
               <div class ="subtitleTitle">Skills:
                 <div class="tech-tags">
                   <span v-for="(technologies, i) in project.skills" :key="i" class="Stag">{{ technologies }}</span>
                 </div>
               </div>
-            
-
             </div>
           </div>
           </div>
         </div>
       </div>
-      <ContactSection/>
- 
-  
 </template>
 
 <script setup>
 import {PorfolioProjectsList} from '@/components/contentFolder/PortfolioDetails'
-import AboutSection from './AboutSection.vue';
-import ContactSection from './ContactSection.vue';
+import { ref, computed, defineProps, defineEmits } from 'vue';
+
+// Define props for this component
+const props = defineProps({
+  activeView: {
+    type: String,
+    required: true
+  }
+});
+
+// Define emits for this component
+const emit = defineEmits(['switch-view']);
+
+// Reactive state for expand/collapse
+const expanded = ref(false);
+
+// Computed property for projects to show (expand/collapse logic)
+const projectsToShow = computed(() => {
+  if (expanded.value) {
+    return projects.value;
+  }
+  return projects.value.slice(0, 3);
+});
+
+
+// Function to emit the event when the button is clicked
+const switchViewToProjectSection = () => {
+  emit('switch-view', 'projectSection');
+};
 
 </script>
 
 <style scoped>
+
+.top_elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .heroSection {
   display: flex;
   flex-direction: column;
@@ -92,8 +115,13 @@ import ContactSection from './ContactSection.vue';
 }
 
 .portfolio-title {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 40px;
+  align-items: center;
+  margin-bottom: 2rem;
   font-size: 2.5em;
   color: #333;
 }
@@ -102,8 +130,6 @@ import ContactSection from './ContactSection.vue';
   display: flex;
   gap: 30px;
   flex-direction: column;
-
-
 }
 
 .portfolio-card {
@@ -124,12 +150,9 @@ import ContactSection from './ContactSection.vue';
 }
 
 .card-image-wrapper {
-  
   width:100%;
-  
   position: relative;
   overflow: hidden;
-  
 }
 
 .card-image,
@@ -197,11 +220,9 @@ import ContactSection from './ContactSection.vue';
 }
 
 .subtext {
-  
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: 1rem;
-    
 }
 
 .case-study-button {
@@ -234,7 +255,7 @@ import ContactSection from './ContactSection.vue';
   color: #000679;
   padding: 3px 8px;
   border-radius: 4px;
-  
+
 }
 
 .Stag {
@@ -243,6 +264,45 @@ import ContactSection from './ContactSection.vue';
   padding: 4px 8px;
   border-radius: 4px;
  
+}
+.project-section {
+  padding: 40px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.view-switcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.view-switcher h2 {
+  font-size: 2.5em;
+  color: #00796b;
+  margin: 0;
+}
+
+.switch-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    max-width: 16rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.switch-button:hover {
+  background-color: #0056b3;
 }
 
 
@@ -292,8 +352,9 @@ import ContactSection from './ContactSection.vue';
   }
 
   .portfolio-title {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 30px;
+
   }
 
   .card-title {
@@ -345,4 +406,7 @@ import ContactSection from './ContactSection.vue';
     font-size: 0.9em;
   }
 }
+
+
+
 </style>

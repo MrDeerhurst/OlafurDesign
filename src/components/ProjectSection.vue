@@ -1,15 +1,36 @@
 <script setup>
 import expanedProjectCard from './reusable/ExpanedProjectCard.vue';
 import { projectsList } from "./contentFolder/Content"
+
+// Define props for this component
+const props = defineProps({
+  activeView: {
+    type: String,
+    required: true
+  }
+});
+
+// Define emits for this component
+const emit = defineEmits(['switch-view']);
+
+// Function to emit the event when the button is clicked
+const switchViewToPortfolio = () => {
+  emit('switch-view', 'portfolio');
+};
 </script>
 
 <template>
   <section id="portfolio" class="portfolio-section">
     <div class="container">
-      <h2>My Latest Work</h2>
+        <h2>My Latest Work</h2>
+      <button v-if="activeView === 'projectSection'" @click="$emit('switch-view', 'portfolio')" class="switch-button">
+          View All Portfolio
+      </button>
+    </div>
       <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
-    </div>
+    
+    
   </section>
 </template>
 
@@ -93,6 +114,41 @@ import { projectsList } from "./contentFolder/Content"
 .view-case-study-button:hover {
   background-color: var(--primary-blue-dark);
   transform: translateY(-2px);
+}
+.project-section {
+  padding: 40px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.view-switcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.view-switcher h2 {
+  font-size: 2.5em;
+  color: #00796b;
+  margin: 0;
+}
+
+.switch-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.switch-button:hover {
+  background-color: #0056b3;
 }
 
 /* Responsive adjustments */
