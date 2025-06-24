@@ -29,7 +29,7 @@ export default {
       <h1>Transforming Ideas into Immersive VR/AR Experiences.</h1>
       <p>Specializing in engaging, high-performance virtual and augmented reality applications.</p>
       <div class="hero-ctas">
-        <button class="cta-primary" @click="scrollToSection('portfolio')" >View My Portfolio</button>
+        <button class="cta-primary" @click="scrollToSection('projects')" >View My Projects</button>
         <button class="cta-secondary" @click="scrollToSection('services')"  >Learn More About My Services</button>
       </div>
     </div>

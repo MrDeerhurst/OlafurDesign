@@ -27,7 +27,7 @@ export const PorfolioProjectsList = [
       'Agile Product Development',
       'Sensor & Ergonomic Awareness'
     ],
-    technologies: ['ARKit', 'Unity', 'C#', 'Mobile', 'Blender','AutoCAD' ],
+    technologies: ['ARKit', 'Unity', 'C#', 'Mobile', 'Blender 3D','AutoCAD' ],
     steps: ['','',''],
     expandedPoints: [
       ,'',
@@ -60,7 +60,7 @@ export const PorfolioProjectsList = [
       'Sensor & Ergonomic Awareness',
       'Cross-functional Collaboration'
     ],
-    technologies: ['Unity', 'C#', 'Blender','AutoCAD' ],
+    technologies: ['Unity', 'C#', 'Blender 3D','AutoCAD' ],
     caseStudyLink: '#',
     steps: ['','',''],
     expandedPoints: [
@@ -92,7 +92,7 @@ export const PorfolioProjectsList = [
     'Agile Prototyping',
     'Cross-functional Collaboration'
   ],
-  technologies: ['Oculus VR','VR', 'Figma','Unity', 'Blender','AutoCAD' ],
+  technologies: ['Oculus VR','VR', 'Figma','Unity', 'Blender 3D','AutoCAD' ],
   steps: [
     'Researched industrial training contexts and selected representative tasks for VR simulation.',
     'Designed and built two control systems: one using hand tracking, the other using physical controllers.',

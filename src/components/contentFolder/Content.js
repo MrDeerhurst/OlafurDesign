@@ -34,7 +34,7 @@ export const projectsList = [
       'Agile Product Development',
       'Sensor & Ergonomic Awareness'
     ],
-    technologies: ['ARKit', 'Unity', 'C#', "Mobile"],
+    technologies: ['ARKit', 'Unity', 'C#', 'Mobile', 'Blender 3D','AutoCAD' ],
     caseStudyLink: '#',
     isSmallScreen: false,
     webmLink: gearsWebm,
@@ -55,7 +55,7 @@ export const projectsList = [
       'Agile Product Development',
       'Sensor & Ergonomic Awareness'
     ],
-    technologies: ['Unity', 'C#'],
+    technologies: ['Unity', 'C#', 'Blender 3D','AutoCAD' ],
     caseStudyLink: '#',
     isSmallScreen: false,
     webmLink: trawlWebm,
@@ -76,7 +76,7 @@ export const projectsList = [
       'Agile Product Development',
       'Sensor & Ergonomic Awareness'
     ],
-    technologies: ['Unity', 'C#', 'Meta Quest SDK'],
+    technologies: ['Oculus VR','VR', 'Figma','Unity', 'Blender 3D','AutoCAD' ],
     caseStudyLink: '#',
     isSmallScreen: false,
     webmLink: trainingWebm,

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import expanedProjectCard from './reusable/ExpanedProjectCard.vue';
-import { projectsList } from "./contentFolder/Content";
+import { projectsList, } from "./contentFolder/Content";
 import FullScreenOverlay from './FullScreenOverlay.vue'; 
 import Portfolio from './Portfolio.vue';   
 
@@ -26,8 +26,11 @@ const closePortfolioOverlay = () => {
       <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
     </div>
-    <p class="section-intro">If interested in more in detailed descriptions please </p>
-    <div class="porfolioLink" @click="openPortfolioOverlay"> click here </div>
+    <p class="section-intro">If interested in expanded projects descriptions please </p>
+    <div class="section-intro">
+      <div class="porfolioLink" @click="openPortfolioOverlay"> click here </div>
+    </div>
+    
 
     <FullScreenOverlay :is-visible="showPortfolioOverlay" @close="closePortfolioOverlay" class="expanded">
       <Portfolio class="expanded"  />
@@ -42,8 +45,12 @@ const closePortfolioOverlay = () => {
 }
 
 .porfolioLink {
+  display: flex;
+  justify-content: center;
   color: rgb(32, 32, 255);
   font-size: 1.2rem;
+  width: 100%;
+  
 }
 
 .projects-grid {
