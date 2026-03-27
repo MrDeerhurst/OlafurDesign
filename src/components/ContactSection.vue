@@ -1,12 +1,11 @@
 <script setup>
-import { ref } from 'vue';
-import apiService from '../services/api';
-
+import { ref } from "vue";
+import apiService from "../services/api";
 
 const form = ref({
-  name: '',
-  email: '',
-  message: ''
+  name: "",
+  email: "",
+  message: "",
 });
 
 const submitForm = async () => {
@@ -15,23 +14,25 @@ const submitForm = async () => {
     // Call the service function to send the data
     const response = await apiService.submitContactForm(form.value);
 
-   // console.log('Backend response:', response.data);
+    // console.log('Backend response:', response.data);
 
     if (response.data.success) {
       alert(response.data.message);
       // Clear the form fields
-      form.value.name = '';
-      form.value.email = '';
-      form.value.message = '';
+      form.value.name = "";
+      form.value.email = "";
+      form.value.message = "";
     } else {
       alert(`Error: ${response.data.message}`);
     }
   } catch (error) {
-   // console.error('Error submitting form:', error);
+    // console.error('Error submitting form:', error);
     if (error.response) {
-      alert(`Failed to send message: ${error.response.data.message || 'An unexpected error occurred.'}`);
+      alert(
+        `Failed to send message: ${error.response.data.message || "An unexpected error occurred."}`,
+      );
     } else {
-      alert('Failed to send message. Please try again later.');
+      alert("Failed to send message. Please try again later.");
     }
   }
 };
@@ -41,34 +42,57 @@ const submitForm = async () => {
   <section id="contact" class="contact-section">
     <div class="container">
       <h2>Ready to Build Your Next Reality?</h2>
-      <p class="section-intro">Let's collaborate on your innovative VR/AR solutions.</p>
+      <p class="section-intro">
+        Let's collaborate on your innovative VR/AR solutions.
+      </p>
       <div class="contact-grid">
         <form @submit.prevent="submitForm" class="contact-form">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" v-model="form.name" required>
+            <input type="text" id="name" v-model="form.name" required />
           </div>
           <div class="form-group">
             <label for="email">Your Email</label>
-            <input type="email" id="email" v-model="form.email" required>
+            <input type="email" id="email" v-model="form.email" required />
           </div>
           <div class="form-group">
             <label for="message">Project Details / Message</label>
-            <textarea id="message" v-model="form.message" rows="6" required></textarea>
+            <textarea
+              id="message"
+              v-model="form.message"
+              rows="6"
+              required
+            ></textarea>
           </div>
           <button type="submit" class="cta-button">Send Message</button>
         </form>
         <div class="contact-info">
           <h3>Direct Contact</h3>
-          <p>✉️ Email: <a href="Design@olafur.design">design@olafur.design</a></p>
+          <p>
+            ✉️ Email: <a href="Design@olafur.design">design@olafur.design</a>
+          </p>
           <!-- <p>📱 Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p> -->
-          <p>📅 Schedule a call: <a href="https://calendly.com/design-olafur" target="_blank" rel="noopener noreferrer">Book Here</a></p>
+          <!-- <p>📅 Schedule a call: <a href="https://calendly.com/design-olafur" target="_blank" rel="noopener noreferrer">Book Here</a></p> -->
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/olafur-konrad/" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/in/olafur-konrad/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn</a
+            >
             <!-- <a href="https://behance.net/yourprofile" target="_blank" rel="noopener noreferrer">Behance</a> -->
-            <a href="https://bsky.app/profile/wolaf.bsky.social" target="_blank" rel="noopener noreferrer"> Bluesky</a>
+            <a
+              href="https://bsky.app/profile/wolaf.bsky.social"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bluesky</a
+            >
           </div>
-          <p class="location">Serving clients globally from Reykjavik, Iceland.</p>
+          <p class="location">
+            Serving clients globally from Reykjavik, Iceland.
+          </p>
         </div>
       </div>
     </div>
@@ -81,7 +105,7 @@ const submitForm = async () => {
   align-items: center;
   justify-content: center;
   padding: 0px;
-  font-size: 1.0rem;
+  font-size: 1rem;
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
@@ -90,7 +114,7 @@ const submitForm = async () => {
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-linkedin {
@@ -102,9 +126,6 @@ const submitForm = async () => {
   background: #007bb5;
   color: white;
 }
-
-
-
 
 .contact-grid {
   display: grid;
@@ -157,7 +178,9 @@ const submitForm = async () => {
   font-family: var(--font-body);
   color: var(--text-charcoal);
   box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
@@ -170,7 +193,6 @@ const submitForm = async () => {
 .form-group textarea {
   resize: vertical;
 }
-
 
 .contact-info h3 {
   font-family: var(--font-heading);

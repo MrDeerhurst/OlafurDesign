@@ -10,33 +10,33 @@ import vrExperiences from '@/assets/images/organisation.png';
 import UXUI from '@/assets/images/UIUX.png';
  
 const services = [
-  { // Object/Image detection
+  { // AR development
     icon:arDevelopment ,
-    stepTitle: "Step One",
-    title: 'Object or Image detection', 
-    description: 'Camera starts with quickly identifying and locating a machine object it sees. After which it can provide a user interface and 3D object information overlay'
+    title: 'Immersive AR Development',
+    description: 'Custom-built AR apps for iOS (ARKit) and Android (ARCore) from branded filters and product visualization to spatial interfaces and real-world overlays.'
   },
-  { // Connects 
+  { // VR custom content
+    icon: vrExperiences,
+    title: 'Custom VR Experiences',
+    description: 'Create immersive VR simulations, educational content, and virtual tours for headsets and mobile platforms ideal for training, onboarding, or storytelling.'
+  },
+  { // UI/UX
     icon: UXUI,
-    stepTitle: "Step Two",
-    title: 'Connects documentation to real world item ',
-    description: 'Retrieves text, video and CAD models and ties them to the real world item.'
+    title: 'UI/UX Design for Immersive Experiences',
+    description: 'Designing intuitive and engaging user experiences for AR/VR environments, ensuring natural interactions and clear interface layouts across headsets and mobile.'
   },
-    { // design and animation
+  { // design and animation
     icon: interactivity,
-    stepTitle: "Step Three",
     title: 'Interactive 3D Content',
-    description: 'Users can then interact and navigate information and processes that improve immersion and training quality.'
+    description: 'Model, animate, and optimize 3D assets for immersive use bringing products, environments, and narratives to life across AR and VR platforms.'
   },
   { // AR/VR Concept Prototyping
-    icon: vrExperiences,
-    stepTitle: "Step Four",
-    title: 'Complex process training',
-    description: 'Allows for detailed process training, such as step by step walkthrough for setup, maintenance and error analysis.'
-  }
+    icon: prototype,
+    title: 'AR/VR Concept Prototyping',
+    description: 'From napkin sketch to interactive prototype, I help you test, iterate, and refine immersive concepts before committing to full development.'
+  },
   
 ];
-
 
 // Define breakpoints for responsive carousel behavior
 const breakpoints = {
@@ -66,14 +66,12 @@ const breakpoints = {
 <template>
   <section id="services">
     <div class="container">
-      <h2>How does it work?</h2>
-      <p class="section-intro">How do our virtual and augmented reality services work?</p>
+      <h2>VR/AR Services</h2>
+      <p class="section-intro">Bringing your vision to life with specialized virtual and augmented reality solutions.</p>
       <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel" >
         <Slide v-for="(service, index) in services" :key="index">
           <div class="carousel__item">
             <div class="service-block">
-              <dev class ="serviec-subtitle">{{ service.stepTitle }}</dev>
-            
               <img 
                 :src= service.icon  
                 class="service-icon">
@@ -81,7 +79,6 @@ const breakpoints = {
              
               
               <h3 >{{ service.title }}</h3>
-              
               <p class="fit-content-paragraph">{{ service.description }}</p>
             </div>
           </div>
@@ -169,10 +166,6 @@ const breakpoints = {
   color: var(--secondary-teal);
   width: 50%;
 
-}
-.serviec-subtitle {
-  font-weight: bold;
-  font-size: 1.0rem;
 }
 
 .service-block h3 {

@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from 'vue';
-import expanedProjectCard from './reusable/ExpanedProjectCard.vue';
-import { projectsList, } from "./contentFolder/Content";
-import FullScreenOverlay from './FullScreenOverlay.vue'; 
-import Portfolio from './Portfolio.vue';   
+import { ref } from "vue";
+import expanedProjectCard from "./reusable/ExpanedProjectCard.vue";
+import { projectsList } from "./contentFolder/Content";
+import FullScreenOverlay from "./FullScreenOverlay.vue";
+import Portfolio from "./Portfolio.vue";
 
 // Reactive state to control the visibility of the overlay
 const showPortfolioOverlay = ref(false); // This line uses 'ref'
@@ -22,20 +22,24 @@ const closePortfolioOverlay = () => {
 <template>
   <section id="projects" class="projects-section">
     <div class="container">
-      <h2>My Latest Work</h2>
+      <h2>Selected Previous Projects</h2>
       <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
     </div>
-    <p class="section-intro">If interested in expanded projects descriptions please </p>
+    <p class="section-intro">
+      If interested in expanded projects descriptions please
+    </p>
     <div class="section-intro">
-      <div class="porfolioLink" @click="openPortfolioOverlay"> click here </div>
+      <div class="porfolioLink" @click="openPortfolioOverlay">click here</div>
     </div>
-    
 
-    <FullScreenOverlay :is-visible="showPortfolioOverlay" @close="closePortfolioOverlay" class="expanded">
-      <Portfolio class="expanded"  />
+    <FullScreenOverlay
+      :is-visible="showPortfolioOverlay"
+      @close="closePortfolioOverlay"
+      class="expanded"
+    >
+      <Portfolio class="expanded" />
     </FullScreenOverlay>
-
   </section>
 </template>
 
@@ -50,7 +54,6 @@ const closePortfolioOverlay = () => {
   color: rgb(32, 32, 255);
   font-size: 1.2rem;
   width: 100%;
-  
 }
 
 .projects-grid {
@@ -67,14 +70,15 @@ const closePortfolioOverlay = () => {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .projects-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow on hover */
 }
-
 
 .item-content {
   padding: 25px;
@@ -104,7 +108,7 @@ const closePortfolioOverlay = () => {
 }
 
 .tech-tag {
-  background-color: #E0F7FA; /* Lighter variant of teal/aqua */
+  background-color: #e0f7fa; /* Lighter variant of teal/aqua */
   color: var(--secondary-teal); /* Use secondary accent */
   padding: 5px 10px;
   border-radius: 5px;
@@ -123,7 +127,9 @@ const closePortfolioOverlay = () => {
   cursor: pointer;
   font-size: 0.95rem; /* Slightly larger font */
   font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   width: 100%;
   text-align: center;
   box-sizing: border-box;
@@ -138,8 +144,6 @@ const closePortfolioOverlay = () => {
   background-color: #e0f7fa;
   text-align: center;
 }
-
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -162,6 +166,5 @@ const closePortfolioOverlay = () => {
     max-width: 350px;
     margin: 0 auto;
   }
-  
 }
 </style>

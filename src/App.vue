@@ -1,54 +1,49 @@
 <script setup>
-import TheHeader from './components/TheHeader.vue'
-import HeroSection from './components/HeroSection.vue'
-import ServicesSection from './components/ServicesSection.vue'
-import ProcessSection from './components/ProcessSection.vue'
-import ProjectSection from './components/ProjectSection.vue'
-import DifferentiatorsSection from './components/DifferentiatorsSection.vue'
-import TestimonialsSection from './components/TestimonialsSection.vue'
-import AboutSection from './components/AboutSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import TheFooter from './components/TheFooter.vue'
-import Portfolio from './components/Portfolio.vue'
-import Home from './views/Home.vue'
-
-
-
+import TheHeader from "./components/TheHeader.vue";
+import HeroSection from "./components/HeroSection.vue";
+import ServicesSection from "./components/ServicesSection.vue";
+import ProcessSection from "./components/ProcessSection.vue";
+import ProjectSection from "./components/ProjectSection.vue";
+import DifferentiatorsSection from "./components/DifferentiatorsSection.vue";
+import TestimonialsSection from "./components/TestimonialsSection.vue";
+import AboutSection from "./components/AboutSection.vue";
+import ContactSection from "./components/ContactSection.vue";
+import TheFooter from "./components/TheFooter.vue";
+import Portfolio from "./components/Portfolio.vue";
+import Home from "./views/Home.vue";
 </script>
 
 <template>
-
-     <router-view />
-    
+  <router-view />
 </template>
-
-
 
 <style>
 /* ------------------------------------ */
 /* Global CSS Variables (Color Palette) */
 /* ------------------------------------ */
 :root {
-  --primary-blue: #2C64FF;
-  --primary-blue-dark: #004FDE;
-  --secondary-teal: #00D0B4; /* New accent color */
+  --primary-blue: #2c64ff;
+  --primary-blue-dark: #004fde;
+  --secondary-teal: #00d0b4; /* New accent color */
 
-  --bg-light-gray: #F8F9FA;
-  --bg-white: #FFFFFF;
+  --bg-light-gray: #f8f9fa;
+  --bg-white: #ffffff;
 
-  --text-charcoal: #343A40;
-  --text-medium-gray: #6C757D;
-  --border-light-gray: #DEE2E6;
+  --text-charcoal: #343a40;
+  --text-medium-gray: #6c757d;
+  --border-light-gray: #dee2e6;
 
   /* Fonts */
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 /* ------------------------------------ */
 /* Basic Global Resets & Styles */
 /* ------------------------------------ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -97,53 +92,89 @@ section {
 /* ------------------------------------ */
 /* Global Typography */
 /* ------------------------------------ */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   color: var(--text-charcoal);
   line-height: 1.2;
-  
+
   margin-bottom: 20px; /* Consistent margin */
 }
 
-h1 { font-size: 3.5rem; font-weight: 700; 
-     margin-top: 0;
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 0;
 }
-h2 { font-size: 2.8rem; font-weight: 700;
-     margin-top: 4rem; /* for navigation scroll to show the top of the content*/
+h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 2rem; /* for navigation scroll to show the top of the content*/
 }
-h3 { font-size: 1.5rem; font-weight: 600;
-      margin-top: 0;
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
 }
-h4 { font-size: 1.1rem; font-weight: 600;
-     margin-top: 0;
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0;
 }
-
-
 
 @media (max-width: 1024px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2.4rem; }
-  h3 { font-size: 1.9rem; }
-  h4 { font-size: 1.3rem; }
-
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.6rem; }
-  h4 { font-size: 1.0rem; }
-  h5 { font-size: 0.8rem; }
-  
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.4rem; }
-  h4 { font-size: 1.0rem; }
-  
-  body { font-size: 0.95rem; line-height: 1.6; } /* Slightly smaller base font on tiny screens */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  } /* Slightly smaller base font on tiny screens */
 }
 
 /* ------------------------------------ */
@@ -165,12 +196,15 @@ button {
   color: var(--bg-white);
   padding: 14px 30px; /* Larger padding for better touch target */
   border: none;
-  
+
   border-radius: 8px; /* Slightly more rounded */
   cursor: pointer;
   font-size: 1.1rem; /* Slightly larger font */
   font-weight: 600; /* Bolder text */
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
   /* min-width: 160px;  Ensure buttons are tappable */
   /* min-height: 50px; /* Google's recommended touch target size */
   box-shadow: 0 4px 12px rgba(44, 100, 255, 0.2); /* Subtle shadow */
@@ -216,11 +250,12 @@ button:hover {
 @media (max-width: 768px) {
   .section-intro {
     font-size: 1.1rem;
-}}
+  }
+}
 @media (max-width: 480px) {
   .section-intro {
     font-size: 1rem;
     margin-bottom: 30px;
   }
-} 
+}
 </style>

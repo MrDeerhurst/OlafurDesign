@@ -1,23 +1,34 @@
 <template>
   <section id="process" class="process-section">
     <div class="container">
-      <h2>My Streamlined Development Process</h2>
-      <p class="section-intro">My collaborative and transparent approach ensures your project's success.</p>
+      <h2>Product Impact Examples</h2>
+      <p class="section-intro">
+        Just few of the general ways how this product can improve your busness.
+      </p>
       <div class="process-steps">
-        <div v-for="(step, index) in processSteps" :key="index" class="process-step">
+        <div
+          v-for="(step, index) in processSteps"
+          :key="index"
+          class="process-step"
+        >
           <div class="step-header" @click="toggleAccordion(index)">
-            <div class="step-number">{{ index + 1 }}</div>
+            <div class="step-number">{{ step.icon }}</div>
             <h3>{{ step.title }}</h3>
-            <span class="accordion-icon" :class="{ 'rotate': activeAccordionIndex === index }">&#9660;</span>
+            <span
+              class="accordion-icon"
+              :class="{ rotate: activeAccordionIndex === index }"
+              >&#9660;</span
+            >
           </div>
 
-          <div class="step-content" :class="{ 'active-mobile': activeAccordionIndex === index }">
+          <div
+            class="step-content"
+            :class="{ 'active-mobile': activeAccordionIndex === index }"
+          >
             <p>{{ step.description }}</p>
           </div>
         </div>
       </div>
-
-      <p class="benefit-statement">This systematic process leads to successful, high-impact VR/AR solutions.</p>
     </div>
   </section>
 </template>
@@ -27,21 +38,60 @@ export default {
   data() {
     return {
       processSteps: [
-        { title: 'Discovery & Strategy', description: 'I start by understanding your vision, target audience, and business objectives. This phase involves in-depth discussions to define project scope and technical requirements.' },
+        {
+          icon: "🔧",
+          title: "Field Service Technician Support",
+          description:
+            "Color-coded AR lines trace exact cable routes and connection points on complex panels, reducing human error and cutting repair time significantly compared to reading schematics.",
+        },
+        {
+          icon: "📦",
+          title: "Warehouses and Logistics",
+          description:
+            "Workers us AR mobile app that project the optimal walking route through the warehouse and highlight the exact shelf and bin to pick from, reducing pick errors and training time for new staff.",
+        },
+        {
+          icon: "🏭",
+          title: "Industrial Training of the Workforce",
+          description:
+            "AR Step-by-Step Procedure Training, Trainees follow AR-guided overlays on real machines that walk them through procedures step by step, only advancing when each step is correctly completed, reinforcing muscle memory.",
+        },
+        {
+          icon: "🔍",
+          title: "Equipment Inspection and Maintenance",
+          description:
+            "Before entering a hazardous area, inspectors walk through a VR replica of the facility to plan their inspection route, identify risk zones, and review previous inspection findings spatially.",
+        },
+        {
+          icon: "⚙️",
+          title: "Equipment Installation",
+          description:
+            "AR Alignment Guidance: During installation, AR projects exact positioning markers, bolt hole locations, and alignment guides onto the floor or mounting surface, eliminating measurement errors on heavy or complex equipment.",
+        },
+        {
+          icon: "🚨",
+          title: "Real-time Troubleshooting",
+          description:
+            "AR device walk the technician through a live fault tree overlaid on the actual equipment ,  each step dynamically updating based on what the technician observes and confirms.",
+        },
+        /*,{ title: 'Discovery & Strategy', description: 'I start by understanding your vision, target audience, and business objectives. This phase involves in-depth discussions to define project scope and technical requirements.' },
         { title: 'Concept & Design', description: 'Next, I translate ideas into tangible concepts. This includes wireframing, prototyping, and creating a visual design that aligns with your brand identity and user experience goals.' },
         { title: 'Development & Iteration', description: 'My agile development process brings your concept to life. I work in sprints, constantly testing and iterating based on feedback to ensure a robust and high-quality solution.' },
         { title: 'Testing & Quality Assurance', description: 'Rigorous testing is performed to identify and fix any bugs, ensuring the application is stable, secure, and performs flawlessly across all target devices and environments.' },
         { title: 'Deployment & Launch', description: 'I handle the deployment process, ensuring a smooth and successful launch of your VR/AR solution. I manage all technical aspects so you can focus on your business.' },
         { title: 'Support & Evolution', description: 'My commitment doesn’t end at launch. I provide ongoing support, maintenance, and analytics to monitor performance and identify opportunities for future enhancements and evolution.' }
+      */
       ],
       activeAccordionIndex: null, // Tracks which accordion item is open. null means all are closed.
-      isMobile: false // To conditionally apply accordion behavior
+      isMobile: false, // To conditionally apply accordion behavior
     };
   },
   methods: {
     toggleAccordion(index) {
-      if (this.isMobile) { // Only allow toggling if on mobile screen size
-        this.activeAccordionIndex = this.activeAccordionIndex === index ? null : index;
+      if (this.isMobile) {
+        // Only allow toggling if on mobile screen size
+        this.activeAccordionIndex =
+          this.activeAccordionIndex === index ? null : index;
       }
     },
     // Method to check screen size and update isMobile
@@ -53,18 +103,18 @@ export default {
       if (!this.isMobile) {
         this.activeAccordionIndex = null;
       }
-    }
+    },
   },
   mounted() {
     // Initial check on mount
     this.checkScreenSize();
     // Listen for window resize events to update isMobile
-    window.addEventListener('resize', this.checkScreenSize);
+    window.addEventListener("resize", this.checkScreenSize);
   },
   beforeUnmount() {
     // Clean up the event listener when the component is destroyed
-    window.removeEventListener('resize', this.checkScreenSize);
-  }
+    window.removeEventListener("resize", this.checkScreenSize);
+  },
 };
 </script>
 
@@ -88,7 +138,8 @@ h2 {
   color: #333;
 }
 
-.section-intro, .benefit-statement {
+.section-intro,
+.benefit-statement {
   font-size: 1.1em;
   color: #666;
   max-width: 800px;
@@ -120,24 +171,25 @@ h2 {
 .step-header {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .step-number {
-  background-color: var(--primary-blue); /* Accent color */
+  background-color: var(--primary-blue);
   color: var(--bg-white);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 1.8em;
   font-weight: bold;
-  margin-right: 15px; 
+  margin-right: 15px;
   flex-shrink: 0;
-  box-shadow: 0 0 0 5px var(--bg-white), 0 0 0 7px var(--primary-blue);
- 
+  box-shadow:
+    0 0 0 5px var(--bg-white),
+    0 0 0 7px var(--primary-blue);
 }
 
 .process-step h3 {
@@ -146,7 +198,6 @@ h2 {
   color: var(--text-charcoal);
   margin: 0;
   flex-grow: 1;
-
 }
 
 .process-step p {
@@ -169,7 +220,8 @@ h2 {
 }
 
 /* --- Media Queries for Mobile Accordion Behavior --- */
-@media (max-width: 768px) { /* Adjust this breakpoint as needed for your definition of mobile */
+@media (max-width: 768px) {
+  /* Adjust this breakpoint as needed for your definition of mobile */
   .process-steps {
     flex-direction: column; /* Stack cards vertically */
     gap: 10px;
@@ -201,11 +253,14 @@ h2 {
     max-height: 0;
     overflow: hidden;
     padding-bottom: 0; /* No padding when collapsed */
-    transition: max-height 0.3s ease-out, padding-bottom 0.3s ease-out; /* Smooth transition */
+    transition:
+      max-height 0.3s ease-out,
+      padding-bottom 0.3s ease-out; /* Smooth transition */
     display: block; /* Ensure it's a block element so max-height works */
   }
 
-  .step-content.active-mobile { /* Use this class only for mobile active state */
+  .step-content.active-mobile {
+    /* Use this class only for mobile active state */
     max-height: 300px; /* Sufficient height to show content when active */
     padding-bottom: 15px; /* Add some padding when open */
   }

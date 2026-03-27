@@ -1,27 +1,42 @@
 <template>
   <section id="differentiators" class="differentiators-section">
     <div class="container">
-      <h2>Why Partner With Me?</h2>
-      <p class="section-intro">Unlock new possibilities for your business with my specialized expertise.</p>
+      <h2>Examplers of XR(VR and AR) solutions in Industrial contexts</h2>
+      <p class="section-intro">
+        Unlock new possibilities for your business with my specialized
+        expertise.
+      </p>
       <div class="differentiators-grid">
         <div class="differentiator-item">
           <h3>Deep VR/AR Specialization</h3>
-          <p>My entire focus is on creating exceptional virtual and augmented reality experiences optimized for mobile or VR/AR devices.</p>
+          <p>
+            My entire focus is on creating exceptional virtual and augmented
+            reality experiences optimized for mobile or VR/AR devices.
+          </p>
         </div>
         <div class="differentiator-item">
           <h3>Performance & Optimization</h3>
-          <p>I prioritize delivering smooth, high-performing applications that work flawlessly across a range of mobile, desktop or VR/AR hardware.</p>
+          <p>
+            I prioritize delivering smooth, high-performing applications that
+            work flawlessly across a range of mobile, desktop or VR/AR hardware.
+          </p>
         </div>
         <div class="differentiator-item">
           <h3>User-Centric Design</h3>
-          <p>Every solution is crafted with intuitive UI/UX, ensuring engaging and accessible experiences for end-users.</p>
+          <p>
+            Every solution is crafted with intuitive UI/UX, ensuring engaging
+            and accessible experiences for end-users.
+          </p>
         </div>
         <div class="differentiator-item">
           <h3>Collaborative & Transparent</h3>
-          <p>I believe in close communication and partnership throughout the entire development lifecycle.</p>
+          <p>
+            I believe in close communication and partnership throughout the
+            entire development lifecycle.
+          </p>
         </div>
       </div>
-      </div>
+    </div>
   </section>
 </template>
 
@@ -43,7 +58,9 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .differentiator-item:hover {

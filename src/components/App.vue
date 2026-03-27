@@ -1,15 +1,14 @@
 <script setup>
-import TheHeader from './components/TheHeader.vue'
-import HeroSection from './components/HeroSection.vue'
-import ServicesSection from './components/ServicesSection.vue'
-import ProcessSection from './components/ProcessSection.vue'
-import PortfolioSection from './components/PortfolioSection.vue'
-import DifferentiatorsSection from './components/DifferentiatorsSection.vue'
-import TestimonialsSection from './components/TestimonialsSection.vue'
-import AboutSection from './components/AboutSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import TheFooter from './components/TheFooter.vue'
-
+import TheHeader from "./components/TheHeader.vue";
+import HeroSection from "./components/HeroSection.vue";
+import ServicesSection from "./components/ServicesSection.vue";
+import ProcessSection from "./components/ProcessSection.vue";
+import PortfolioSection from "./components/PortfolioSection.vue";
+import DifferentiatorsSection from "./components/DifferentiatorsSection.vue";
+import TestimonialsSection from "./components/TestimonialsSection.vue";
+import AboutSection from "./components/AboutSection.vue";
+import ContactSection from "./components/ContactSection.vue";
+import TheFooter from "./components/TheFooter.vue";
 </script>
 
 <template>
@@ -18,7 +17,7 @@ import TheFooter from './components/TheFooter.vue'
     <main>
       <HeroSection />
       <ServicesSection />
-      
+
       <ProcessSection />
       <PortfolioSection />
       <DifferentiatorsSection />
@@ -35,26 +34,28 @@ import TheFooter from './components/TheFooter.vue'
 /* Global CSS Variables (Color Palette) */
 /* ------------------------------------ */
 :root {
-  --primary-blue: #2C64FF;
-  --primary-blue-dark: #004FDE;
-  --secondary-teal: #00D0B4; /* New accent color */
+  --primary-blue: #2c64ff;
+  --primary-blue-dark: #004fde;
+  --secondary-teal: #00d0b4; /* New accent color */
 
-  --bg-light-gray: #F8F9FA;
-  --bg-white: #FFFFFF;
+  --bg-light-gray: #f8f9fa;
+  --bg-white: #ffffff;
 
-  --text-charcoal: #343A40;
-  --text-medium-gray: #6C757D;
-  --border-light-gray: #DEE2E6;
+  --text-charcoal: #343a40;
+  --text-medium-gray: #6c757d;
+  --border-light-gray: #dee2e6;
 
   /* Fonts */
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 /* ------------------------------------ */
 /* Basic Global Resets & Styles */
 /* ------------------------------------ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -103,7 +104,9 @@ section {
 /* ------------------------------------ */
 /* Global Typography */
 /* ------------------------------------ */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
   color: var(--text-charcoal);
   line-height: 1.2;
@@ -111,28 +114,60 @@ h1, h2, h3 {
   margin-bottom: 20px; /* Consistent margin */
 }
 
-h1 { font-size: 3.5rem; font-weight: 700; }
-h2 { font-size: 2.8rem; font-weight: 700; }
-h3 { font-size: 1.5rem; font-weight: 600; }
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
 @media (max-width: 1024px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2.4rem; }
-  h3 { font-size: 1.7rem; }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.5rem; }
-  body { line-height: 1.7; }
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  body {
+    line-height: 1.7;
+  }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.4rem; }
-  body { font-size: 0.95rem; line-height: 1.6; } /* Slightly smaller base font on tiny screens */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  } /* Slightly smaller base font on tiny screens */
 }
 
 /* ------------------------------------ */
@@ -158,7 +193,10 @@ button {
   cursor: pointer;
   font-size: 1.1rem; /* Slightly larger font */
   font-weight: 600; /* Bolder text */
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
   /* min-width: 160px;  Ensure buttons are tappable */
   /* min-height: 50px; /* Google's recommended touch target size */
   box-shadow: 0 4px 12px rgba(44, 100, 255, 0.2); /* Subtle shadow */
