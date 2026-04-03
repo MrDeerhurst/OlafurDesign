@@ -40,6 +40,11 @@ const submitForm = async () => {
 
 <template>
   <section id="contact" class="contact-section">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Contact</span>
+      <span class="eyebrow-line"></span>
+    </div>
     <div class="container">
       <h2 class="Announcer">Ready for the next step?</h2>
       <p class="section-intro">
@@ -100,6 +105,28 @@ const submitForm = async () => {
 </template>
 
 <style scoped>
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.eyebrow-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: #989898;
+  opacity: 0.6;
+}
+.eyebrow-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #989898;
+}
+
 .Announcer {
   font-family: "Playfair Display", "Georgia", serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
