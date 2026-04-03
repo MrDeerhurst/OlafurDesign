@@ -1,47 +1,51 @@
 <template>
-  <section id="Impact" class="process-section">
+  <section id="Impact" class="process-section" aria-hidden="false">
     <div class="eyebrow">
       <span class="eyebrow-line"></span>
       <span class="eyebrow-text">Impact</span>
       <span class="eyebrow-line"></span>
     </div>
     <div class="container">
-      <h2 class="Announcer">Services Impact Examples</h2>
-      <p class="section-intro">
-        Just few of the general ways how this service can create value, only
-        requiring a mobile phone.
-      </p>
-      <div class="process-steps">
-        <div
-          v-for="(step, index) in processSteps"
-          :key="index"
-          class="process-step"
-        >
-          <div class="step-header" @click="toggleAccordion(index)">
-            <div class="step-number">{{ step.icon }}</div>
-            <h3>{{ step.title }}</h3>
-            <span
-              class="accordion-icon"
-              :class="{ rotate: activeAccordionIndex === index }"
-              >&#9660;</span
-            >
-          </div>
-
+      <div class="block" :class="{ visible: el1Visible }" ref="el1">
+        <h2 class="Announcer">Services Impact Examples</h2>
+        <p class="section-intro">
+          Just few of the general ways how this service can create value, only
+          requiring a mobile phone.
+        </p>
+      </div>
+      <div class="block" :class="{ visible: el2Visible }" ref="el2">
+        <div class="process-steps">
           <div
-            class="step-content"
-            :class="{ 'active-mobile': activeAccordionIndex === index }"
+            v-for="(step, index) in processSteps"
+            :key="index"
+            class="process-step"
           >
-            <div class="sub-container">
-              <ImageRotator
-                class="exampleImages"
-                :images="step.images"
-                :interval="4000"
-                :transition-duration="step.durnation"
-                :transitions="step.transt"
-                aspect-ratio="6/10"
-              />
-              <div class="step-textbox">
-                <p>{{ step.description }}</p>
+            <div class="step-header" @click="toggleAccordion(index)">
+              <div class="step-number">{{ step.icon }}</div>
+              <h3>{{ step.title }}</h3>
+              <span
+                class="accordion-icon"
+                :class="{ rotate: activeAccordionIndex === index }"
+                >&#9660;</span
+              >
+            </div>
+
+            <div
+              class="step-content"
+              :class="{ 'active-mobile': activeAccordionIndex === index }"
+            >
+              <div class="sub-container">
+                <ImageRotator
+                  class="exampleImages"
+                  :images="step.images"
+                  :interval="4000"
+                  :transition-duration="step.durnation"
+                  :transitions="step.transt"
+                  aspect-ratio="6/10"
+                />
+                <div class="step-textbox">
+                  <p>{{ step.description }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -72,6 +76,8 @@ import TS_One from "@/assets/images/TS_1.png";
 import TS_Two from "@/assets/images/TS_2.png";
 import TS_Three from "@/assets/images/TS_3.png";
 import TS_Four from "@/assets/images/TS_4.png";
+
+import { ref, onMounted, onUnmounted } from "vue";
 
 export default {
   data() {
@@ -250,6 +256,9 @@ export default {
       ],
       activeAccordionIndex: null, // Tracks which accordion item is open. null means all are closed.
       isMobile: false, // To conditionally apply accordion behavior
+      el1Visible: false,
+      el2Visible: false,
+      observers: [],
     };
   },
   methods: {
@@ -276,6 +285,22 @@ export default {
     this.checkScreenSize();
     // Listen for window resize events to update isMobile
     window.addEventListener("resize", this.checkScreenSize);
+    const observe = (el, key) => {
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            this[key] = true;
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.15 },
+      );
+      if (el) obs.observe(el);
+      this.observers.push(obs);
+    };
+
+    observe(this.$refs.el1, "el1Visible");
+    observe(this.$refs.el2, "el2Visible");
   },
   beforeUnmount() {
     // Clean up the event listener when the component is destroyed
@@ -284,10 +309,27 @@ export default {
   components: {
     ImageRotator,
   },
+
+  unmounted() {
+    this.observers.forEach((o) => o.disconnect());
+  },
 };
 </script>
 
 <style scoped>
+.block {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .Announcer {
   font-family: "Playfair Display", "Georgia", serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);

@@ -320,6 +320,7 @@ export default {
 
 /* Specific styles for hero CTAs, overriding global button styles */
 .hero-ctas .cta-primary {
+  display: flex;
   background-color: var(--primary-blue);
   color: var(--bg-white);
   box-shadow: 0 6px 15px rgba(44, 100, 255, 0.3); /* Stronger shadow for primary CTA */

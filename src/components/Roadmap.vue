@@ -212,36 +212,12 @@ const scrollToSection = (sectionId) => {
   opacity: 0.6;
 }
 
-/* ─── Left Rail ─── */
-.left-rail {
-  position: absolute;
-  left: 1.75rem;
-  top: 6rem;
-  bottom: 5rem;
+/* ─── Inner ─── */
+.inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-}
-.rail-label {
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  opacity: 0.7;
-}
-.rail-line {
-  flex: 1;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  opacity: 0.3;
-}
-
-/* ─── Inner ─── */
-.inner {
-  position: relative;
+  justify-content: center;
   z-index: 1;
   max-width: 960px;
   margin: 0 auto;

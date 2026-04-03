@@ -62,19 +62,49 @@ const breakpoints = {
     snapAlign: 'start',
   },
 };
+
+
+
+import { ref, onMounted, onUnmounted } from "vue";
+
+const el1 = ref(null)
+const el2 = ref(null)
+const el1Visible = ref(false)
+const el2Visible = ref(false)
+
+let observers = []
+
+onMounted(() => {
+  const observe = (el, setter) => {
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setter(true); obs.disconnect() } },
+      { threshold: 0.15 }
+    )
+    if (el) obs.observe(el)
+    observers.push(obs)
+  }
+
+  observe(el1.value, v => (el1Visible.value = v))
+  observe(el2.value, v => (el2Visible.value = v))
+})
+
+onUnmounted(() => observers.forEach(o => o.disconnect()))
 </script>
 
 <template>
-  <section id="Function">
+  <section id="Function" aria-hidden="false" >
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
           <span class="eyebrow-text">Function</span>
           <span class="eyebrow-line"></span>
       </div>
-    <div class="container">
+   <div class="block" :class="{ visible: el1Visible }" ref="el1">
+    <div class="container" ref="header" :class="{ visible: phaseVisible }">
       <h2 class ="Announcer">How does it work?</h2>
       <p class="section-intro">How do our virtual and augmented reality services work?</p>
-      <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel" >
+    
+    <div class="block" :class="{ visible: el2Visible }" ref="el2">
+      <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel"   ref="blocks" >
         <Slide v-for="(service, index) in services" :key="index">
           <div class="carousel__item">
             <div class="service-block">
@@ -98,15 +128,25 @@ const breakpoints = {
           <Pagination />
         </template>
       </Carousel>
-
+      </div>
       
+    </div>
     </div>
   </section>
   
 </template>
 
 <style scoped>
+.block {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .Announcer{
  font-family: "Playfair Display", "Georgia", serif;
  font-weight: 700;
