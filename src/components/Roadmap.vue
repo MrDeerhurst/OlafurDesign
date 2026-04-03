@@ -539,7 +539,7 @@ const scrollToSection = (sectionId) => {
 /* ─── Responsive ─── */
 @media (max-width: 720px) {
   .derisk {
-    padding: 1.5rem;
+    padding: 4rem 1.25rem 3rem;
   }
   .timeline {
     grid-template-columns: 1fr;

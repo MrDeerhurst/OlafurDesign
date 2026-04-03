@@ -93,7 +93,7 @@ export default {
 
     <div class="hero-content">
       <h1 style="text-align: left">
-        Eliminate Maintenance Errors with AR-Guided Training.
+        Reduce Maintenance Errors with AR-Guided Training.
       </h1>
       <p style="text-align: left">
         <!--Specializing in engaging, high-performance virtual reality(VR) and augmented reality(AR) applications. -->

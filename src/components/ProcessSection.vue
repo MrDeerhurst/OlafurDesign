@@ -102,7 +102,7 @@ export default {
             },
           ],
           description:
-            "Stop wasting hours deciphering grease-stained paper blueprints. Our AR overlays trace exact cable routes directly onto your panels, ensuring wiring accuracy and cutting repair cycles in half.",
+            "Stop wasting hours deciphering grease-stained paper blueprints. Our AR overlays trace exact cable routes directly onto your panels, improving wiring accuracy and cutting repair cycles in half.",
           durnation: 400,
           interval: 10,
           transt: ["fade"],
@@ -126,7 +126,7 @@ export default {
             },
           ],
           description:
-            "Turn seasonal staff into top performers instantly. AR-guided routing and bin-highlighting eliminate 'search time' and picking errors, ensuring your high-volume facility stays on schedule without the training overhead",
+            "Turn seasonal staff into top performers faster. AR-guided routing and bin-highlighting reducing 'search time' and picking errors, ensuring your high-volume facility stays on schedule without the training overhead",
           durnation: 800,
           interval: 4000,
           transt: ["fade"],
@@ -156,7 +156,7 @@ export default {
             }, // full
           ],
           description:
-            "Stop 'shadowing' and start doing. Trainees follow foolproof AR overlays on live machinery that only advance when the task is done right. You get faster onboarding and  compliance with SOPs.",
+            "Stop 'shadowing' and start doing. Trainees follow foolproof AR overlays on live machinery, bridging the gap between knowledge and action, resulting in lower error rates. With this you get faster onboarding and  compliance with SOPs.",
           durnation: 800,
           interval: 4000,
           transt: ["direct", "direct"],
@@ -188,7 +188,7 @@ export default {
         },
         {
           icon: "⚙️",
-          title: "Zero-Error Commissioning",
+          title: "Reduce-Error Commissioning",
           obf: "fill",
           images: [
             {
@@ -205,7 +205,7 @@ export default {
             },
           ],
           description:
-            "Eliminate the 'measure twice, drill once' headache. Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed perfectly the first time.",
+            "Reduce the 'measure twice, drill once' headache. Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed well the first time.",
           durnation: 800,
           interval: 4000,
           transt: ["fade"],

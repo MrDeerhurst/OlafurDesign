@@ -175,7 +175,7 @@ const hardwareFeatures = [
 const deployFeatures = [
   {
     label: "Rapid Ingestion",
-    desc: "Upload your existing 3D models and PDF manuals, ready in days.",
+    desc: "Send in your existing 3D models and PDF manuals, can be ready in days.",
     paths: [
       "M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5",
     ],
