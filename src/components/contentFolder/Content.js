@@ -5,8 +5,6 @@ import trainingWebm from "@/assets/videos/Training.webm";
 import trainingMp4 from "@/assets/videos/Training.mp4";
 import trawlWebm from "@/assets/videos/Trawl.webm";
 import trawlMp4 from "@/assets/videos/Trawl.mp4";
-import arDetection from "@/assets/videos/Objectdetection.webm";
-import ikeaAssembly from "@/assets/videos/Ikeaassembly_v2.webm";
 
 export const globalCounter = ref(0);
 
@@ -31,7 +29,7 @@ export const projectsList = [
     technologies: ["ARKit", "Unity", "C#", "Mobile", "Blender 3D", "AutoCAD"],
     caseStudyLink: "#",
     isSmallScreen: false,
-    webmLink: arDetection,
+    webmLink: gearsWebm,
     mp4Link: gearsMp4,
   },
   {
@@ -54,7 +52,7 @@ export const projectsList = [
     technologies: ["ARKit", "Unity", "C#", "Mobile", "Blender 3D", "AutoCAD"],
     caseStudyLink: "#",
     isSmallScreen: false,
-    webmLink: ikeaAssembly,
+    webmLink: gearsWebm,
     mp4Link: gearsMp4,
   } /*
   {
