@@ -22,16 +22,19 @@ const closePortfolioOverlay = () => {
 <template>
   <section id="projects" class="projects-section">
     <div class="container">
-      <h2>Selected Previous Projects</h2>
+      <h2>Samples From Previous Projects</h2>
       <p class="section-intro">A showcase of some of my innovative projects.</p>
       <expanedProjectCard :projects="projectsList" />
     </div>
+
+    <!--
     <p class="section-intro">
       If interested in expanded projects descriptions please
     </p>
     <div class="section-intro">
       <div class="porfolioLink" @click="openPortfolioOverlay">click here</div>
-    </div>
+    </div> 
+    
 
     <FullScreenOverlay
       :is-visible="showPortfolioOverlay"
@@ -40,6 +43,7 @@ const closePortfolioOverlay = () => {
     >
       <Portfolio class="expanded" />
     </FullScreenOverlay>
+      -->
   </section>
 </template>
 

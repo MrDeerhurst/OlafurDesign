@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from 'vue'; // Import ref for reactive variables
-
+import { ref } from "vue"; // Import ref for reactive variables
 
 // Reactive state for the mobile menu
 const isMobileMenuOpen = ref(false); // Declared as a ref, initialized to false
@@ -10,8 +9,8 @@ const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   if (section) {
     section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   }
 };
@@ -22,21 +21,21 @@ const toggleMobileMenu = () => {
 
   // Prevent/allow body scrolling
   if (isMobileMenuOpen.value) {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
   }
 };
 
 // Method to close the mobile menu
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false; // Access ref value with .value
-  document.body.style.overflow = ''; // Restore body scrolling
+  document.body.style.overflow = ""; // Restore body scrolling
 };
 
 // --- Optional: Listen for screen resize to close menu on desktop ---
 // This is good practice to ensure menu closes if screen size changes
-import { onMounted, onBeforeUnmount } from 'vue';
+import { onMounted, onBeforeUnmount } from "vue";
 
 const handleResize = () => {
   // Assuming 768px is your breakpoint for mobile menu
@@ -46,16 +45,13 @@ const handleResize = () => {
 };
 
 onMounted(() => {
-  window.addEventListener('resize', handleResize);
+  window.addEventListener("resize", handleResize);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleResize);
+  window.removeEventListener("resize", handleResize);
 });
-
-
 </script>
-
 
 <template>
   <header class="header">
@@ -67,18 +63,30 @@ onBeforeUnmount(() => {
 
       <nav class="main-nav">
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#Function">Function</a></li>
+          <li><a href="#Impact">Impact</a></li>
+          <li><a href="#Deployment">Deployment</a></li>
+          <li><a href="#Roadmap">Roadmap</a></li>
           <!--<li><a href="#testimonials">Testimonials</a></li> -->
         </ul>
       </nav>
-        <button class="cta-button desktop-cta" @click="() => { scrollToSection('contact'); closeMobileMenu(); }">
-            Let’s Talk
-        </button>
-      
-      <div class="hamburger" @click="toggleMobileMenu" :class="{ 'is-active': isMobileMenuOpen }">
+      <button
+        class="cta-button desktop-cta"
+        @click="
+          () => {
+            scrollToSection('contact');
+            closeMobileMenu();
+          }
+        "
+      >
+        Let’s Talk
+      </button>
+
+      <div
+        class="hamburger"
+        @click="toggleMobileMenu"
+        :class="{ 'is-active': isMobileMenuOpen }"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -88,13 +96,24 @@ onBeforeUnmount(() => {
     <transition name="mobile-menu-fade">
       <nav v-if="isMobileMenuOpen" class="mobile-nav-overlay">
         <ul>
-          <li><a href="#services" @click="closeMobileMenu">Services</a></li>
-          <li><a href="#process" @click="closeMobileMenu">Process</a></li>
-          <li><a href="#projects" @click="closeMobileMenu">Projects</a></li>
-          <li><a href="#about" @click="closeMobileMenu">About</a></li>
-          <li><button class="cta-button mobile-cta" @click="() => { closeMobileMenu(); scrollToSection('contact'); }">
-                  Let’s Talk
-              </button>
+          <li><a href="#Function" @click="closeMobileMenu">Function</a></li>
+          <li><a href="#Impact" @click="closeMobileMenu">Impact</a></li>
+          <li>
+            <a href="#Deployment" @click="closeMobileMenu">Deployment</a>
+          </li>
+          <li><a href="#Roadmap" @click="closeMobileMenu">Roadmap</a></li>
+          <li>
+            <button
+              class="cta-button mobile-cta"
+              @click="
+                () => {
+                  closeMobileMenu();
+                  scrollToSection('contact');
+                }
+              "
+            >
+              Let’s Talk
+            </button>
           </li>
         </ul>
       </nav>
@@ -113,17 +132,16 @@ onBeforeUnmount(() => {
 }
 
 .header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .logo {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  
 }
 
 .logo img {
@@ -131,7 +149,6 @@ onBeforeUnmount(() => {
   max-width: 4rem;
   min-width: 2rem;
   border-radius: 50%;
- 
 }
 
 .logo a {
@@ -170,13 +187,13 @@ onBeforeUnmount(() => {
 }
 
 .desktop-cta {
-    display: flex;
-    width: 15%;
-    height: 20%;
-    padding: 1rem 1.5rem;
-    margin-left: 10px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  width: 15%;
+  height: 20%;
+  padding: 1rem 1.5rem;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hamburger Icon */
@@ -220,7 +237,12 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.95); /* Darker, slightly transparent overlay */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.95
+  ); /* Darker, slightly transparent overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,16 +284,19 @@ onBeforeUnmount(() => {
 }
 
 /* Transition for mobile menu */
-.mobile-menu-fade-enter-active, .mobile-menu-fade-leave-active {
+.mobile-menu-fade-enter-active,
+.mobile-menu-fade-leave-active {
   transition: opacity 0.3s ease;
 }
-.mobile-menu-fade-enter-from, .mobile-menu-fade-leave-to {
+.mobile-menu-fade-enter-from,
+.mobile-menu-fade-leave-to {
   opacity: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .main-nav, .desktop-cta {
+  .main-nav,
+  .desktop-cta {
     display: none;
   }
   .hamburger {

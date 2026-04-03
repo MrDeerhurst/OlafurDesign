@@ -1,13 +1,12 @@
-
 <template>
-<div class="portfolio-grid">
-    <div v-for="(singleProject, index) in projects" :key="index" class="card"> <!-- @click="openCard(index)">-->
+  <div class="portfolio-grid">
+    <div v-for="(singleProject, index) in projects" :key="index" class="card">
+      <!-- @click="openCard(index)">-->
       <VideoAnimation
         :webm-src="singleProject.webmLink"
         :mp4-src="singleProject.mp4Link"
-        :poster-src= "singleProject.image"
-       
-      ></VideoAnimation>    
+        :poster-src="singleProject.image"
+      ></VideoAnimation>
       <div>
         <div class="cardText">
           <h3 class="card-title">{{ singleProject.title }}</h3>
@@ -15,39 +14,39 @@
         </div>
         <div class="CardTags">
           <div class="tech-tags">
-            <span v-for="(technologies, i) in singleProject.technologies" :key="i" class="tag">{{ technologies }}</span>
+            <span
+              v-for="(technologies, i) in singleProject.technologies"
+              :key="i"
+              class="tag"
+              >{{ technologies }}</span
+            >
           </div>
         </div>
       </div>
-
     </div>
-</div>
- 
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import ProgressiveImage from './ProgressiveImage.vue';
-import VideoAnimation from './VideoComponent.vue';
+import { ref } from "vue";
+import ProgressiveImage from "./ProgressiveImage.vue";
+import VideoAnimation from "./VideoComponent.vue";
 
 const props = defineProps({
   projects: {
     type: Array,
-    required: true
-  }
+    required: true,
+  },
 });
 
 defineExpose({
-  VideoAnimation
+  VideoAnimation,
 });
 
 const activeCard = ref(null);
-
 </script>
 
 <style scoped>
-
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,27 +58,29 @@ const activeCard = ref(null);
   border-radius: 12px;
   padding: 0px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.3s;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.cardText{ 
-  display: flex ;
+.cardText {
+  display: flex;
   flex-direction: column;
- 
+
   margin: 8px;
 }
 .card-title {
-display: flex ;
-justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
 
-.card-desc{
-display: flex ;
-margin-inline: 4px;
+.card-desc {
+  display: flex;
+  margin-inline: 4px;
 }
 
 .tech-tags {
@@ -178,8 +179,14 @@ margin-inline: 4px;
   background-color: #0056b3;
 }
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @media (max-width: 480px) {
   .portfolio-grid {

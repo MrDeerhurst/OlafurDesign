@@ -8,31 +8,32 @@ import prototype from '@/assets/images/prototype.png';
 import arDevelopment from '@/assets/images/Custom_VR.png';
 import vrExperiences from '@/assets/images/organisation.png';
 import UXUI from '@/assets/images/UIUX.png';
+import Mobile from '@/assets/images/MobileVR_AR.png'
  
 const services = [
   { // Object/Image detection
     icon:arDevelopment ,
     stepTitle: "Step One",
-    title: 'Object or Image detection', 
-    description: 'Camera starts with quickly identifying and locating a machine object it sees. After which it can provide a user interface and 3D object information overlay'
+    title: 'Capture', 
+    description: 'We digitize your manuals and expert knowledge.'
   },
   { // Connects 
-    icon: UXUI,
+    icon: Mobile,
     stepTitle: "Step Two",
-    title: 'Connects documentation to real world item ',
-    description: 'Retrieves text, video and CAD models and ties them to the real world item.'
+    title: 'Deploy',
+    description: 'Your team accesses instructions instantly via smartphone or tablet.'
   },
     { // design and animation
     icon: interactivity,
     stepTitle: "Step Three",
-    title: 'Interactive 3D Content',
-    description: 'Users can then interact and navigate information and processes that improve immersion and training quality.'
+    title: 'Execute',
+    description: 'AR overlays show exactly which bolt to turn and which lever to pull.'
   },
   { // AR/VR Concept Prototyping
     icon: vrExperiences,
     stepTitle: "Step Four",
-    title: 'Complex process training',
-    description: 'Allows for detailed process training, such as step by step walkthrough for setup, maintenance and error analysis.'
+    title: 'Verify',
+    description: 'Real-time data logs ensure the job was done to spec'
   }
   
 ];
@@ -64,9 +65,14 @@ const breakpoints = {
 </script>
 
 <template>
-  <section id="services">
+  <section id="Function">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Function</span>
+          <span class="eyebrow-line"></span>
+      </div>
     <div class="container">
-      <h2>How does it work?</h2>
+      <h2 class ="Announcer">How does it work?</h2>
       <p class="section-intro">How do our virtual and augmented reality services work?</p>
       <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel" >
         <Slide v-for="(service, index) in services" :key="index">
@@ -101,6 +107,31 @@ const breakpoints = {
 
 <style scoped>
 
+.Announcer{
+ font-family: "Playfair Display", "Georgia", serif;
+ font-weight: 700;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.eyebrow-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: #989898;
+  opacity: 0.6;
+}
+.eyebrow-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #989898;
+}
 
 /* Remove the previous grid layout for services, as carousel handles it */
  .services-grid {

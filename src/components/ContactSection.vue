@@ -41,7 +41,7 @@ const submitForm = async () => {
 <template>
   <section id="contact" class="contact-section">
     <div class="container">
-      <h2>Ready to Build Your Next Reality?</h2>
+      <h2 class="Announcer">Ready for the next step?</h2>
       <p class="section-intro">
         Let's collaborate on your innovative VR/AR solutions.
       </p>
@@ -81,7 +81,7 @@ const submitForm = async () => {
             >
               LinkedIn</a
             >
-            <!-- <a href="https://behance.net/yourprofile" target="_blank" rel="noopener noreferrer">Behance</a> -->
+
             <a
               href="https://bsky.app/profile/wolaf.bsky.social"
               target="_blank"
@@ -100,6 +100,10 @@ const submitForm = async () => {
 </template>
 
 <style scoped>
+.Announcer {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
 .fa {
   display: flex;
   align-items: center;

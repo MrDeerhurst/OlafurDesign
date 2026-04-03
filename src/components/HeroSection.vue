@@ -93,20 +93,23 @@ export default {
 
     <div class="hero-content">
       <h1 style="text-align: left">
-        Bridging The Gap Between Understanding And Action
+        Eliminate Maintenance Errors with AR-Guided Training.
       </h1>
       <p style="text-align: left">
-        Specializing in engaging, high-performance virtual reality(VR) and
-        augmented reality(AR) applications.
+        <!--Specializing in engaging, high-performance virtual reality(VR) and augmented reality(AR) applications. -->
+        Turn every technician into an expert. Our Augmented Reality platform
+        provides real-time, hands-on guidance for setup and troubleshooting,
+        reducing onboarding time and cutting service costs.
       </p>
       <div class="hero-ctas">
-        <button class="cta-primary" @click="scrollToSection('projects')">
-          View Projects
+        <button class="cta-primary" @click="scrollToSection('Impact')">
+          Impact Examples
         </button>
+        <!--
         <button class="cta-secondary" @click="scrollToSection('services')">
           Learn More About Services
         </button>
-      </div>
+      --></div>
     </div>
   </section>
 </template>
@@ -128,6 +131,8 @@ export default {
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  font-family: "Poppins", sans-serif;
 }
 
 .hero-section::before {
@@ -172,13 +177,13 @@ export default {
 }
 
 .hero-content {
-  position: relative;
   z-index: 1;
   max-width: 800px;
-  padding: 10px 10px 10px 40px;
+  padding: 10px 10px 10px 10px;
 }
 /* Phone mockup */
 .phone-mockup {
+  display: flex;
   z-index: 1;
   display: inline-block;
   width: 170px;
@@ -292,7 +297,6 @@ export default {
 }
 
 .hero-content h1 {
-  font-family: var(--font-heading); /* Ensure headings use chosen font */
   font-size: 3.5rem; /* Base size, adjusted by global App.vue styles */
   margin-bottom: 20px;
   line-height: 1.2;
@@ -346,6 +350,8 @@ export default {
 @media (max-width: 768px) {
   .hero-section {
     height: 70vh;
+    display: flex;
+    align-items: flex-start;
   }
   .hero-content h1 {
     font-size: 2.2rem;
@@ -362,10 +368,10 @@ export default {
 }
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .hero-content p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 </style>

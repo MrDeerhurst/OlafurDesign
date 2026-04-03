@@ -1,9 +1,15 @@
 <template>
-  <section id="process" class="process-section">
+  <section id="Impact" class="process-section">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Impact</span>
+      <span class="eyebrow-line"></span>
+    </div>
     <div class="container">
-      <h2>Product Impact Examples</h2>
+      <h2 class="Announcer">Services Impact Examples</h2>
       <p class="section-intro">
-        Just few of the general ways how this product can improve your busness.
+        Just few of the general ways how this service can create value, only
+        requiring a mobile phone.
       </p>
       <div class="process-steps">
         <div
@@ -25,7 +31,19 @@
             class="step-content"
             :class="{ 'active-mobile': activeAccordionIndex === index }"
           >
-            <p>{{ step.description }}</p>
+            <div class="sub-container">
+              <ImageRotator
+                class="exampleImages"
+                :images="step.images"
+                :interval="4000"
+                :transition-duration="step.durnation"
+                :transitions="step.transt"
+                aspect-ratio="6/10"
+              />
+              <div class="step-textbox">
+                <p>{{ step.description }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -34,45 +52,193 @@
 </template>
 
 <script>
+import ImageRotator from "@/components/reusable/ImageRotator.vue";
+import imageOne from "@/assets/images/PipingNormal.png";
+import imageTwo from "@/assets/images/PipingAdded.png";
+import FSTS_N from "@/assets/images/FSTS_N.png";
+import FSTS_A from "@/assets/images/FSTS_A.png";
+import WH_One from "@/assets/images/WH_1.png";
+import WH_Two from "@/assets/images/WH_2.png";
+import WH_Three from "@/assets/images/WH_3.png";
+
+import MT_One from "@/assets/images/MT_1.png";
+import MT_Two from "@/assets/images/MT_2.png";
+import MT_Three from "@/assets/images/MT_3.png";
+
+import ASTwo_One from "@/assets/images/ASTwo_1.png";
+import ASTwo_Two from "@/assets/images/ASTwo_2.png";
+
+import TS_One from "@/assets/images/TS_1.png";
+import TS_Two from "@/assets/images/TS_2.png";
+import TS_Three from "@/assets/images/TS_3.png";
+import TS_Four from "@/assets/images/TS_4.png";
+
 export default {
   data() {
     return {
       processSteps: [
         {
           icon: "🔧",
-          title: "Field Service Technician Support",
+          title: "Eliminate Schematic Confusion",
+          obf: "fill",
+          images: [
+            {
+              src: FSTS_N,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: FSTS_A,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+          ],
           description:
-            "Color-coded AR lines trace exact cable routes and connection points on complex panels, reducing human error and cutting repair time significantly compared to reading schematics.",
+            "Stop wasting hours deciphering grease-stained paper blueprints. Our AR overlays trace exact cable routes directly onto your panels, ensuring wiring accuracy and cutting repair cycles in half.",
+          durnation: 400,
+          interval: 10,
+          transt: ["fade"],
         },
         {
           icon: "📦",
-          title: "Warehouses and Logistics",
+          title: "Precision Picking at Speed",
+          obf: "fill",
+          images: [
+            {
+              src: WH_One,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: WH_Three,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+          ],
           description:
-            "Workers us AR mobile app that project the optimal walking route through the warehouse and highlight the exact shelf and bin to pick from, reducing pick errors and training time for new staff.",
+            "Turn seasonal staff into top performers instantly. AR-guided routing and bin-highlighting eliminate 'search time' and picking errors, ensuring your high-volume facility stays on schedule without the training overhead",
+          durnation: 800,
+          interval: 4000,
+          transt: ["fade"],
         },
         {
           icon: "🏭",
-          title: "Industrial Training of the Workforce",
+          title: "Standardize Expert Performance",
+          obf: "fill",
+          images: [
+            {
+              src: MT_One,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: MT_Two,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fade",
+            },
+            {
+              src: MT_Three,
+              alt: "Image 3",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+          ],
           description:
-            "AR Step-by-Step Procedure Training, Trainees follow AR-guided overlays on real machines that walk them through procedures step by step, only advancing when each step is correctly completed, reinforcing muscle memory.",
+            "Stop 'shadowing' and start doing. Trainees follow foolproof AR overlays on live machinery that only advance when the task is done right. You get faster onboarding and  compliance with SOPs.",
+          durnation: 800,
+          interval: 4000,
+          transt: ["direct", "direct"],
+          of: "fade",
         },
         {
           icon: "🔍",
-          title: "Equipment Inspection and Maintenance",
+          title: "Visualize Hidden Hazards",
+          obf: "fill",
+          images: [
+            {
+              src: imageOne,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: imageTwo,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+          ],
           description:
-            "Before entering a hazardous area, inspectors walk through a VR replica of the facility to plan their inspection route, identify risk zones, and review previous inspection findings spatially.",
+            "Keep your team out of the danger zone. Our interface projects spatial risk zones and historical fault data directly onto the worker’s field of view, turning safety compliance from a checklist into a visual reality.",
+          durnation: 800,
+          interval: 4000,
+          transt: ["fade"],
         },
         {
           icon: "⚙️",
-          title: "Equipment Installation",
+          title: "Zero-Error Commissioning",
+          obf: "fill",
+          images: [
+            {
+              src: ASTwo_One,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: ASTwo_Two,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+          ],
           description:
-            "AR Alignment Guidance: During installation, AR projects exact positioning markers, bolt hole locations, and alignment guides onto the floor or mounting surface, eliminating measurement errors on heavy or complex equipment.",
+            "Eliminate the 'measure twice, drill once' headache. Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed perfectly the first time.",
+          durnation: 800,
+          interval: 4000,
+          transt: ["fade"],
         },
         {
           icon: "🚨",
-          title: "Real-time Troubleshooting",
+          title: "Adaptive Fault Recovery",
+          obf: "fill",
+          images: [
+            {
+              src: TS_One,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: TS_Two,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+            {
+              src: TS_Three,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+            {
+              src: TS_Four,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fill",
+            },
+          ],
           description:
-            "AR device walk the technician through a live fault tree overlaid on the actual equipment ,  each step dynamically updating based on what the technician observes and confirms.",
+            "No more guessing games. Our dynamic fault-tree overlays react to what the technician sees in real-time, guiding them through complex repairs with the precision of a senior engineer,even if it's their first day.",
+          durnation: 800,
+          interval: 4000,
+          transt: ["fade"],
         },
         /*,{ title: 'Discovery & Strategy', description: 'I start by understanding your vision, target audience, and business objectives. This phase involves in-depth discussions to define project scope and technical requirements.' },
         { title: 'Concept & Design', description: 'Next, I translate ideas into tangible concepts. This includes wireframing, prototyping, and creating a visual design that aligns with your brand identity and user experience goals.' },
@@ -115,13 +281,41 @@ export default {
     // Clean up the event listener when the component is destroyed
     window.removeEventListener("resize", this.checkScreenSize);
   },
+  components: {
+    ImageRotator,
+  },
 };
 </script>
 
 <style scoped>
+.Announcer {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.eyebrow-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: #989898;
+  opacity: 0.6;
+}
+.eyebrow-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #989898;
+}
 /* Base Styles (apply to all screen sizes, including desktop) */
 .process-section {
-  padding: 40px 0;
+  padding: 10px 10px 40px 10px;
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -154,6 +348,11 @@ h2 {
 }
 
 .process-step {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -206,6 +405,13 @@ h2 {
   color: #555;
   margin-top: 0;
 }
+.step-textbox {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 /* Accordion Icon - HIDDEN by default on desktop */
 .accordion-icon {
@@ -217,6 +423,29 @@ h2 {
 
 .accordion-icon.rotate {
   transform: rotate(180deg);
+}
+
+.sub-container {
+  display: table;
+  clear: both;
+}
+
+.exampleImages {
+  display: flex;
+  height: 20rem;
+  width: 18rem;
+  margin: 4px;
+  border-radius: 15%;
+
+  align-items: center;
+  justify-content: center;
+}
+.step-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --- Media Queries for Mobile Accordion Behavior --- */
@@ -250,6 +479,7 @@ h2 {
 
   /* Accordion Content - Hidden by default on mobile, animated */
   .step-content {
+    display: flex;
     max-height: 0;
     overflow: hidden;
     padding-bottom: 0; /* No padding when collapsed */
@@ -261,7 +491,7 @@ h2 {
 
   .step-content.active-mobile {
     /* Use this class only for mobile active state */
-    max-height: 300px; /* Sufficient height to show content when active */
+    max-height: 600px; /* Sufficient height to show content when active */
     padding-bottom: 15px; /* Add some padding when open */
   }
 }

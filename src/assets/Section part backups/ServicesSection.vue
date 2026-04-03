@@ -165,7 +165,7 @@ const breakpoints = {
   margin-bottom: 0px;
   color: var(--secondary-teal);
   width: 50%;
-
+  font-weight: 700;
 }
 
 .service-block h3 {
@@ -280,7 +280,7 @@ const breakpoints = {
     
   }
   .service-icon {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 </style>

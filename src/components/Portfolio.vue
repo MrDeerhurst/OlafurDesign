@@ -1,50 +1,91 @@
 <template>
-  
-    <div class="container">
-      <div class="top_elements">
+  <div class="container">
+    <div class="top_elements">
       <h1 class="portfolio-title">My Projects</h1>
-      </div>
-      
-      <div class="portfolio-grid">
-        <div v-for="(project, index) in PorfolioProjectsList" :key="index" class="portfolio-card">
-          <div class="card-image-wrapper">
-            <img :src="project.image" :alt="project.title" class="card-image" />
-            <video v-if="project.webmLink || project.mp4Link" class="card-video" autoplay loop muted playsinline>
-              <source v-if="project.webmLink" :src="project.webmLink" type="video/webm">
-              <source v-if="project.mp4Link" :src="project.mp4Link" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="card-content">
-            <h2 class="card-title">{{ project.title }}</h2>
-            <p class="subtext">{{ project.shortDescription }}</p>
-            <div class="card-details">
-              <p class ='subtext' > <strong class ="subtitleTitle">Task:</strong> {{ project.task }}</p>
-              <div class ="subtitleTitle">Key Results:</div>
-                <ul>
-                  <li v-for="(result, i) in project.keyResults" :key="i" class="subtext">{{ result }}</li>
-                </ul>
-                <p class ='subtext'> <strong class ="subtitleTitle">My Role:</strong> {{ project.myRole }}</p>
-                <div class ="subtitleTitle">Platform:
-                <div class="tech-tags">
-                  <span v-for="(technologies, i) in project.technologies" :key="i" class="Ttag">{{ technologies }}</span>
-                </div>
+    </div>
+
+    <div class="portfolio-grid">
+      <div
+        v-for="(project, index) in PorfolioProjectsList"
+        :key="index"
+        class="portfolio-card"
+      >
+        <div class="card-image-wrapper">
+          <img :src="project.image" :alt="project.title" class="card-image" />
+          <video
+            v-if="project.webmLink || project.mp4Link"
+            class="card-video"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source
+              v-if="project.webmLink"
+              :src="project.webmLink"
+              type="video/webm"
+            />
+            <source
+              v-if="project.mp4Link"
+              :src="project.mp4Link"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">{{ project.title }}</h2>
+          <p class="subtext">{{ project.shortDescription }}</p>
+          <div class="card-details">
+            <p class="subtext">
+              <strong class="subtitleTitle">Task:</strong> {{ project.task }}
+            </p>
+            <div class="subtitleTitle">Key Results:</div>
+            <ul>
+              <li
+                v-for="(result, i) in project.keyResults"
+                :key="i"
+                class="subtext"
+              >
+                {{ result }}
+              </li>
+            </ul>
+            <p class="subtext">
+              <strong class="subtitleTitle">My Role:</strong>
+              {{ project.myRole }}
+            </p>
+            <div class="subtitleTitle">
+              Platform:
+              <div class="tech-tags">
+                <span
+                  v-for="(technologies, i) in project.technologies"
+                  :key="i"
+                  class="Ttag"
+                  >{{ technologies }}</span
+                >
               </div>
-              <div class ="subtitleTitle">Skills:
-                <div class="tech-tags">
-                  <span v-for="(technologies, i) in project.skills" :key="i" class="Stag">{{ technologies }}</span>
-                </div>
+            </div>
+            <div class="subtitleTitle">
+              Skills:
+              <div class="tech-tags">
+                <span
+                  v-for="(technologies, i) in project.skills"
+                  :key="i"
+                  class="Stag"
+                  >{{ technologies }}</span
+                >
               </div>
             </div>
           </div>
-          </div>
         </div>
       </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import {PorfolioProjectsList} from '@/components/contentFolder/PortfolioDetails'
-import { ref, computed, defineProps, defineEmits } from 'vue';
+import { PorfolioProjectsList } from "@/components/contentFolder/PortfolioDetails";
+import { ref, computed, defineProps, defineEmits } from "vue";
 
 // Computed property for expand/collapse (from previous work)
 const projectsToShow = computed(() => {
@@ -53,13 +94,9 @@ const projectsToShow = computed(() => {
   }
   return projects.value.slice(0, 3);
 });
-
-
 </script>
 
 <style scoped>
-
-
 .top_elements {
   display: flex;
   flex-direction: column;
@@ -73,12 +110,11 @@ const projectsToShow = computed(() => {
   max-width: 1200px;
   min-width: 400px;
   margin: 0 auto;
-  font-family: 'Arial', sans-serif; /* Or your preferred font */
+  font-family: "Arial", sans-serif; /* Or your preferred font */
   display: flex;
   align-content: center;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .portfolio-title {
@@ -106,8 +142,9 @@ const projectsToShow = computed(() => {
   overflow: hidden;
   display: flex;
   flex-direction: row-reverse;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .portfolio-card:hover {
@@ -116,7 +153,7 @@ const projectsToShow = computed(() => {
 }
 
 .card-image-wrapper {
-  width:100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -140,7 +177,7 @@ const projectsToShow = computed(() => {
 }
 
 .card-title {
-  font-size: 2.0em;
+  font-size: 2em;
   margin-top: 0;
   margin-bottom: 10px;
   color: #000000; /* A nice blue for titles */
@@ -179,8 +216,8 @@ const projectsToShow = computed(() => {
   font-family: var(--font-heading);
   color: var(--text-charcoal);
   line-height: 1.2;
-  font-size: 1.0rem; 
-  font-weight: 700; 
+  font-size: 1rem;
+  font-weight: 700;
   margin-top: 1rem;
   padding-bottom: 0.5rem;
 }
@@ -214,14 +251,13 @@ const projectsToShow = computed(() => {
   flex-wrap: wrap;
   gap: 8px;
   padding-bottom: 0rem;
-   font-size: 1rem;
+  font-size: 1rem;
 }
 .Ttag {
   background: #e0e3ff;
   color: #000679;
   padding: 3px 8px;
   border-radius: 4px;
-
 }
 
 .Stag {
@@ -229,7 +265,6 @@ const projectsToShow = computed(() => {
   color: #016559;
   padding: 4px 8px;
   border-radius: 4px;
- 
 }
 .project-section {
   padding: 40px 20px;
@@ -253,56 +288,50 @@ const projectsToShow = computed(() => {
 }
 
 .switch-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    display: flex;
-    max-width: 16rem;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  display: flex;
+  max-width: 16rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .switch-button:hover {
   background-color: #0056b3;
 }
 
-
 /* --- Responsive Design --- */
 
 /* Tablet styles */
 @media (max-width: 800px) {
-  
+  .subtext {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 1rem;
+  }
 
-.subtext {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  font-size: 1rem;
-   
-}
-
-.tech-tags {
-   font-size: 0.8rem;
-}
+  .tech-tags {
+    font-size: 0.8rem;
+  }
 
   .card-image,
-.card-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  max-height: 20rem;
-  
-}
+  .card-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: 20rem;
+  }
 
   .card-image-wrapper {
-  width: 100%;
-  max-height: 20rem;
-  
+    width: 100%;
+    max-height: 20rem;
   }
 
   .portfolio-card {
@@ -320,7 +349,6 @@ const projectsToShow = computed(() => {
   .portfolio-title {
     font-size: 2rem;
     margin-bottom: 30px;
-
   }
 
   .card-title {
@@ -335,9 +363,9 @@ const projectsToShow = computed(() => {
 
 /* Mobile styles */
 @media (max-width: 700px) {
-   .card-image-wrapper {
-  width: 100%;
-  height: 20rem;
+  .card-image-wrapper {
+    width: 100%;
+    height: 20rem;
   }
 
   .portfolio-grid {
@@ -374,7 +402,4 @@ const projectsToShow = computed(() => {
     font-size: 0.9em;
   }
 }
-
-
-
 </style>

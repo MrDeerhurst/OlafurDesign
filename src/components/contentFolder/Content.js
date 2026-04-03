@@ -5,24 +5,21 @@ import trainingWebm from "@/assets/videos/Training.webm";
 import trainingMp4 from "@/assets/videos/Training.mp4";
 import trawlWebm from "@/assets/videos/Trawl.webm";
 import trawlMp4 from "@/assets/videos/Trawl.mp4";
+import arDetection from "@/assets/videos/Objectdetection.webm";
+import ikeaAssembly from "@/assets/videos/Ikeaassembly_v2.webm";
 
 export const globalCounter = ref(0);
 
 export const projectsList = [
   {
-    title: "Mobile AR Gear Assembly Instructions",
+    title: "AR mobile object detection for industrial training",
     short_description:
-      "An augmented reality app for deploying an 3D model onto a surface as a part of assembly instructions.",
+      "An augmented reality app for showing step by step processes how to assemble and use devices.",
     image: "https://i.imgur.com/49MVi84.png",
     gif: "https://i.imgur.com/Ngn5g9V.gif",
     expandedPoints: [
-      "Master’s thesis completed at KTH Royal Institute of Technology.",
-      "Explored immersive training for the metals industry using Oculus VR.",
-      "Compared hand tracking and physical controllers with 26 participants.",
-      "Measured performance, task completion, and immersion using both qualitative and quantitative metrics.",
-      "Project applied core UX methods: user research, iterative design, and usability testing.",
-      "Highlighted challenges in balancing hardware limitations and immersive design.",
-      "Reflects cross-disciplinary strengths in UX, product management, and human-computer interaction.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
     skills: [
       "User-Centered Design (UCD)",
@@ -34,9 +31,32 @@ export const projectsList = [
     technologies: ["ARKit", "Unity", "C#", "Mobile", "Blender 3D", "AutoCAD"],
     caseStudyLink: "#",
     isSmallScreen: false,
-    webmLink: gearsWebm,
+    webmLink: arDetection,
     mp4Link: gearsMp4,
   },
+  {
+    title: "Mobile AR Gear Assembly Instructions",
+    short_description:
+      "An augmented reality app for deploying an 3D model onto a surface as a part of assembly instructions.",
+    image: "https://i.imgur.com/49MVi84.png",
+    gif: "https://i.imgur.com/Ngn5g9V.gif",
+    expandedPoints: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    ],
+    skills: [
+      "User-Centered Design (UCD)",
+      "AR Interaction Design",
+      "Quantitative & Qualitative User Research",
+      "Agile Product Development",
+      "Sensor & Ergonomic Awareness",
+    ],
+    technologies: ["ARKit", "Unity", "C#", "Mobile", "Blender 3D", "AutoCAD"],
+    caseStudyLink: "#",
+    isSmallScreen: false,
+    webmLink: ikeaAssembly,
+    mp4Link: gearsMp4,
+  } /*
   {
     title: "3D Bottom Trawl Simulation",
     short_description:
@@ -57,16 +77,22 @@ export const projectsList = [
     technologies: ["Unity", "C#", "Blender 3D", "AutoCAD"],
     caseStudyLink: "#",
     isSmallScreen: false,
-    webmLink: trawlWebm,
-    mp4Link: trawlMp4,
+    webmLink: gearsWebm,
+    mp4Link: gearsMp4,
   },
+  
   {
     title: "VR Industry Training Master Theisis Research",
     short_description:
       "Led a comparative UX study of VR hand tracking vs. physical controllers in immersive training scenarios integrating user research, interface design, and interaction testing to inform better HMI decisions in high-stakes environments.",
     expandedPoints: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Master’s thesis completed at KTH Royal Institute of Technology.",
+      "Explored immersive training for the metals industry using Oculus VR.",
+      "Compared hand tracking and physical controllers with 26 participants.",
+      "Measured performance, task completion, and immersion using both qualitative and quantitative metrics.",
+      "Project applied core UX methods: user research, iterative design, and usability testing.",
+      "Highlighted challenges in balancing hardware limitations and immersive design.",
+      "Reflects cross-disciplinary strengths in UX, product management, and human-computer interaction.",
     ],
     image: "https://i.imgur.com/WEBm5LN.png",
     gif: "https://i.imgur.com/zD0JDdV.gif",
@@ -90,4 +116,5 @@ export const projectsList = [
     webmLink: trainingWebm,
     mp4Link: trainingMp4,
   },
+  */,
 ];

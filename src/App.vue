@@ -1,17 +1,4 @@
-<script setup>
-import TheHeader from "./components/TheHeader.vue";
-import HeroSection from "./components/HeroSection.vue";
-import ServicesSection from "./components/ServicesSection.vue";
-import ProcessSection from "./components/ProcessSection.vue";
-import ProjectSection from "./components/ProjectSection.vue";
-import DifferentiatorsSection from "./components/DifferentiatorsSection.vue";
-import TestimonialsSection from "./components/TestimonialsSection.vue";
-import AboutSection from "./components/AboutSection.vue";
-import ContactSection from "./components/ContactSection.vue";
-import TheFooter from "./components/TheFooter.vue";
-import Portfolio from "./components/Portfolio.vue";
-import Home from "./views/Home.vue";
-</script>
+<script setup></script>
 
 <template>
   <router-view />
@@ -96,10 +83,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-heading);
   color: var(--text-charcoal);
   line-height: 1.2;
-
   margin-bottom: 20px; /* Consistent margin */
 }
 
@@ -107,16 +92,19 @@ h1 {
   font-size: 3.5rem;
   font-weight: 700;
   margin-top: 0;
+  font-family: "Poppins", sans-serif;
 }
 h2 {
-  font-size: 2.8rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   margin-top: 2rem; /* for navigation scroll to show the top of the content*/
+  font-family: var(--font-heading);
 }
 h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 0;
+  font-family: "Poppins", sans-serif;
 }
 h4 {
   font-size: 1.1rem;
