@@ -9,6 +9,7 @@
 /* Global CSS Variables (Color Palette) */
 /* ------------------------------------ */
 :root {
+  --light-blue: #007ade;
   --primary-blue: #2c64ff;
   --primary-blue-dark: #004fde;
   --secondary-teal: #00d0b4; /* New accent color */
@@ -42,7 +43,6 @@ body {
   margin: 0;
   font-family: var(--font-body);
   background-color: var(--bg-light-gray);
-  color: var(--text-charcoal);
   line-height: 1.7; /* Improved readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

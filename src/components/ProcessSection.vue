@@ -84,6 +84,37 @@ export default {
     return {
       processSteps: [
         {
+          icon: "🏭",
+          title: "Standardize Expert Performance",
+          obf: "fill",
+          images: [
+            {
+              src: MT_One,
+              alt: "Image 1",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+            {
+              src: MT_Two,
+              alt: "Image 2 - Baraba",
+              caption: "The Alps",
+              of: "fade",
+            },
+            {
+              src: MT_Three,
+              alt: "Image 3",
+              caption: "The sample",
+              of: "fill",
+            }, // full
+          ],
+          description:
+            "Stop 'shadowing' and start doing. Trainees follow foolproof AR overlays on live machinery, bridging the gap between knowledge and action, resulting in lower error rates. With this you get faster onboarding and  compliance with SOPs.",
+          durnation: 800,
+          interval: 4000,
+          transt: ["direct", "direct"],
+          of: "fade",
+        },
+        {
           icon: "🔧",
           title: "Eliminate Schematic Confusion",
           obf: "fill",
@@ -131,37 +162,7 @@ export default {
           interval: 4000,
           transt: ["fade"],
         },
-        {
-          icon: "🏭",
-          title: "Standardize Expert Performance",
-          obf: "fill",
-          images: [
-            {
-              src: MT_One,
-              alt: "Image 1",
-              caption: "The sample",
-              of: "fill",
-            }, // full
-            {
-              src: MT_Two,
-              alt: "Image 2 - Baraba",
-              caption: "The Alps",
-              of: "fade",
-            },
-            {
-              src: MT_Three,
-              alt: "Image 3",
-              caption: "The sample",
-              of: "fill",
-            }, // full
-          ],
-          description:
-            "Stop 'shadowing' and start doing. Trainees follow foolproof AR overlays on live machinery, bridging the gap between knowledge and action, resulting in lower error rates. With this you get faster onboarding and  compliance with SOPs.",
-          durnation: 800,
-          interval: 4000,
-          transt: ["direct", "direct"],
-          of: "fade",
-        },
+
         {
           icon: "🔍",
           title: "Visualize Hidden Hazards",
@@ -386,7 +387,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px; /* Space between cards */
-  justify-content: center;
 }
 
 .process-step {
@@ -411,7 +411,7 @@ h2 {
 
 .step-header {
   display: flex;
-  align-items: center;
+
   margin-bottom: 12px;
 }
 
@@ -422,8 +422,9 @@ h2 {
   width: 45px;
   height: 45px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-size: 1.8em;
   font-weight: bold;
   margin-right: 15px;
@@ -494,16 +495,18 @@ h2 {
 @media (max-width: 768px) {
   /* Adjust this breakpoint as needed for your definition of mobile */
   .process-steps {
-    flex-direction: column; /* Stack cards vertically */
     gap: 10px;
   }
 
   .process-step {
+    display: flex;
+    align-items: stretch;
     flex: 1 1 100%; /* Each item takes full width */
     padding: 15px 20px; /* Adjust padding for mobile */
   }
 
   .step-header {
+    display: flex;
     cursor: pointer; /* Indicate it's clickable on mobile */
     margin-bottom: 0; /* Remove header margin on mobile */
     padding: 10px 0;

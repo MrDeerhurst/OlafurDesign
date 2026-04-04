@@ -6,21 +6,21 @@
         <ul>
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms-of-service">Terms of Service</a></li>
-          </ul>
+        </ul>
       </nav>
     </div>
   </footer>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const currentYear = ref(new Date().getFullYear());
 </script>
 
 <style scoped>
 .footer {
-  background-color: var(--text-charcoal); /* Darker background for footer */
+  background-color: #5e5e5e; /* Darker background for footer */
   color: var(--bg-white);
   padding: 30px 0;
   text-align: center;
@@ -44,7 +44,8 @@ const currentYear = ref(new Date().getFullYear());
     flex-direction: column;
     gap: 10px;
   }
-  .footer p, .footer-nav a {
+  .footer p,
+  .footer-nav a {
     font-size: 0.85rem;
   }
 }

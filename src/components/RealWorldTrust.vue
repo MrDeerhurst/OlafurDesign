@@ -1,5 +1,5 @@
 <template>
-  <section class="trust-layer" id="Deployment">
+  <section class="Deployment" id="Deployment">
     <!-- Background grid -->
     <div class="grid-bg" aria-hidden="true">
       <div class="grid-lines"></div>
@@ -227,7 +227,7 @@ onUnmounted(() => observers.forEach((o) => o.disconnect()));
 
 <style scoped>
 /* ── Tokens ── */
-.trust-layer {
+.Deployment {
   --c-bg: #f9f9f9;
   --c-surface: #ffffff;
   --c-border: rgba(255, 255, 255, 0.07);
@@ -565,7 +565,7 @@ onUnmounted(() => observers.forEach((o) => o.disconnect()));
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .trust-layer {
+  .Deployment {
     padding: 4rem 1.25rem 3rem;
   }
   .bottom-bar {

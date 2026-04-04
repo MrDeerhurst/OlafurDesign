@@ -125,7 +125,7 @@ onBeforeUnmount(() => {
 .header {
   background-color: var(--bg-white);
   padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(110, 110, 110, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
