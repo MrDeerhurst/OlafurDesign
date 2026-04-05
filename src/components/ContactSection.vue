@@ -166,7 +166,7 @@ const submitForm = async () => {
   text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 30px;

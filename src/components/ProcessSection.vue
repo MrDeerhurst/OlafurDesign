@@ -394,7 +394,7 @@ h2 {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -471,6 +471,11 @@ h2 {
 .sub-container {
   display: table;
   clear: both;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .exampleImages {
@@ -492,7 +497,7 @@ h2 {
 }
 
 /* --- Media Queries for Mobile Accordion Behavior --- */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   /* Adjust this breakpoint as needed for your definition of mobile */
   .process-steps {
     gap: 10px;

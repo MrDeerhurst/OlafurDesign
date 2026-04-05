@@ -35,7 +35,7 @@ const currentYear = ref(new Date().getFullYear());
   gap: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .footer .container {
     flex-direction: column;
     text-align: center;

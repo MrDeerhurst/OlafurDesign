@@ -2,12 +2,21 @@
   <section id="testimonials" class="testimonials-section">
     <div class="container">
       <h2>What My Clients Say</h2>
-      <p class="section-intro">Trusted by innovators to deliver outstanding results.</p>
+      <p class="section-intro">
+        Trusted by innovators to deliver outstanding results.
+      </p>
 
       <div v-if="!isMobile" class="testimonials-grid">
-        <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial-card">
+        <div
+          v-for="(testimonial, index) in testimonials"
+          :key="index"
+          class="testimonial-card"
+        >
           <p class="quote">"{{ testimonial.quote }}"</p>
-          <p class="author">- {{ testimonial.name }} <span v-if="testimonial.company">, {{ testimonial.company }}</span></p>
+          <p class="author">
+            - {{ testimonial.name }}
+            <span v-if="testimonial.company">, {{ testimonial.company }}</span>
+          </p>
         </div>
       </div>
 
@@ -18,7 +27,7 @@
           :loop="true"
           :autoplay="{
             delay: 5000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           }"
           :pagination="{ clickable: true }"
           :navigation="true"
@@ -27,28 +36,36 @@
           class="mySwiper"
           :modules="modules"
         >
-          <swiper-slide v-for="(testimonial, index) in testimonials" :key="index" class="testimonial-card">
+          <swiper-slide
+            v-for="(testimonial, index) in testimonials"
+            :key="index"
+            class="testimonial-card"
+          >
             <p class="quote">"{{ testimonial.quote }}"</p>
-            <p class="author">- {{ testimonial.name }} <span v-if="testimonial.company">, {{ testimonial.company }}</span></p>
+            <p class="author">
+              - {{ testimonial.name }}
+              <span v-if="testimonial.company"
+                >, {{ testimonial.company }}</span
+              >
+            </p>
           </swiper-slide>
         </swiper>
       </div>
-
     </div>
   </section>
 </template>
 
 <script>
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles (core and required modules)
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // Import Swiper modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export default {
   components: {
@@ -58,15 +75,34 @@ export default {
   data() {
     return {
       testimonials: [
-        { quote: 'Working with Olafur was a game-changer for our project. Their attention to detail and innovative solutions truly exceeded our expectations.', name: 'Jane Doe', company: 'Tech Innovators Inc.' },
-        { quote: 'The VR experience Olafur crafted for us was immersive and flawlessly executed. Highly recommend their expertise in interactive solutions.', name: 'John Smith', company: 'Virtual Worlds Co.' },
-        { quote: 'Exceptional communication and delivery. Olafur transformed our complex ideas into a user-friendly and visually stunning application.', name: 'Emily White', company: 'Digital Dreamscapes' },
-        { quote: 'From concept to deployment, the process was smooth and transparent. Olafur delivered a high-impact AR solution that delighted our customers.', name: 'David Lee', company: 'Augmented Futures Ltd.' },
-        
+        {
+          quote:
+            "Working with Olafur was a game-changer for our project. Their attention to detail and innovative solutions truly exceeded our expectations.",
+          name: "Jane Doe",
+          company: "Tech Innovators Inc.",
+        },
+        {
+          quote:
+            "The VR experience Olafur crafted for us was immersive and flawlessly executed. Highly recommend their expertise in interactive solutions.",
+          name: "John Smith",
+          company: "Virtual Worlds Co.",
+        },
+        {
+          quote:
+            "Exceptional communication and delivery. Olafur transformed our complex ideas into a user-friendly and visually stunning application.",
+          name: "Emily White",
+          company: "Digital Dreamscapes",
+        },
+        {
+          quote:
+            "From concept to deployment, the process was smooth and transparent. Olafur delivered a high-impact AR solution that delighted our customers.",
+          name: "David Lee",
+          company: "Augmented Futures Ltd.",
+        },
       ],
       modules: [Autoplay, Pagination, Navigation],
       isMobile: false, // New data property to track mobile state
-      mobileBreakpoint: 768 // Define your breakpoint (e.g., 768px for tablets/mobiles)
+      mobileBreakpoint: 768, // Define your breakpoint (e.g., 768px for tablets/mobiles)
     };
   },
   methods: {
@@ -80,15 +116,15 @@ export default {
       this.isMobile = window.innerWidth <= this.mobileBreakpoint;
       // You might want to reset Swiper or other states if resizing across breakpoint,
       // but v-if/v-else largely handles the rendering for us.
-    }
+    },
   },
   mounted() {
     this.checkScreenSize(); // Initial check
-    window.addEventListener('resize', this.checkScreenSize); // Listen for resize
+    window.addEventListener("resize", this.checkScreenSize); // Listen for resize
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.checkScreenSize); // Clean up
-  }
+    window.removeEventListener("resize", this.checkScreenSize); // Clean up
+  },
 };
 </script>
 
@@ -96,7 +132,7 @@ export default {
 /* Base Testimonials Section Styles */
 .testimonials-section {
   padding: 60px 0;
- 
+
   text-align: center;
 }
 
@@ -121,7 +157,10 @@ h2 {
 /* --- Desktop Grid Layout Styles (Applies when !isMobile) --- */
 .testimonials-grid {
   display: grid; /* Use CSS Grid for a nice layout */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
   gap: 30px; /* Space between grid items */
   justify-content: center; /* Center grid items if they don't fill the row */
 }
@@ -158,7 +197,6 @@ h2 {
   font-weight: normal;
   color: #777;
 }
-
 
 /* --- Mobile Swiper Styles (Applies when isMobile) --- */
 /* Wrapper to give Swiper proper context when conditionally rendered */
@@ -199,7 +237,9 @@ h2 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 :deep(.swiper-button-next)::after,

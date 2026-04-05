@@ -1,57 +1,74 @@
 <script setup>
-import { defineProps, defineEmits, watch, onMounted, onBeforeUnmount } from 'vue';
+import {
+  defineProps,
+  defineEmits,
+  watch,
+  onMounted,
+  onBeforeUnmount,
+} from "vue";
 
 const props = defineProps({
   isVisible: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
-const emit = defineEmits(['close']);
+const emit = defineEmits(["close"]);
 
 // Watch for changes in isVisible to toggle body scroll
-watch(() => props.isVisible, (newVal) => {
-  if (newVal) {
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  } else {
-    document.body.style.overflow = ''; // Restore background scrolling
-  }
-});
+watch(
+  () => props.isVisible,
+  (newVal) => {
+    if (newVal) {
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+    } else {
+      document.body.style.overflow = ""; // Restore background scrolling
+    }
+  },
+);
 
 // Handle Escape key to close the overlay
 const handleKeydown = (event) => {
-  if (props.isVisible && event.key === 'Escape') {
-    emit('close');
+  if (props.isVisible && event.key === "Escape") {
+    emit("close");
   }
 };
 
 // Add/remove event listener for keydown on mount/unmount
 onMounted(() => {
-  document.addEventListener('keydown', handleKeydown);
+  document.addEventListener("keydown", handleKeydown);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener('keydown', handleKeydown);
-  document.body.style.overflow = ''; // Ensure scroll is restored if component is unmounted while overlay is open
+  document.removeEventListener("keydown", handleKeydown);
+  document.body.style.overflow = ""; // Ensure scroll is restored if component is unmounted while overlay is open
 });
 
 // Method to close when clicking the overlay background itself (not the content)
 const closeOnClickOutside = (event) => {
-  if (event.target === event.currentTarget) { // Check if click was on the overlay div itself
-    emit('close');
+  if (event.target === event.currentTarget) {
+    // Check if click was on the overlay div itself
+    emit("close");
   }
 };
 </script>
 
 <template>
   <Transition name="overlay-fade">
-    <div v-if="isVisible" class="full-screen-overlay-backdrop" @click="closeOnClickOutside">
+    <div
+      v-if="isVisible"
+      class="full-screen-overlay-backdrop"
+      @click="closeOnClickOutside"
+    >
       <div class="full-screen-overlay-content">
         <div class="overlay-sticky-header">
-          <button class="overlay-close-button" @click="$emit('close')">&times;</button>
+          <button class="overlay-close-button" @click="$emit('close')">
+            &times;
+          </button>
         </div>
-        <slot></slot> </div>
+        <slot></slot>
+      </div>
     </div>
   </Transition>
 </template>
@@ -87,17 +104,16 @@ const closeOnClickOutside = (event) => {
   position: sticky; /* Make it sticky */
   top: 0; /* Stick to the top of its scrollable parent */
   width: 100%; /* Take full width */
-  
+
   z-index: 10; /* Ensure it stays on top of scrolling content */
   padding: 15px 0; /* Add padding for spacing */
-  
+
   display: flex;
   justify-content: flex-end; /* Push the button to the right */
   align-items: center;
 }
 
 .overlay-close-button {
- 
   right: 15px;
   background: none;
   border: none;

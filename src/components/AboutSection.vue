@@ -71,7 +71,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .about-content {
     margin-top: 30px;
   }

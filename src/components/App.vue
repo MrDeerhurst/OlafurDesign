@@ -89,7 +89,7 @@ section {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   section {
     padding: 60px 4%;
   }
@@ -139,7 +139,7 @@ h3 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   h1 {
     font-size: 2.4rem;
   }
@@ -239,7 +239,7 @@ button:hover {
   max-width: 700px;
   margin: 20px auto 60px auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .section-intro {
     font-size: 1.1rem;
     margin-bottom: 40px;

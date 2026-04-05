@@ -219,7 +219,7 @@ const breakpoints = {
   right: -20px; /* Adjust as needed */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .carousel__prev {
     left: -10px;
   }
@@ -262,7 +262,7 @@ const breakpoints = {
 }
 
 /* Responsive adjustments for overall section if needed, but breakpoints handle most for carousel */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .service-block {
     padding: 25px;
     min-height: 100px; /* Adjust height for smaller screens */

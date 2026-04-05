@@ -67,9 +67,18 @@ onBeforeUnmount(() => {
           <li><a href="#Impact">Impact</a></li>
           <li><a href="#Deployment">Deployment</a></li>
           <li><a href="#Roadmap">Roadmap</a></li>
-          <!--<li><a href="#testimonials">Testimonials</a></li> -->
         </ul>
       </nav>
+      <a
+        href="#Roadmap"
+        @click="
+          () => {
+            scrollToSection('contact');
+            closeMobileMenu();
+          }
+        "
+        >IS/ENG</a
+      >
       <button
         class="cta-button desktop-cta"
         @click="
@@ -125,7 +134,7 @@ onBeforeUnmount(() => {
 .header {
   background-color: var(--bg-white);
   padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(110, 110, 110, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -294,7 +303,7 @@ onBeforeUnmount(() => {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .main-nav,
   .desktop-cta {
     display: none;

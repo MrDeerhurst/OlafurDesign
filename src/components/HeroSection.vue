@@ -348,11 +348,11 @@ export default {
 }
 
 /* Responsive adjustments specific to HeroSection */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .hero-section {
-    height: 70vh;
+    height: 40rem;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
   .hero-content h1 {
     font-size: 2.2rem;

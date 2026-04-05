@@ -197,7 +197,7 @@ const deployFeatures = [
 ];
 
 const stats = [
-  { value: "< 7days", label: "Avg. Deployment Time" },
+  { value: "0$", label: "Hardware cost" },
   { value: "3+", label: "Hardware Ecosystems" },
   { value: "0", label: "Proprietary Lock-in" },
 ];
@@ -251,39 +251,6 @@ onUnmounted(() => observers.forEach((o) => o.disconnect()));
 }
 
 /* Google Fonts import via @import inside style is not scoped-safe, use link in index.html or add globally */
-
-/* ── Grid Background ── */
-.grid-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-.grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-.scan-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--c-accent), transparent);
-  opacity: 0.3;
-  animation: scan 6s linear infinite;
-}
-@keyframes scan {
-  0% {
-    top: -2px;
-  }
-  100% {
-    top: 100%;
-  }
-}
 
 /* ── Section Header ── */
 .section-header {

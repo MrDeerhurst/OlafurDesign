@@ -150,7 +150,7 @@ const closePortfolioOverlay = () => {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .projects-grid {
     gap: 20px;
   }
