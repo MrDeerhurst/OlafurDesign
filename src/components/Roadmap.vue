@@ -4,17 +4,18 @@
     <div class="noise" aria-hidden="true"></div>
     <div class="eyebrow">
       <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Offer</span>
+      <span class="eyebrow-text">{{
+        Languages.current.Roadmap.EyelashText
+      }}</span>
       <span class="eyebrow-line"></span>
     </div>
     <!-- Main content -->
     <div class="inner">
       <!-- Header -->
       <header class="header" ref="headerEl">
-        <h2 class="title">A Clear Path to Yes</h2>
+        <h2 class="title">{{ Languages.current.Roadmap.MainTitle }}</h2>
         <p class="subtitle">
-          We don't expect you to overhaul your entire product line overnight.
-          Let's prove the ROI on a single high-impact procedure.
+          {{ Languages.current.Roadmap.SubTitle }}
         </p>
       </header>
 
@@ -27,7 +28,7 @@
 
         <!-- Phase cards -->
         <div
-          v-for="(phase, i) in phases"
+          v-for="(phase, i) in Languages.current.Roadmap.Cards"
           :key="i"
           class="phase"
           :class="{
@@ -51,11 +52,6 @@
             <h3 class="card-title">{{ phase.title }}</h3>
             <p class="card-body">{{ phase.body }}</p>
 
-            <!-- Decorative step label -->
-            <div class="card-step">
-              Step {{ String(i + 1).padStart(2, "0") }}
-            </div>
-
             <!-- Hover glow -->
             <div class="card-glow" aria-hidden="true"></div>
           </div>
@@ -65,10 +61,11 @@
       <!-- Bottom CTA strip -->
       <div class="cta-strip" :class="{ visible: phaseVisible }">
         <div class="cta-left">
-          <span class="cta-label">Ready to start?</span>
+          <span class="cta-label">{{
+            Languages.current.Roadmap.ActonBox.Title
+          }}</span>
           <p class="cta-text">
-            Send us one CAD file and process instrucitons. That's the entire
-            commitment.
+            {{ Languages.current.Roadmap.ActonBox.subtext }}
           </p>
         </div>
         <button
@@ -76,7 +73,7 @@
           type="button"
           @click="scrollToSection('contact')"
         >
-          <span>Begin Your Pilot</span>
+          <span>{{ Languages.current.Roadmap.ActonBox.ButtonText }}</span>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -98,7 +95,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
-
+import { Languages } from "./contentFolder/Language";
 const headerEl = ref(null);
 const timelineEl = ref(null);
 const phaseVisible = ref(false);

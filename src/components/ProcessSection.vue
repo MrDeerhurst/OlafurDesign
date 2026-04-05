@@ -2,21 +2,20 @@
   <section id="Impact" class="process-section" aria-hidden="false">
     <div class="eyebrow">
       <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Impact</span>
+      <span class="eyebrow-text">{{
+        Languages.current.Impact.EyelashText
+      }}</span>
       <span class="eyebrow-line"></span>
     </div>
     <div class="container">
       <div class="block" :class="{ visible: el1Visible }" ref="el1">
-        <h2 class="Announcer">Services Impact Examples</h2>
-        <p class="section-intro">
-          Just few of the general ways how this service can create value, only
-          requiring a mobile phone.
-        </p>
+        <h2 class="Announcer">{{ Languages.current.Impact.MainTitle }}</h2>
+        <p class="section-intro">{{ Languages.current.Impact.SubTitle }}</p>
       </div>
       <div class="block" :class="{ visible: el2Visible }" ref="el2">
         <div class="process-steps">
           <div
-            v-for="(step, index) in processSteps"
+            v-for="(step, index) in Languages.current.Impact.processSteps"
             :key="index"
             class="process-step"
           >
@@ -77,6 +76,8 @@ import TS_Two from "@/assets/images/TS_2.png";
 import TS_Three from "@/assets/images/TS_3.png";
 import TS_Four from "@/assets/images/TS_4.png";
 
+import { Languages } from "./contentFolder/Language";
+
 import { ref, onMounted, onUnmounted } from "vue";
 
 export default {
@@ -116,7 +117,7 @@ export default {
         },
         {
           icon: "🔧",
-          title: "Eliminate Schematic Confusion",
+          title: "Reduce Schematic Confusion",
           obf: "fill",
           images: [
             {
@@ -260,6 +261,7 @@ export default {
       el1Visible: false,
       el2Visible: false,
       observers: [],
+      Languages,
     };
   },
   methods: {
@@ -394,7 +396,7 @@ h2 {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);

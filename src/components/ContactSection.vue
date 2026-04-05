@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import apiService from "../services/api";
-
+import { Languages } from "./contentFolder/Language";
 const form = ref({
   name: "",
   email: "",
@@ -42,26 +42,34 @@ const submitForm = async () => {
   <section id="contact" class="contact-section">
     <div class="eyebrow">
       <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Contact</span>
+      <span class="eyebrow-text">{{
+        Languages.current.Contact.EyelashText
+      }}</span>
       <span class="eyebrow-line"></span>
     </div>
     <div class="container">
-      <h2 class="Announcer">Ready for the next step?</h2>
+      <h2 class="Announcer">{{ Languages.current.Contact.MainTitle }}</h2>
       <p class="section-intro">
-        Let's collaborate on your innovative VR/AR solutions.
+        {{ Languages.current.Contact.SubTitle }}
       </p>
       <div class="contact-grid">
         <form @submit.prevent="submitForm" class="contact-form">
           <div class="form-group">
-            <label for="name">Your Name</label>
+            <label for="name">{{
+              Languages.current.Contact.TextBox.NameText
+            }}</label>
             <input type="text" id="name" v-model="form.name" required />
           </div>
           <div class="form-group">
-            <label for="email">Your Email</label>
+            <label for="email">{{
+              Languages.current.Contact.TextBox.EmailText
+            }}</label>
             <input type="email" id="email" v-model="form.email" required />
           </div>
           <div class="form-group">
-            <label for="message">Project Details / Message</label>
+            <label for="message">{{
+              Languages.current.Contact.TextBox.DetailText
+            }}</label>
             <textarea
               id="message"
               v-model="form.message"
@@ -69,12 +77,15 @@ const submitForm = async () => {
               required
             ></textarea>
           </div>
-          <button type="submit" class="cta-button">Send Message</button>
+          <button type="submit" class="cta-button">
+            {{ Languages.current.Contact.TextBox.ButtonText }}
+          </button>
         </form>
         <div class="contact-info">
-          <h3>Direct Contact</h3>
+          <h3>{{ Languages.current.Contact.DirectContact.Title }}</h3>
           <p>
-            ✉️ Email: <a href="Design@olafur.design">design@olafur.design</a>
+            {{ Languages.current.Contact.DirectContact.EmailText
+            }}<a href="Design@olafur.design">design@olafur.design</a>
           </p>
           <!-- <p>📱 Phone: <a href="tel:+1234567890">+1 (234) 567-890</a> </p> -->
           <!-- <p>📅 Schedule a call: <a href="https://calendly.com/design-olafur" target="_blank" rel="noopener noreferrer">Book Here</a></p> -->
@@ -96,7 +107,7 @@ const submitForm = async () => {
             >
           </div>
           <p class="location">
-            Serving clients globally from Reykjavik, Iceland.
+            {{ Languages.current.Contact.DirectContact.ServiceText }}
           </p>
         </div>
       </div>

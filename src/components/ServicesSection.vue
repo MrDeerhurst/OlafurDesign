@@ -2,6 +2,8 @@
 // Import the carousel components and CSS
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import { Languages } from "./contentFolder/Language";
+
 
 import interactivity from '@/assets/images/interactive.png';
 import prototype from '@/assets/images/prototype.png';
@@ -95,17 +97,17 @@ onUnmounted(() => observers.forEach(o => o.disconnect()))
   <section id="Function" aria-hidden="false" >
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Function</span>
+          <span class="eyebrow-text">{{  Languages.current.Function.EyelashText }}</span>
           <span class="eyebrow-line"></span>
       </div>
    <div class="block" :class="{ visible: el1Visible }" ref="el1">
     <div class="container" ref="header" :class="{ visible: phaseVisible }">
-      <h2 class ="Announcer">How does it work?</h2>
-      <p class="section-intro">How do our virtual and augmented reality services work?</p>
+      <h2 class ="Announcer">{{  Languages.current.Function.MainTitle }}</h2>
+      <p class="section-intro">{{  Languages.current.Function.SubTitle }}</p>
     
     <div class="block" :class="{ visible: el2Visible }" ref="el2">
       <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel"   ref="blocks" >
-        <Slide v-for="(service, index) in services" :key="index">
+        <Slide v-for="(service, index) in  Languages.current.Function.services" :key="index">
           <div class="carousel__item">
             <div class="service-block">
               <dev class ="serviec-subtitle">{{ service.stepTitle }}</dev>

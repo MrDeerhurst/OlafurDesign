@@ -1,6 +1,7 @@
 <script>
 import portfolio from "./ProjectSection.vue"; // Adjust path if needed
 import services from "./ServicesSection.vue";
+import { Languages } from "./contentFolder/Language";
 
 export default {
   components: {
@@ -12,6 +13,7 @@ export default {
       animationId: null,
       start: null,
       duration: 2800,
+      Languages,
     };
   },
 
@@ -93,17 +95,14 @@ export default {
 
     <div class="hero-content">
       <h1 style="text-align: left">
-        Reduce Maintenance Errors with AR-Guided Training.
+        {{ Languages.current.Hero.MainTitle }}
       </h1>
       <p style="text-align: left">
-        <!--Specializing in engaging, high-performance virtual reality(VR) and augmented reality(AR) applications. -->
-        Turn every technician into an expert. Our Augmented Reality platform
-        provides real-time, hands-on guidance for setup and troubleshooting,
-        reducing onboarding time and cutting service costs.
+        {{ Languages.current.Hero.SubTitle }}
       </p>
       <div class="hero-ctas">
         <button class="cta-primary" @click="scrollToSection('Impact')">
-          Impact Examples
+          {{ Languages.current.Hero.Button }}
         </button>
         <!--
         <button class="cta-secondary" @click="scrollToSection('services')">
@@ -348,6 +347,12 @@ export default {
 }
 
 /* Responsive adjustments specific to HeroSection */
+@media (max-width: 1020px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
 @media (max-width: 820px) {
   .hero-section {
     height: 40rem;

@@ -1,8 +1,16 @@
 <script setup>
 import { ref } from "vue"; // Import ref for reactive variables
+import { Languages } from "./contentFolder/Language";
 
 // Reactive state for the mobile menu
 const isMobileMenuOpen = ref(false); // Declared as a ref, initialized to false
+
+const CL = ref(Languages.chosenLanguages);
+
+// Method to Change Languages on website
+function toggleLanguage() {
+  Languages.set();
+}
 
 // Method for smooth scrolling to sections
 const scrollToSection = (sectionId) => {
@@ -63,70 +71,95 @@ onBeforeUnmount(() => {
 
       <nav class="main-nav">
         <ul>
-          <li><a href="#Function">Function</a></li>
-          <li><a href="#Impact">Impact</a></li>
-          <li><a href="#Deployment">Deployment</a></li>
-          <li><a href="#Roadmap">Roadmap</a></li>
+          <li>
+            <a href="#Function">{{ Languages.current.Header.FunctionLink }}</a>
+          </li>
+          <li>
+            <a href="#Impact">{{ Languages.current.Header.ImpactLink }}</a>
+          </li>
+          <li>
+            <a href="#Deployment">{{
+              Languages.current.Header.DeploymentLink
+            }}</a>
+          </li>
+          <li>
+            <a href="#Roadmap">{{ Languages.current.Header.RoadmapLink }}</a>
+          </li>
         </ul>
       </nav>
-      <a
-        href="#Roadmap"
-        @click="
-          () => {
-            scrollToSection('contact');
-            closeMobileMenu();
-          }
-        "
-        >IS/ENG</a
-      >
-      <button
-        class="cta-button desktop-cta"
-        @click="
-          () => {
-            scrollToSection('contact');
-            closeMobileMenu();
-          }
-        "
-      >
-        Let’s Talk
-      </button>
+      <div class="rightSideItems">
+        <a
+          class="langButton"
+          @click="
+            () => {
+              toggleLanguage();
+            }
+          "
+          >IS/ENG</a
+        >
+        <button
+          class="cta-button desktop-cta"
+          @click="
+            () => {
+              scrollToSection('contact');
+              closeMobileMenu();
+            }
+          "
+        >
+          {{ Languages.current.Header.ContactButton }}
+        </button>
 
-      <div
-        class="hamburger"
-        @click="toggleMobileMenu"
-        :class="{ 'is-active': isMobileMenuOpen }"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+        <div
+          class="hamburger"
+          @click="toggleMobileMenu"
+          :class="{ 'is-active': isMobileMenuOpen }"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div>
 
-    <transition name="mobile-menu-fade">
-      <nav v-if="isMobileMenuOpen" class="mobile-nav-overlay">
-        <ul>
-          <li><a href="#Function" @click="closeMobileMenu">Function</a></li>
-          <li><a href="#Impact" @click="closeMobileMenu">Impact</a></li>
-          <li>
-            <a href="#Deployment" @click="closeMobileMenu">Deployment</a>
-          </li>
-          <li><a href="#Roadmap" @click="closeMobileMenu">Roadmap</a></li>
-          <li>
-            <button
-              class="cta-button mobile-cta"
-              @click="
-                () => {
-                  closeMobileMenu();
-                  scrollToSection('contact');
-                }
-              "
-            >
-              Let’s Talk
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </transition>
+      <transition name="mobile-menu-fade">
+        <nav v-if="isMobileMenuOpen" class="mobile-nav-overlay">
+          <ul>
+            <li>
+              <a href="#Function" @click="closeMobileMenu">{{
+                Languages.current.Header.FunctionLink
+              }}</a>
+            </li>
+            <li>
+              <a href="#Impact" @click="closeMobileMenu">{{
+                Languages.current.Header.ImpactLink
+              }}</a>
+            </li>
+            <li>
+              <a href="#Deployment" @click="closeMobileMenu">{{
+                Languages.current.Header.DeploymentLink
+              }}</a>
+            </li>
+            <li>
+              <a href="#Roadmap" @click="closeMobileMenu">{{
+                Languages.current.Header.RoadmapLink
+              }}</a>
+            </li>
+            <li>
+              <button
+                class="cta-button mobile-cta"
+                @click="
+                  () => {
+                    closeMobileMenu();
+                    scrollToSection('contact');
+                  }
+                "
+              >
+                {{ Languages.current.Header.ContactButton }}
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </transition>
+    </div>
   </header>
 </template>
 
@@ -160,6 +193,19 @@ onBeforeUnmount(() => {
   border-radius: 50%;
 }
 
+.rightSideItems {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  justify-content: flex-end;
+}
+
+.langButton {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
 .logo a {
   display: flex;
   font-family: var(--font-heading); /* Use heading font for logo text */
@@ -175,6 +221,7 @@ onBeforeUnmount(() => {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
 }
 
 .main-nav li {
@@ -301,9 +348,18 @@ onBeforeUnmount(() => {
 .mobile-menu-fade-leave-to {
   opacity: 0;
 }
+.cta-button {
+  width: 45%;
+}
 
 /* Responsive adjustments */
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
+  .logo a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 860px) {
   .main-nav,
   .desktop-cta {
     display: none;
@@ -312,7 +368,7 @@ onBeforeUnmount(() => {
     display: flex;
   }
   .logo a {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 </style>

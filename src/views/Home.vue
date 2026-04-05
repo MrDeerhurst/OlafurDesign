@@ -12,6 +12,10 @@ import TheFooter from "@/components/TheFooter.vue";
 import Portfolio from "@/components/Portfolio.vue";
 import RealWorldTrust from "@/components/RealWorldTrust.vue";
 import Roadmap from "@/components/Roadmap.vue";
+import { provide } from "vue";
+import { Languages } from "@/components/contentFolder/Language";
+
+provide("Languages", Languages);
 </script>
 
 <template>

@@ -9,10 +9,14 @@
     <div class="section-header" ref="header">
       <div class="eyebrow">
         <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Deployment</span>
+        <span class="eyebrow-text">{{
+          Languages.current.Deployment.EyelashText
+        }}</span>
         <span class="eyebrow-line"></span>
       </div>
-      <h2 class="section-title">Built for the Real World</h2>
+      <h2 class="section-title">
+        {{ Languages.current.Deployment.MainTitle }}
+      </h2>
     </div>
 
     <!-- Two-column blocks -->
@@ -20,21 +24,26 @@
       <!-- Block 1: Hardware Agnostic -->
       <div class="block" :class="{ visible: block1Visible }" ref="block1">
         <div class="block-meta">
-          <span class="block-num">01</span>
-          <div class="block-tag">Hardware Agnostic</div>
+          <span class="block-num">{{
+            Languages.current.Deployment.Cards.CardOne.CardTitleNumber
+          }}</span>
+          <div class="block-tag">
+            {{ Languages.current.Deployment.Cards.CardOne.CardTitleTop }}
+          </div>
         </div>
 
         <div class="block-body">
-          <h3 class="block-title">Use the Tools You Already Own</h3>
+          <h3 class="block-title">
+            {{ Languages.current.Deployment.Cards.CardOne.CardMainTitle }}
+          </h3>
           <p class="block-lead">
-            No need to buy $5,000 goggles just to see the value. Our platform is
-            built to run on the hardware your team and customers already have in
-            their pockets.
+            {{ Languages.current.Deployment.Cards.CardOne.CardSubtitle }}
           </p>
 
           <ul class="feature-list">
             <li
-              v-for="(item, i) in hardwareFeatures"
+              v-for="(item, i) in Languages.current.Deployment.Cards.CardOne
+                .CardItems"
               :key="i"
               class="feature-item"
               :style="{ transitionDelay: `${0.1 + i * 0.08}s` }"
@@ -76,22 +85,26 @@
         ref="block2"
       >
         <div class="block-meta">
-          <span class="block-num">02</span>
-          <div class="block-tag">Deployment</div>
+          <span class="block-num">{{
+            Languages.current.Deployment.Cards.CardTwo.CardTitleNumber
+          }}</span>
+          <div class="block-tag">
+            {{ Languages.current.Deployment.Cards.CardTwo.CardTitleTop }}
+          </div>
         </div>
 
         <div class="block-body">
           <h3 class="block-title">
-            From CAD to Site in Days, <em>Not Months</em>
+            {{ Languages.current.Deployment.Cards.CardTwo.CardMainTitle }}
           </h3>
           <p class="block-lead">
-            We've eliminated the "Implementation Gap." Our deployment pipeline
-            is optimized for the speed of manufacturing.
+            {{ Languages.current.Deployment.Cards.CardTwo.CardSubtitle }}
           </p>
 
           <ul class="feature-list">
             <li
-              v-for="(item, i) in deployFeatures"
+              v-for="(item, i) in Languages.current.Deployment.Cards.CardTwo
+                .CardItems"
               :key="i"
               class="feature-item"
               :style="{ transitionDelay: `${0.1 + i * 0.08}s` }"
@@ -129,7 +142,11 @@
 
     <!-- Bottom bar -->
     <div class="bottom-bar">
-      <div class="stat" v-for="stat in stats" :key="stat.label">
+      <div
+        class="stat"
+        v-for="stat in Languages.current.Deployment.Benefit"
+        :key="stat.label"
+      >
         <span class="stat-value">{{ stat.value }}</span>
         <span class="stat-label">{{ stat.label }}</span>
       </div>
@@ -139,7 +156,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-
+import { Languages } from "./contentFolder/Language";
 const header = ref(null);
 const block1 = ref(null);
 const block2 = ref(null);
