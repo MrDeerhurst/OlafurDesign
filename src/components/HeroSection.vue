@@ -14,11 +14,30 @@ export default {
       start: null,
       duration: 2800,
       Languages,
+      el1Visible: false,
+      el2Visible: false,
+      observers: [],
     };
   },
 
   mounted() {
     this.startAnimation();
+    const observe = (el, key) => {
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            this[key] = true;
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.15 },
+      );
+      if (el) obs.observe(el);
+      this.observers.push(obs);
+    };
+
+    observe(this.$refs.el1, "el1Visible");
+    observe(this.$refs.el2, "el2Visible");
   },
 
   beforeUnmount() {
@@ -39,7 +58,6 @@ export default {
     startAnimation() {
       this.animationId = requestAnimationFrame(this.animate);
     },
-
     animate(ts) {
       if (!this.start) this.start = ts;
 
@@ -59,7 +77,6 @@ export default {
 
       this.animationId = requestAnimationFrame(this.animate);
     },
-
     stopAnimation() {
       if (this.animationId) {
         cancelAnimationFrame(this.animationId);
@@ -67,48 +84,73 @@ export default {
         this.start = null;
       }
     },
+    mounted() {
+      const observe = (el, key) => {
+        const obs = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              this[key] = true;
+              obs.disconnect();
+            }
+          },
+          { threshold: 0.15 },
+        );
+        if (el) obs.observe(el);
+        this.observers.push(obs);
+      };
+
+      observe(this.$refs.el1, "el1Visible");
+      observe(this.$refs.el2, "el2Visible");
+    },
+  },
+  unmounted() {
+    this.observers.forEach((o) => o.disconnect());
   },
 };
 </script>
 
 <template>
-  <section id="hero" class="hero-section">
-    <div class="phone-mockup">
-      <div class="phone-notch"></div>
-      <div class="phone-screen" id="phoneScreen">
-        <img
-          class="phone-bg-img"
-          src="@/assets/images/PipingNormal.png"
-          alt="Background"
-        />
-        <img
-          class="phone-overlay-img"
-          id="overlayImg"
-          src="@/assets/images/PipingAdded.png"
-          alt="AR Overlay"
-        />
-        <div class="scan-bar" id="scanBar"></div>
-        <div class="phone-vignette"></div>
-        <div class="ar-corners"><span></span></div>
+  <section id="hero" class="hero-section" aria-hidden="true">
+    <div class="block" :class="{ visible: el1Visible }" ref="el1">
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-screen" id="phoneScreen">
+          <img
+            class="phone-bg-img"
+            src="@/assets/images/PipingNormal.png"
+            alt="Background"
+          />
+          <img
+            class="phone-overlay-img"
+            id="overlayImg"
+            src="@/assets/images/PipingAdded.png"
+            alt="AR Overlay"
+          />
+          <div class="scan-bar" id="scanBar"></div>
+          <div class="phone-vignette"></div>
+          <div class="ar-corners"><span></span></div>
+        </div>
       </div>
     </div>
-
-    <div class="hero-content">
-      <h1 style="text-align: left">
-        {{ Languages.current.Hero.MainTitle }}
-      </h1>
-      <p style="text-align: left">
-        {{ Languages.current.Hero.SubTitle }}
-      </p>
-      <div class="hero-ctas">
-        <button class="cta-primary" @click="scrollToSection('Impact')">
-          {{ Languages.current.Hero.Button }}
-        </button>
-        <!--
+    <div class="block" :class="{ visible: el2Visible }" ref="el2">
+      <div class="hero-content">
+        <h1 style="text-align: left">
+          {{ Languages.current.Hero.MainTitle }}
+        </h1>
+        <p style="text-align: left">
+          {{ Languages.current.Hero.SubTitle }}
+        </p>
+        <div class="hero-ctas">
+          <button class="cta-primary" @click="scrollToSection('Impact')">
+            {{ Languages.current.Hero.Button }}
+          </button>
+          <!--
         <button class="cta-secondary" @click="scrollToSection('services')">
           Learn More About Services
         </button>
-      --></div>
+      -->
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -153,6 +195,19 @@ export default {
   background: rgba(255, 255, 255, 0.04);
   bottom: -80px;
   left: -60px;
+}
+
+.block {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.block.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .video-background,

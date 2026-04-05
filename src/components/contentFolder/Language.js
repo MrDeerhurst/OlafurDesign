@@ -354,8 +354,8 @@ export const English = {
     MainTitle: "Ready for the next step?",
     SubTitle: "Let’s collaborate on your next VR/AR solution.",
     TextBox: {
-      NameText: "Your Name",
-      EmailText: "Your Email",
+      NameText: "Name",
+      EmailText: "Email",
       DetailText: "Project Details / Message",
       ButtonText: "Send Message",
     },
@@ -652,7 +652,7 @@ export const Icelandic = {
     },
     Benefit: [
       { value: "0 kr.", label: "Vélbúnaðarkostnaður" },
-      { value: "3+", label: "Vélbúnaðarkerfi" },
+      { value: "3+", label: "Hugbúnaðar Stýrikerfi" },
       { value: "0", label: "Binding við hugbúnað" },
     ],
   },
@@ -692,7 +692,7 @@ export const Icelandic = {
   Contact: {
     EyelashText: "Samskipti",
     MainTitle: "Ertu tilbúin(n) í næsta skref?",
-    SubTitle: "Vinnum saman að nýstárlegum VR/AR lausnum.",
+    SubTitle: "Vinnum saman að VR/AR lausnum.",
     TextBox: {
       NameText: "Nafn",
       EmailText: "Netfang",

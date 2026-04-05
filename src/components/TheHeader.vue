@@ -244,7 +244,7 @@ onBeforeUnmount(() => {
 
 .desktop-cta {
   display: flex;
-  width: 15%;
+
   height: 20%;
   padding: 1rem 1.5rem;
   margin-left: 10px;
@@ -349,13 +349,14 @@ onBeforeUnmount(() => {
   opacity: 0;
 }
 .cta-button {
-  width: 45%;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1100px) {
   .logo a {
     font-size: 1.4rem;
+  }
+  .cta-button {
   }
 }
 
