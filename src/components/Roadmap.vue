@@ -57,38 +57,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Bottom CTA strip -->
-      <div class="cta-strip" :class="{ visible: phaseVisible }">
-        <div class="cta-left">
-          <span class="cta-label">{{
-            Languages.current.Roadmap.ActonBox.Title
-          }}</span>
-          <p class="cta-text">
-            {{ Languages.current.Roadmap.ActonBox.subtext }}
-          </p>
-        </div>
-        <button
-          class="cta-btn"
-          type="button"
-          @click="scrollToSection('contact')"
-        >
-          <span>{{ Languages.current.Roadmap.ActonBox.ButtonText }}</span>
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
-          >
-            <path
-              d="M5 12h14M12 5l7 7-7 7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
     </div>
   </section>
 </template>
@@ -101,28 +69,12 @@ const timelineEl = ref(null);
 const phaseVisible = ref(false);
 const activePhase = ref(null);
 
-const phases = [
-  {
-    days: "Day 1 – 3",
-    title: "Asset Audit",
-    body: "Send us a CAD file and a standard SOP for one complex task. We analyse the procedure scope and identify spatial anchor points.",
-  },
-  {
-    days: "Day 4 – 10",
-    title: "AR Transformation",
-    body: "We map the logic and create the spatial overlays, step annotations, fault-tree branches, and safety checkpoints rendered in-context.",
-  },
-  {
-    days: "Day 11 – 14",
-    title: "Live Validation",
-    body: "We demo the guided procedure on your own equipment. You see real technicians completing the task with measurable confidence.",
-  },
-];
-
 // Progress fill based on which phase is hovered
 const trackFill = computed(() => {
   if (activePhase.value === null) return 0;
-  return ((activePhase.value + 1) / phases.length) * 100;
+  return (
+    ((activePhase.value + 1) / Languages.current.Roadmap.Cards.length) * 100
+  );
 });
 
 let obs;
@@ -228,6 +180,8 @@ const scrollToSection = (sectionId) => {
   align-content: center;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 .kicker {
   display: flex;
@@ -250,8 +204,7 @@ const scrollToSection = (sectionId) => {
 }
 .title {
   font-family: var(--font-head);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 700;
+
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--ink);

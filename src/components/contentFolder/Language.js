@@ -691,7 +691,7 @@ export const Icelandic = {
 
   Contact: {
     EyelashText: "Samskipti",
-    MainTitle: "Ertu tilbúin(n) í næsta skref?",
+    MainTitle: "Tilbúin(n) í næsta skref?",
     SubTitle: "Vinnum saman að VR/AR lausnum.",
     TextBox: {
       NameText: "Nafn",

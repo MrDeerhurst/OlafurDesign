@@ -5,41 +5,6 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import { Languages } from "./contentFolder/Language";
 
 
-import interactivity from '@/assets/images/interactive.png';
-import prototype from '@/assets/images/prototype.png';
-import arDevelopment from '@/assets/images/Custom_VR.png';
-import vrExperiences from '@/assets/images/organisation.png';
-import UXUI from '@/assets/images/UIUX.png';
-import Mobile from '@/assets/images/MobileVR_AR.png'
- 
-const services = [
-  { // Object/Image detection
-    icon:arDevelopment ,
-    stepTitle: "Step One",
-    title: 'Capture', 
-    description: 'We digitize your manuals and expert knowledge.'
-  },
-  { // Connects 
-    icon: Mobile,
-    stepTitle: "Step Two",
-    title: 'Deploy',
-    description: 'Your team accesses instructions instantly via smartphone or tablet.'
-  },
-    { // design and animation
-    icon: interactivity,
-    stepTitle: "Step Three",
-    title: 'Execute',
-    description: 'AR overlays show exactly which bolt to turn and which lever to pull.'
-  },
-  { // AR/VR Concept Prototyping
-    icon: vrExperiences,
-    stepTitle: "Step Four",
-    title: 'Verify',
-    description: 'Real-time data logs ensure the job was done to spec'
-  }
-  
-];
-
 
 // Define breakpoints for responsive carousel behavior
 const breakpoints = {
@@ -152,6 +117,7 @@ onUnmounted(() => observers.forEach(o => o.disconnect()))
 .Announcer{
  font-family: "Playfair Display", "Georgia", serif;
  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 .eyebrow {
   display: flex;

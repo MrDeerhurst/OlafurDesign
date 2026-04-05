@@ -301,13 +301,8 @@ onUnmounted(() => observers.forEach((o) => o.disconnect()));
   font-family: "Playfair Display", "Georgia", serif;
   color: #333;
   margin: 0;
-}
-.section-title em {
-  font-style: normal;
-  background: linear-gradient(135deg, var(--c-accent), var(--c-accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 
 /* ── Blocks ── */
