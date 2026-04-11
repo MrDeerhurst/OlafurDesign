@@ -72,18 +72,16 @@ onBeforeUnmount(() => {
       <nav class="main-nav">
         <ul>
           <li>
-            <a href="#Function">{{ Languages.current.Header.FunctionLink }}</a>
+            <a href="#Value">{{ Languages.current.Header.FunctionLink }}</a>
           </li>
           <li>
             <a href="#Impact">{{ Languages.current.Header.ImpactLink }}</a>
           </li>
           <li>
-            <a href="#Deployment">{{
-              Languages.current.Header.DeploymentLink
-            }}</a>
+            <a href="#Roadmap">{{ Languages.current.Header.DeploymentLink }}</a>
           </li>
           <li>
-            <a href="#Roadmap">{{ Languages.current.Header.RoadmapLink }}</a>
+            <a href="#Sample">{{ Languages.current.Header.RoadmapLink }}</a>
           </li>
         </ul>
       </nav>
@@ -124,7 +122,7 @@ onBeforeUnmount(() => {
         <nav v-if="isMobileMenuOpen" class="mobile-nav-overlay">
           <ul>
             <li>
-              <a href="#Function" @click="closeMobileMenu">{{
+              <a href="#Value" @click="closeMobileMenu">{{
                 Languages.current.Header.FunctionLink
               }}</a>
             </li>
@@ -134,12 +132,12 @@ onBeforeUnmount(() => {
               }}</a>
             </li>
             <li>
-              <a href="#Deployment" @click="closeMobileMenu">{{
+              <a href="#Roadmap" @click="closeMobileMenu">{{
                 Languages.current.Header.DeploymentLink
               }}</a>
             </li>
             <li>
-              <a href="#Roadmap" @click="closeMobileMenu">{{
+              <a href="#Sample" @click="closeMobileMenu">{{
                 Languages.current.Header.RoadmapLink
               }}</a>
             </li>

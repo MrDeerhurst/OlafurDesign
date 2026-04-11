@@ -25,295 +25,301 @@ import TS_One from "@/assets/images/TS_1.png";
 import TS_Two from "@/assets/images/TS_2.png";
 import TS_Three from "@/assets/images/TS_3.png";
 import TS_Four from "@/assets/images/TS_4.png";
+
+import Brain from "@/assets/images/brain.png";
+import Time from "@/assets/images/Time.png";
+import Waste from "@/assets/images/Waste.png";
+
+import GA from "@/assets/images/Guided Assembly.png";
+import GAIcon from "@/assets/images/GA.png";
+
+import RST from "@/assets/images/RSTMain.png";
+import RSTIcon from "@/assets/images/RSTI.png";
+
+import SFT from "@/assets/images/SFI.png";
+import SFTIcon from "@/assets/images/Safe.png";
+
+import MICO from "@/assets/images/MICO.png";
+import MICOIcon from "@/assets/images/MICOIcon.png";
+
+import REC from "@/assets/images/REC.png";
+import RECIcon from "@/assets/images/RECIcon.png";
+
+import BLCS from "@/assets/images/BLCS.png";
+import BLCSIcon from "@/assets/images/BLCSIcon.png";
+
 import { reactive } from "vue";
 
 export const English = {
   Header: {
-    FunctionLink: "Functionality",
-    ImpactLink: "Value & Impact",
-    DeploymentLink: "Implementation",
-    RoadmapLink: "Roadmap",
+    FunctionLink: "Value",
+    ImpactLink: "Impact",
+    DeploymentLink: "Roadmap",
+    RoadmapLink: "Offer",
     ContactButton: "Get in touch",
   },
   Hero: {
-    MainTitle: "Minimize maintenance errors with AR-guided training.",
+    MainTitle: "Train Any Stakeholder Faster Using Mobile AR",
     SubTitle:
-      "Empower every technician with expert knowledge. Our Augmented Reality (AR) platform provides real-time guidance for setup and troubleshooting, shortening the learning curve and reducing service costs.",
-    Button: "See impact examples",
+      "The End of the Manual. Why the World’s Best Manufacturers are Switching to 'Visual Guidance'. No headsets, no friction, just faster production.",
+    Button: "Book a pilot",
   },
 
-  Function: {
-    EyelashText: "Functionality",
-    MainTitle: "How does it work?",
+  Value: {
+    EyelashText: "Value",
+    MainTitle: "The Expertise Bottleneck",
+    SubTitle:
+      "In modern machinery manufacturing, knowledge is your most valuable and most fragile asset. We see three critical points of failure in the current industrial model",
+    compareTableHead: {
+      before: "The Old Way",
+      after: "With Our Product",
+    },
+    Cards: [
+      {
+        icon: Time,
+        toptext: "Time",
+        label: "Time Delays",
+        desc: "New employees take months to reach peak efficiency because traditional manuals and shadowing can be slow and inconsistent.",
+        items: [
+          {
+            oldTitle: "The Shadowing Bottleneck",
+            oldDesc:
+              "Training scales at the speed of your busiest expert. If the expert is busy, the trainee sits idle.",
+            newTitle: "On-Demand Mentorship",
+            newDesc:
+              "AR guides the user instantly. Training scales at the speed of a download.",
+          },
+          {
+            oldTitle: "Logistical Drag",
+            oldDesc:
+              "Shipping headsets or flying trainers is a high-CO2, high-cost, low-speed relic of the past.",
+            newTitle: "Zero-Lead Time",
+            newDesc:
+              "Deploy knowledge globally in one click to the device already in the worker’s pocket.",
+          },
+        ],
+      },
+
+      {
+        icon: Waste,
+        label: "Hardware costs",
+        desc: "Shipping a machine is a high-risk event. Incorrect customer setup or rookie operator errors lead to expensive service travel and eroded margins.",
+        items: [
+          {
+            oldTitle: "Static Manuals",
+            oldDesc:
+              "Printed paper is dead data. The moment a process changes, the manual becomes a liability.",
+            newTitle: "Live SOPs",
+            newDesc:
+              "One update at HQ refreshes every manual in the field. Perfect compliance, zero paper waste.",
+          },
+          {
+            oldTitle: "The Headset Graveyard",
+            oldDesc:
+              "High-cost, fragile hardware that workers find awkward ends up locked in a cabinet. Sunk cost.",
+            newTitle: "Hardware Agnostic",
+            newDesc:
+              "Uses the smartphone,the most refined, durable, and familiar interface on Earth. Zero scare factor.",
+          },
+        ],
+      },
+
+      {
+        icon: Brain,
+        label: "Knowledge Management",
+        desc: "As your most experienced employees retire, their specialized assembly and repair techniques leave with them.",
+        items: [
+          {
+            oldTitle: "The Retirement Crisis",
+            oldDesc:
+              "When a 30-year veteran leaves, their unwritten expertise walks out the door with them.",
+            newTitle: "Expert Capture",
+            newDesc:
+              "Turn unspoken mastery into a shared digital standard. The company owns the brilliance, not just the employee.",
+          },
+          {
+            oldTitle: "Software Lock-in",
+            oldDesc:
+              "Specialized AR platforms trap your data in walled gardens that are hard to export or update.",
+            newTitle: "Open Flexibility",
+            newDesc:
+              "A lasting framework that integrates with your existing IT, built for long-term stability.",
+          },
+          {
+            oldTitle: "The Stress of the New",
+            oldDesc:
+              "New technicians feel the weight of potentially making a million-euro mistake during training",
+            newTitle: "The Safety Net",
+            newDesc:
+              "AR guidance provides a Digital Guardrail. It lowers cognitive load and workplace stress, leading to higher Worker Satisfaction.",
+          },
+        ],
+      },
+    ],
+  },
+  Impact: {
+    EyelashText: "Impact",
+    MainTitle: "Scalable Intelligence on Demand",
+    SubTitle:
+      "We treat the smartphone as a professional precision tool. Our platform captures your engineering data and transforms it into a mobile-first AR ecosystem that serves two distinct purposes: your production floor and your customer's site.",
+
+    processSteps: [
+      {
+        title: "Internal",
+        subtitle: "Operational Excellence & Workforce Upskilling",
+        subitems: [
+          {
+            index: 0,
+            icon: GAIcon,
+            title: "Guided Assembly",
+            obf: "fill",
+            images: [
+              {
+                src: GA,
+                alt: "Image 1",
+                caption: "Sample",
+                of: "cover",
+              },
+            ],
+            description:
+              "Move beyond 2D blueprints. Employees follow 3D spatial overlays that show exactly where every sensor, bolt, and wire belongs. Mistakes are caught before the machine leaves the station.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["direct", "direct"],
+            of: "fade",
+          },
+          {
+            index: 1,
+            icon: RSTIcon,
+            title: "Rapid Skill Transfer",
+            obf: "cover",
+            images: [
+              {
+                src: RST,
+                alt: "Image 1",
+                caption: "Sample",
+                of: "fit",
+              },
+            ],
+            description:
+              "Reduce Time-to-Competence. New hires learn on the job with a digital mentor in their pocket, reducing the burden on your senior supervisors.",
+            durnation: 400,
+            interval: 10,
+            transt: ["fade"],
+          },
+          {
+            index: 2,
+            icon: SFTIcon,
+            title: "Safety-First Interface",
+            obf: "fit",
+            images: [
+              {
+                src: SFT,
+                alt: "Image 1",
+                caption: "Sample",
+                of: "fit",
+              },
+            ],
+            description:
+              "Unlike immersive headsets that can disorient workers, our mobile UI maintains peripheral awareness, ensuring operators remain safe and present in the factory environment.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+        ],
+      },
+      {
+        title: "External",
+        subtitle: "The Hardware Handover & After-Sales Service",
+        subitems: [
+          {
+            index: 3,
+            icon: RECIcon,
+            title: "More Indipendant Customer Onboarding",
+            obf: "fill",
+            images: [
+              {
+                src: MICO,
+                alt: "Image 1",
+                caption: "Sample",
+                of: "fill",
+              },
+            ],
+            description:
+              "Don't just ship hardware, ship the expertise to run it. Provide customers with an AR Setup & Calibration guide. They suppliment your onbording, and you reduce the number of support calls.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+          {
+            index: 4,
+            icon: MICOIcon,
+            title: "Remote Expert Collaboration",
+            obf: "fill",
+            images: [
+              {
+                src: REC,
+                alt: "Image 1",
+                caption: "Sample",
+                of: "fill",
+              },
+            ],
+            description:
+              "When a customer hits a bottleneck, your engineers can communicate more effectively to subject matter seen through the phone camera. Using spatial markers to point to the exact component that needs adjustment, no flight required.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+          {
+            index: 5,
+            icon: BLCSIcon,
+            title: "Branded Life-Cycle Support",
+            obf: "fill",
+            images: [
+              {
+                src: BLCS,
+                alt: "Image 1",
+                caption: "Sample",
+                of: "fill",
+              },
+            ],
+            description:
+              "A quick scan of a serial number provides customers with instant maintenance schedules and parts ordering, turning your machine into a long-term Service-as-a-Product.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+        ],
+      },
+    ],
+  },
+
+  Onboarding: {
+    EyelashText: "Onbording",
+    MainTitle: "Three-Step Implementation",
     SubTitle: "A breakdown of our virtual and augmented reality workflow.",
     services: [
       {
         icon: arDevelopment,
         stepTitle: "Step One",
-        title: "Data Capture",
+        title: "Data Conversion",
         description:
           "We digitize your existing manuals and specialist knowledge.",
       },
       {
         icon: Mobile,
         stepTitle: "Step Two",
-        title: "Implementation",
+        title: "User Test",
         description:
-          "Your team gains instant access to instructions via smartphone or tablet.",
+          "Your team gains access to inital reults and evaluates instructions via smartphone or tablet.",
       },
       {
         icon: interactivity,
         stepTitle: "Step Three",
-        title: "Execution",
+        title: "Deployment",
         description:
-          "AR overlays indicate exactly which bolts to turn and which levers to pull.",
+          "Using their mobile phones Employees and/or customer empowered by training using AR overlays indicate exactly which bolts to turn and which levers to pull.",
       },
-      {
-        icon: vrExperiences,
-        stepTitle: "Step Four",
-        title: "Verification",
-        description:
-          "Real-time data logging ensures the work meets all quality standards.",
-      },
-    ],
-  },
-
-  Impact: {
-    EyelashText: "Value",
-    MainTitle: "Service Impact Examples",
-    SubTitle:
-      "Here are a few practical ways to create value using the service with a standard mobile phone.",
-    processSteps: [
-      {
-        icon: "🏭",
-        title: "Standardize Expert Performance",
-        obf: "fill",
-        images: [
-          {
-            src: MT_One,
-            alt: "Image 1",
-            caption: "Sample",
-            of: "fill",
-          },
-          {
-            src: MT_Two,
-            alt: "Image 2 - Baraba",
-            caption: "The Alps",
-            of: "fade",
-          },
-          {
-            src: MT_Three,
-            alt: "Image 3",
-            caption: "Sample",
-            of: "fill",
-          },
-        ],
-        description:
-          "Move from observation to action. Trainees follow AR instructions directly on the equipment, bridging the gap between theory and practice. This results in fewer errors, faster onboarding, and better compliance with standard procedures.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["direct", "direct"],
-        of: "fade",
-      },
-      {
-        icon: "🔧",
-        title: "Clarify Complex Schematics",
-        obf: "fill",
-        images: [
-          {
-            src: FSTS_N,
-            alt: "Image 1",
-            caption: "Sample",
-            of: "fill",
-          },
-          {
-            src: FSTS_A,
-            alt: "Image 2 - Baraba",
-            caption: "The Alps",
-            of: "fill",
-          },
-        ],
-        description:
-          "Save time spent deciphering worn paper blueprints. Our AR system projects exact cable routes directly onto panels, increasing wiring accuracy and halving repair cycles.",
-        durnation: 400,
-        interval: 10,
-        transt: ["fade"],
-      },
-      {
-        icon: "📦",
-        title: "Warehouse Speed and Precision",
-        obf: "fill",
-        images: [
-          {
-            src: WH_One,
-            alt: "Image 1",
-            caption: "Sample",
-            of: "fill",
-          },
-          {
-            src: WH_Three,
-            alt: "Image 2 - Baraba",
-            caption: "The Alps",
-            of: "fill",
-          },
-        ],
-        description:
-          "Make seasonal staff productive instantly. AR-guided routing and bin-highlighting minimize search time and picking errors, ensuring your facility stays on schedule without high training costs.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-      {
-        icon: "🔍",
-        title: "Identify Hidden Hazards",
-        obf: "fill",
-        images: [
-          {
-            src: imageOne,
-            alt: "Image 1",
-            caption: "Sample",
-            of: "fill",
-          },
-          {
-            src: imageTwo,
-            alt: "Image 2 - Baraba",
-            caption: "The Alps",
-            of: "fill",
-          },
-        ],
-        description:
-          "Keep your team safe. Our interface projects risk zones and historical fault data directly into the worker's field of view, turning safety protocols into a visual reality.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-      {
-        icon: "⚙️",
-        title: "Quality Control in Commissioning",
-        obf: "fill",
-        images: [
-          {
-            src: ASTwo_One,
-            alt: "Image 1",
-            caption: "Sample",
-            of: "fill",
-          },
-          {
-            src: ASTwo_Two,
-            alt: "Image 2 - Baraba",
-            caption: "The Alps",
-            of: "fill",
-          },
-        ],
-        description:
-          "Avoid the common headaches of manual measurement. Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed correctly the first time.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-      {
-        icon: "🚨",
-        title: "Adaptive Fault Recovery",
-        obf: "fill",
-        images: [
-          {
-            src: TS_One,
-            alt: "Image 1",
-            caption: "Sample",
-            of: "fill",
-          },
-          {
-            src: TS_Two,
-            alt: "Image 2 - Baraba",
-            caption: "The Alps",
-            of: "fill",
-          },
-        ],
-        description:
-          "Eliminate the guesswork. Our dynamic fault-tree overlays react to what the technician sees in real-time, guiding them through complex repairs with the precision of a senior engineer.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-    ],
-  },
-
-  Deployment: {
-    EyelashText: "Implementation",
-    MainTitle: "Built for the real world",
-    Cards: {
-      CardOne: {
-        CardTitleNumber: "01",
-        CardTitleTop: "Hardware Independent",
-        CardMainTitle: "Use the tools you already have",
-        CardSubtitle:
-          "There is no need for expensive specialized equipment. Our platform is designed to run on the hardware your team already carries.",
-        CardItems: [
-          {
-            label: "Smartphones and Tablets",
-            desc: "Full support for iOS and Android (ARKit / ARCore).",
-            paths: [
-              "M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5",
-              "M12 18h.008v.008H12V18z",
-            ],
-          },
-
-          {
-            label: "Industrial Wearables",
-            desc: "Ready for RealWear and HoloLens for hands-free operation in high-risk zones.",
-            paths: [
-              "M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z",
-              "M15 12a3 3 0 11-6 0 3 3 0 016 0z",
-            ],
-          },
-
-          {
-            label: "Legacy Integration",
-            desc: "Compatible with your current CAD data; no costly remodeling required.",
-            paths: [
-              "M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244",
-            ],
-          },
-        ],
-      },
-
-      CardTwo: {
-        CardTitleNumber: "02",
-        CardTitleTop: "Implementation",
-        CardMainTitle: "From design to site in days, not months",
-        CardSubtitle:
-          "We have bridged the implementation gap. Our process is optimized for the speed of modern manufacturing.",
-        CardItems: [
-          {
-            label: "Rapid Data Processing",
-            desc: "Submit your 3D models and PDF manuals; the system can be ready in days.",
-            paths: [
-              "M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5",
-            ],
-          },
-
-          {
-            label: "Quick Updates",
-            desc: "Deploy updated procedures to all devices simultaneously without paper supplements.",
-            paths: [
-              "M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99",
-            ],
-          },
-
-          {
-            label: "Simple Interface",
-            desc: "Your specialists can update fault trees themselves without needing a software engineer.",
-            paths: [
-              "M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5",
-            ],
-          },
-        ],
-      },
-    },
-    Benefit: [
-      { value: "0 USD", label: "Hardware Cost" },
-      { value: "3+", label: "Hardware Ecosystems" },
-      { value: "0", label: "Vendor Lock-in" },
     ],
   },
 
@@ -321,7 +327,7 @@ export const English = {
     EyelashText: "Offer",
     MainTitle: "A clear path to results",
     SubTitle:
-      "We don't expect you to overhaul everything at once. Let's prove the ROI with a single high-impact procedure.",
+      "We don't expect you to overhaul everything at once. Let's prove the ROI with a single, simple high-impact procedure.",
     Cards: [
       {
         days: "Days 1 – 3",
@@ -370,290 +376,274 @@ export const English = {
 
 export const Icelandic = {
   Header: {
-    FunctionLink: "Virkni",
-    ImpactLink: "Ávinningur",
-    DeploymentLink: "Innleiðing",
-    RoadmapLink: "Vegvísir",
-    ContactButton: "Hafðu samband",
+    FunctionLink: "Virði",
+    ImpactLink: "Áhrif",
+    DeploymentLink: "Innleiðingaráætlun",
+    RoadmapLink: "Tilboð",
+    ContactButton: "Hafa samband",
   },
   Hero: {
-    MainTitle: "Fækkaðu villum við viðhald með AR-þjálfun.",
+    MainTitle: "Hraðari þjálfun allra hagsmunaaðila með AR í farsímanum",
     SubTitle:
-      "Gerðu hvern tæknimann að sérfræðingi. Viðbættur veruleiki (AR) veitir rauntíma leiðbeiningar við uppsetningu og bilanaleit, sem styttir upplýsingagjöf og lækkar þjónustukostnað.",
-    Button: "Dæmi um ávinning",
+      "Handbókin heyrir sögunni til. Leiðandi framleiðslufyrirtæki heims nýta nú „sjónræna leiðbeiningatækni“. Enginn aukabúnaður, engar hindranir bara skilvirkari framleiðsla.",
+    Button: "Bóka Sýnishorn",
   },
 
-  Function: {
-    EyelashText: "Virkni",
-    MainTitle: "Hvernig virkar þetta?",
-    SubTitle: "Hvernig virkar sýndar- og viðbættur AR veruleiki hjá okkur?",
+  Value: {
+    EyelashText: "Virði",
+    MainTitle: "Flækustig Þekkingar",
+    SubTitle:
+      "Í nútíma tækjaframleiðslu er þekking dýrmætasta en jafnframt viðkvæmasta eignin. Við sjáum þrjá veikleika í núverandi iðnaðarmódelum",
+    compareTableHead: {
+      before: "Ástandið Núna",
+      after: "Okkar Lausn",
+    },
+    Cards: [
+      {
+        icon: Time,
+        toptext: "Tími",
+        label: "Tími",
+        desc: "Nýir starfsmenn eru mánuði að ná fullum afköstum þar sem hefðbundnar handbækur og þjálfarar á stanum eru taka langann tíma og ferli þeirra geta reynst óregluleg.",
+        items: [
+          {
+            oldTitle: "Aðgangur að þjálfurum",
+            oldDesc:
+              "Þjálfun takmarkast við tíma annasams sérfræðings. Ef sérfræðingurinn er upptekinn, þá bíður sá sem á að læra.",
+            newTitle: "Leiðbeiningar á staðnum",
+            newDesc:
+              "AR-tæknin leiðbeinir notandanum samstundis. Þjálfunin skalast á hraða niðurhals.",
+          },
+          {
+            oldTitle: "Flutnings tafir",
+            oldDesc:
+              "Að senda sérhæfð gleraugu, bæklinga eða fljúga með leiðbeinendur er dýrt, hægvirkt og skilur eftir sig stórt kolefnisspor.",
+            newTitle: "Enginn biðtími",
+            newDesc:
+              "Miðlið þekkingu um allan heim með einum smelli sem er svo aðgengilegt í tæki sem allir starfsmenn eru þegar með í vasanum.",
+          },
+        ],
+      },
+
+      {
+        icon: Waste,
+        label: "Vélbúnaðarkostnaður",
+        desc: "Sending á tækjabúnaði fylgir mikil áhætta. Rangt uppsett tæki eða villur óreyndra starfsmanna leiða til dýrra þjónustuferða og skertra afkasta.",
+        items: [
+          {
+            oldTitle: "Formfastar handbækur",
+            oldDesc:
+              "Prentað mál eru dauð gögn. Um leið og ferli breytist verður handbókin að áhættuþætti.",
+            newTitle: "Lifandi verklagsreglur",
+            newDesc:
+              "Ein uppfærsla í höfuðstöðvum uppfærir allar handbækur á vettvangi. Fullkomið öryggi, engin pappírssóun.",
+          },
+          {
+            oldTitle: "Ónotaður tæknibúnaður",
+            oldDesc:
+              "Dýr og viðkvæmur tæknibúnaður sem starfsmönnum finnst óþægilegur endar oft inni í skáp. Tapað fjármagn.",
+            newTitle: "Óháð vélbúnaði",
+            newDesc:
+              "Nýtir snjallsímann, þekktasta viðmót heims og endingargott. Engin tæknifælni.",
+          },
+        ],
+      },
+
+      {
+        icon: Brain,
+        label: "Þekkingarstjórnun",
+        desc: "Þegar reyndustu starfsmennirnir fara á eftirlaun, hverfur sérhæfð þekking þeirra á samsetningu og viðgerðum með þeim.",
+        items: [
+          {
+            oldTitle: "Eftirlauna vandinn",
+            oldDesc:
+              "Þegar starfsmaður með 30 ára reynslu hættir, fer óskrifuð sérþekking hans út um dyrnar.",
+            newTitle: "Varðveisla sérþekkingar",
+            newDesc:
+              "Breyttu óskráðri sérfæðikunnáttu í stafrænan staðla. Gerir samstarfsmönnum kleift að byggja á sérfæðireynslu viðkomandi.",
+          },
+          {
+            oldTitle: "Hugbúnaðar fjötrar",
+            oldDesc:
+              "Sérhæfðir AR-hugbúnaðir læsa gögnum inni í lokuðum kerfum sem erfitt getur reynst að flytja eða uppfæra.",
+            newTitle: "Sveigjanleg lausn",
+            newDesc:
+              "Varanlegra kerfi sem samþættist núverandi upplýsingatækni og er byggt fyrir langtímastöðugleika.",
+          },
+          {
+            oldTitle: "Álag vegna óvissu",
+            oldDesc:
+              "Nýir tæknimenn finna fyrir pressu þegar mistök í þjálfun geta kostað milljónir.",
+            newTitle: "Stafrænt öryggisnet",
+            newDesc:
+              "AR-leiðbeiningar bjóða upp á heilstæðari þjálfun. Þær draga úr hugrænu álagi og streitu, sem eykur starfsánægju.",
+          },
+        ],
+      },
+    ],
+  },
+  Impact: {
+    EyelashText: "Áhrif",
+    MainTitle: "Snjalllausnir þegar þörf er á",
+    SubTitle:
+      "Við lítum á snjallsímann sem nauðsilnlegan tækjabúnað. Lausnin okkar nýtir hönnunargögnin þín og breytir þeim í AR-umhverfi sem þjónar bæði þjónustu og þjálfun innanhús og viðskiptavina.",
+
+    processSteps: [
+      {
+        title: "Innanhús",
+        subtitle: "Bætir rekstur og þróun mannauðs",
+        subitems: [
+          {
+            index: 0,
+            icon: GAIcon,
+            title: "Sjónrænar leiðbeiningar",
+            obf: "fill",
+            images: [
+              {
+                src: GA,
+                alt: "Mynd 1",
+                caption: "Sýnishorn",
+                of: "cover",
+              },
+            ],
+            description:
+              "Farðu lengra en 2D teikningar. Starfsmenn fylgja þrívíddarleiðbeiningum sem sýna nákvæmlega hvar hver skynjari, bolti og kapall á að vera. Mistök eru leiðrétt áður en vélin yfirgefur verksmiðju.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["direct", "direct"],
+            of: "fade",
+          },
+          {
+            index: 1,
+            icon: RSTIcon,
+            title: "Hraðari þekkingarmiðlun",
+            obf: "cover",
+            images: [
+              {
+                src: RST,
+                alt: "Mynd 1",
+                caption: "Sýnishorn",
+                of: "fit",
+              },
+            ],
+            description:
+              "Styttu tímann sem það tekur að verða sjálfstæðari í starfi. Nýliðar læra hraðar með stafrænan leiðbeinanda í vasanum, sem léttir álagi á verkstjórum.",
+            durnation: 400,
+            interval: 10,
+            transt: ["fade"],
+          },
+          {
+            index: 2,
+            icon: SFTIcon,
+            title: "Öryggi í fyrirrúmi",
+            obf: "fit",
+            images: [
+              {
+                src: SFT,
+                alt: "Mynd 1",
+                caption: "Sýnishorn",
+                of: "fit",
+              },
+            ],
+            description:
+              "Ólíkt sýndarveruleikagleraugum sem geta byrgt sýn, tryggir farsímaviðmótið okkar að starfsmenn hafi fulla yfirsýn yfir umhverfi sitt og öryggi á gólfinu.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+        ],
+      },
+      {
+        title: "Þjónusta viðskipavina",
+        subtitle: "Afhending tækjabúnaðar og eftirfylgni",
+        subitems: [
+          {
+            index: 3,
+            icon: RECIcon,
+            title: "Sjálfstæðari innleiðing hjá viðskiptavinum",
+            obf: "fill",
+            images: [
+              {
+                src: MICO,
+                alt: "Mynd 1",
+                caption: "Sýnishorn",
+                of: "fill",
+              },
+            ],
+            description:
+              "Ekki bara senda vélbúnað, sendu sérþekkinguna með. Veittu viðskiptavinum AR-leiðbeiningar fyrir uppsetningu og stillingar. Þetta styður við innleiðingu og fækkar þjónustutilfellum.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+          {
+            index: 4,
+            icon: MICOIcon,
+            title: "Fjarþjónusta sérfræðinga",
+            obf: "fill",
+            images: [
+              {
+                src: REC,
+                alt: "Mynd 1",
+                caption: "Sýnishorn",
+                of: "fill",
+              },
+            ],
+            description:
+              "Þegar viðskiptavinur lendir í flöskuhálsi geta verkfræðingar þínir leiðbeint í gegnum síma. Með því að nota stafræn merki er hægt að benda á nákvæmlega þann hluta sem þarf að stilla og ekkert flug nauðsynlegt.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+          {
+            index: 5,
+            icon: BLCSIcon,
+            title: "Þjónusta út líftíma vöru",
+            obf: "fill",
+            images: [
+              {
+                src: BLCS,
+                alt: "Mynd 1",
+                caption: "Sýnishorn",
+                of: "fill",
+              },
+            ],
+            description:
+              "Einföld skönnun á raðnúmeri gefur viðskiptavinum upplýsingar um viðhald og varahlutapantanir, sem breytir vélbúnaðinum í samfellda þjónustulausn.",
+            durnation: 800,
+            interval: 4000,
+            transt: ["fade"],
+          },
+        ],
+      },
+    ],
+  },
+
+  Onboarding: {
+    EyelashText: "Innleiðing",
+    MainTitle: "Innleiðing í þremur skrefum",
+    SubTitle: "Yfirlit yfir vinnuflæði okkar í sýndar- og viðbættum veruleika.",
     services: [
       {
         icon: arDevelopment,
         stepTitle: "Skref eitt",
-        title: "Gagnaöflun",
-        description: "Við stafrænum handbækur þínar og sérfræðiþekkingu.",
+        title: "Gagnaflutningur",
+        description:
+          "Við stafrænum handbækur þínar og sérþekkingu fyrirtækisins.",
       },
       {
         icon: Mobile,
         stepTitle: "Skref tvö",
-        title: "Innleiðing",
+        title: "Notendaprófun",
         description:
-          "Teymið þitt fær tafarlausan aðgang að leiðbeiningum í snjallsíma eða spjaldtölvu.",
+          "Teymið þitt fær aðgang að fyrstu niðurstöðum og leggur mat á leiðbeiningar í snjallsíma eða spjaldtölvu.",
       },
       {
         icon: interactivity,
         stepTitle: "Skref þrjú",
-        title: "Framkvæmd",
+        title: "Raunnotkun",
         description:
-          "AR-upplýsingar sýna nákvæmlega hvaða skrúfu á að snúa og í hvaða stöng á að toga.",
+          "Með snjallsímanum geta starfsmenn og viðskiptavinir nýtt AR-leiðbeiningar sem sýna nákvæmlega hvaða skrúfum á að snúa og hvaða handföngum á að toga í.",
       },
-      {
-        icon: vrExperiences,
-        stepTitle: "Skref fjögur",
-        title: "Staðfesting",
-        description:
-          "Rauntímaskráning gagna tryggir að verkið sé unnið samkvæmt ítrustu kröfum.",
-      },
-    ],
-  },
-
-  Impact: {
-    EyelashText: "Ávinningur",
-    MainTitle: "Dæmi um ávinning þjónustunnar",
-    SubTitle:
-      "Hér eru nokkrar leiðir til að skapa virði með þjónustunni, þar sem aðeins þarf snjallsíma.",
-    processSteps: [
-      {
-        icon: "🏭",
-        title: "Samræmdu vinnubrögð sérfræðinga",
-        obf: "fill",
-        images: [
-          {
-            src: MT_One,
-            alt: "Mynd 1",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-          {
-            src: MT_Two,
-            alt: "Mynd 2 - Baraba",
-            caption: "Alparnir",
-            of: "fade",
-          },
-          {
-            src: MT_Three,
-            alt: "Mynd 3",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-        ],
-        description:
-          "Hættu að fylgjast með úr fjarlægð og byrjaðu að vinna. Nýliðar fylgja AR-leiðbeiningum beint á vélbúnaði, sem brúar bilið milli þekkingar og framkvæmdar. Þetta skilar sér í færri villum, hraðari þjálfun og fylgni við verkferla.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["direct", "direct"],
-        of: "fade",
-      },
-      {
-        icon: "🔧",
-        title: "Enginn ruglingur við teikningar",
-        obf: "fill",
-        images: [
-          {
-            src: FSTS_N,
-            alt: "Mynd 1",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-          {
-            src: FSTS_A,
-            alt: "Mynd 2 - Baraba",
-            caption: "Alparnir",
-            of: "fill",
-          },
-        ],
-        description:
-          "Ekki eyða tíma í að ráða í óhreinar pappírsteikningar. AR-kerfið okkar sýnir nákvæmar lagnaleiðir beint á tækjatöflur, sem eykur nákvæmni og styttir viðgerðartíma.",
-        durnation: 400,
-        interval: 10,
-        transt: ["fade"],
-      },
-      {
-        icon: "📦",
-        title: "Hraði og nákvæmni í vöruhúsum",
-        obf: "fill",
-        images: [
-          {
-            src: WH_One,
-            alt: "Mynd 1",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-          {
-            src: WH_Three,
-            alt: "Mynd 2 - Baraba",
-            caption: "Alparnir",
-            of: "fill",
-          },
-        ],
-        description:
-          "Gerðu tímabundið starfsfólk afkastameira á svipstundu. AR-leiðbeiningar og auðkenning vörustaðsetninga lágmarkar leitartíma og tiltektarvillur, sem tryggir að allt sé á áætlun án mikils þjálfunarkostnaðar.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-      {
-        icon: "🔍",
-        title: "Sjáðu duldar hættur",
-        obf: "fill",
-        images: [
-          {
-            src: imageOne,
-            alt: "Mynd 1",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-          {
-            src: imageTwo,
-            alt: "Mynd 2 - Baraba",
-            caption: "Alparnir",
-            of: "fill",
-          },
-        ],
-        description:
-          "Haltu teyminu þínu utan hættusvæða. Viðmótið okkar varpar áhættusvæðum og sögulegum gögnum um bilanir beint fyrir sjónir starfsmannsins. Öryggismál breytast úr þurrum tékklista í sjónrænan veruleika.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-      {
-        icon: "⚙️",
-        title: "Gæðastýring við gangsetningu",
-        obf: "fill",
-        images: [
-          {
-            src: ASTwo_One,
-            alt: "Mynd 1",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-          {
-            src: ASTwo_Two,
-            alt: "Mynd 2 - Baraba",
-            caption: "Alparnir",
-            of: "fill",
-          },
-        ],
-        description:
-          "Sparaðu þér höfuðverkinn við mælingar. Varpaðu nákvæmri staðsetningu borholna og festinga beint á fleti til að tryggja að þungatæki séu rétt sett upp í fyrstu tilraun.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-      {
-        icon: "🚨",
-        title: "Sveigjanleg viðgerðarstýring",
-        obf: "fill",
-        images: [
-          {
-            src: TS_One,
-            alt: "Mynd 1",
-            caption: "Sýnishorn",
-            of: "fill",
-          },
-          {
-            src: TS_Two,
-            alt: "Mynd 2 - Baraba",
-            caption: "Alparnir",
-            of: "fill",
-          },
-        ],
-        description:
-          "Engar fleiri getgátur. Virka bilanatréð okkar bregst við því sem tæknimaðurinn sér í rauntíma og leiðir hann í gegnum flóknar viðgerðir af sömu nákvæmni og reyndur verkfræðingur.",
-        durnation: 800,
-        interval: 4000,
-        transt: ["fade"],
-      },
-    ],
-  },
-
-  Deployment: {
-    EyelashText: "Innleiðing",
-    MainTitle: "Hannað fyrir raunverulegar aðstæður",
-    Cards: {
-      CardOne: {
-        CardTitleNumber: "01",
-        CardTitleTop: "Óháð vélbúnaði",
-        CardMainTitle: "Notaðu tækin sem þú átt núþegar",
-        CardSubtitle:
-          "Það er engin þörf á dýrum sérbúnaði. Hugbúnaðurinn okkar er hannaður til að keyra á þeim vélbúnaði sem teymið þitt er þegar með í vasanum.",
-        CardItems: [
-          {
-            label: "Snjallsímar og spjaldtölvur",
-            desc: "Fullur stuðningur fyrir iOS og Android (ARKit / ARCore).",
-            paths: [
-              "M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5",
-              "M12 18h.008v.008H12V18z",
-            ],
-          },
-
-          {
-            label: "Iðnaðar-snjallbúnaður",
-            desc: "Tilbúið fyrir RealWear og HoloLens, fyrir handfrjálsa vinnu á áhættusvæðum.",
-            paths: [
-              "M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z",
-              "M15 12a3 3 0 11-6 0 3 3 0 016 0z",
-            ],
-          },
-
-          {
-            label: "Samþætting við Önnur kerfi",
-            desc: "Virkar með núverandi CAD-gögnum, engin þörf á dýrri endurgerð líkana.",
-            paths: [
-              "M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244",
-            ],
-          },
-        ],
-      },
-
-      CardTwo: {
-        CardTitleNumber: "02",
-        CardTitleTop: "Innleiðing",
-        CardMainTitle: "Frá hönnun til framkvæmda á nokkrum dögum",
-        CardSubtitle:
-          "Við höfum brúað bilið í innleiðingu. Ferlið okkar er fínstillt fyrir hraða nútíma framleiðslu.",
-        CardItems: [
-          {
-            label: "Hröð gagnaúrvinnsla",
-            desc: "Sendu okkur 3D líkön og handbækur á PDF-formi; kerfið getur verið tilbúið á stuttum tíma.",
-            paths: [
-              "M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5",
-            ],
-          },
-
-          {
-            label: "Fljótlegar uppfærslur",
-            desc: "Sendu uppfærða verkferla í öll tæki samtímis, án þess að nota pappír.",
-            paths: [
-              "M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99",
-            ],
-          },
-
-          {
-            label: "Einfalt viðmót",
-            desc: "Sérfræðingar þínir geta sjálfir uppfært bilanatré án þess að þurfa forritara.",
-            paths: [
-              "M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5",
-            ],
-          },
-        ],
-      },
-    },
-    Benefit: [
-      { value: "0 kr.", label: "Vélbúnaðarkostnaður" },
-      { value: "3+", label: "Hugbúnaðar Stýrikerfi" },
-      { value: "0", label: "Binding við hugbúnað" },
     ],
   },
 
@@ -661,43 +651,42 @@ export const Icelandic = {
     EyelashText: "Tilboð",
     MainTitle: "Skýr leið að árangri",
     SubTitle:
-      "Við ætlumst ekki til þess að þú breytir öllu skipulagi á einni nóttu. Sönnum arðsemina með einu verkferli.",
+      "Við ætlumst ekki til þess að þú breytir öllu í einu. Sýnum fram á arðsemi með einu einföldu en mikilvægu ferli.",
     Cards: [
       {
         days: "Dagar 1 – 3",
-        title: "Greining gagna",
-        body: "Sendu okkur CAD-skrá og lýsingu á einföldum ferli. Við greinum umfangið og finnum helstu tengipunkta.",
+        title: "Gagnagreining",
+        body: "Sendu okkur CAD-skjal og leiðbeiningar fyrir eitt afmarkað verkefni. Við greinum umfangið og finnum helstu tengipunkta.",
       },
-
       {
         days: "Dagar 4 – 10",
-        title: "AR-umbreyting",
-        body: "Við setjum upp rökfræðina og búum til staðsetningarleiðbeiningar, skýringar og öryggisatriði í réttu samhengi.",
+        title: "AR-uppsetning",
+        body: "Við setjum upp rökfræðina og búum til sjónrænar leiðbeiningar, skýringar og öryggisathuganir í réttu samhengi.",
       },
       {
         days: "Dagar 11 – 14",
-        title: "Raunprófun",
-        body: "Við sýnum hvernig ferlið virkar á þínum eigin búnaði. Þú færð að sjá starfsmenn klára verkefnið.",
+        title: "Staðfesting",
+        body: "Við sýnum ferlið á ykkar búnaði.",
       },
     ],
 
     ActonBox: {
-      Title: "Tilbúin(n) að byrja?",
+      Title: "Tilbúin að byrja?",
       subtext:
-        "Sendu okkur eina CAD-skrá og verkferla. Það er eina skuldbindingin.",
-      ButtonText: "Hefja tilraunaverkefni",
+        "Sendu okkur eitt CAD-skjal og verklagsreglur. Það er eina skuldbindingin.",
+      ButtonText: "Hefja prufuverkefni",
     },
   },
 
   Contact: {
-    EyelashText: "Samskipti",
-    MainTitle: "Tilbúin(n) í næsta skref?",
-    SubTitle: "Vinnum saman að VR/AR lausnum.",
+    EyelashText: "Tengiliður",
+    MainTitle: "Næstu skref?",
+    SubTitle: "Hönnum þína næstu lausn samann.",
     TextBox: {
       NameText: "Nafn",
       EmailText: "Netfang",
       DetailText: "Upplýsingar um verkefni / Skilaboð",
-      ButtonText: "Senda",
+      ButtonText: "Senda skilaboð",
     },
 
     DirectContact: {

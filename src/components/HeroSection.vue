@@ -1,13 +1,6 @@
 <script>
-import portfolio from "./ProjectSection.vue"; // Adjust path if needed
-import services from "./ServicesSection.vue";
-import { Languages } from "./contentFolder/Language";
-
+import { Languages } from "@/components/contentFolder/Language.js";
 export default {
-  components: {
-    portfolio,
-    services,
-  },
   data() {
     return {
       animationId: null,
@@ -141,7 +134,7 @@ export default {
           {{ Languages.current.Hero.SubTitle }}
         </p>
         <div class="hero-ctas">
-          <button class="cta-primary" @click="scrollToSection('Impact')">
+          <button class="cta-primary" @click="scrollToSection('contact')">
             {{ Languages.current.Hero.Button }}
           </button>
           <!--

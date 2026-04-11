@@ -59,20 +59,20 @@ onUnmounted(() => observers.forEach(o => o.disconnect()))
 </script>
 
 <template>
-  <section id="Function" aria-hidden="false" >
+  <section id="Roadmap" aria-hidden="false" >
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">{{  Languages.current.Function.EyelashText }}</span>
+          <span class="eyebrow-text">{{  Languages.current.Onboarding.EyelashText }}</span>
           <span class="eyebrow-line"></span>
       </div>
    <div class="block" :class="{ visible: el1Visible }" ref="el1">
     <div class="container" ref="header" :class="{ visible: phaseVisible }">
-      <h2 class ="Announcer">{{  Languages.current.Function.MainTitle }}</h2>
-      <p class="section-intro">{{  Languages.current.Function.SubTitle }}</p>
+      <h2 class ="Announcer">{{  Languages.current.Onboarding.MainTitle }}</h2>
+      <p class="section-intro">{{  Languages.current.Onboarding.SubTitle }}</p>
     
     <div class="block" :class="{ visible: el2Visible }" ref="el2">
       <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints" class="services-carousel"   ref="blocks" >
-        <Slide v-for="(service, index) in  Languages.current.Function.services" :key="index">
+        <Slide v-for="(service, index) in  Languages.current.Onboarding.services" :key="index">
           <div class="carousel__item">
             <div class="service-block">
               <dev class ="serviec-subtitle">{{ service.stepTitle }}</dev>

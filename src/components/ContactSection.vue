@@ -237,7 +237,8 @@ const submitForm = async () => {
 }
 
 .contact-info h3 {
-  font-family: var(--font-heading);
+  font-family: "DM Serif Display", serif;
+
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: var(--primary-blue);

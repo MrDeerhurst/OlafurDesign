@@ -1,5 +1,5 @@
 <template>
-  <section class="derisk" id="Roadmap">
+  <section class="derisk" id="Sample">
     <!-- Noise texture overlay -->
     <div class="noise" aria-hidden="true"></div>
     <div class="eyebrow">
@@ -248,7 +248,6 @@ const scrollToSection = (sectionId) => {
 
 /* ─── Phase ─── */
 .phase {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
