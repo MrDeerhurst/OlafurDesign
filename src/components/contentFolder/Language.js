@@ -109,7 +109,7 @@ export const English = {
             oldTitle: "Static Manuals",
             oldDesc:
               "Printed paper is dead data. The moment a process changes, the manual becomes a liability.",
-            newTitle: "Live SOPs",
+            newTitle: "Active Content",
             newDesc:
               "One update at HQ refreshes every manual in the field. Perfect compliance, zero paper waste.",
           },
@@ -376,9 +376,9 @@ export const English = {
 
 export const Icelandic = {
   Header: {
-    FunctionLink: "Virði",
-    ImpactLink: "Áhrif",
-    DeploymentLink: "Innleiðingaráætlun",
+    FunctionLink: "Áhrif",
+    ImpactLink: "Dæmi",
+    DeploymentLink: "Innleiðing",
     RoadmapLink: "Tilboð",
     ContactButton: "Hafa samband",
   },
@@ -390,7 +390,7 @@ export const Icelandic = {
   },
 
   Value: {
-    EyelashText: "Virði",
+    EyelashText: "Áhrif",
     MainTitle: "Flækustig Þekkingar",
     SubTitle:
       "Í nútíma tækjaframleiðslu er þekking dýrmætasta en jafnframt viðkvæmasta eignin. Við sjáum þrjá veikleika í núverandi iðnaðarmódelum",

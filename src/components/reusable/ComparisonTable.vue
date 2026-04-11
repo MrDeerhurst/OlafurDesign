@@ -376,12 +376,16 @@ onUnmounted(() => {
   }
   .ct-header-new {
     min-width: 10rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .ct-title {
     display: flex;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .ct-cell--new {
+    display: grid;
+    align-items: center;
   }
 }
 @media (max-width: 367px) {

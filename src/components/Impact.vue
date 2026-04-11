@@ -212,6 +212,7 @@ h2 {
 .process-steps {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px; /* Space between cards */
 }
 

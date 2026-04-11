@@ -26,11 +26,6 @@
         :key="i"
         class="blocks"
       >
-        <div class="block-meta">
-          <div class="block-tag">
-            {{ MainItem.topText }}
-          </div>
-        </div>
         <div class="block-body">
           <h3 class="block-title">
             {{ MainItem.label }}
@@ -481,10 +476,6 @@ onUnmounted(() => observers.forEach((o) => o.disconnect()));
   .subFeature-content {
     display: grid;
     grid-auto-flow: row;
-  }
-  .ct-header-cell {
-    padding: 0;
-    margin: 0;
   }
 }
 </style>
