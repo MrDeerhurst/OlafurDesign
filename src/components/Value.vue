@@ -482,5 +482,9 @@ onUnmounted(() => observers.forEach((o) => o.disconnect()));
     display: grid;
     grid-auto-flow: row;
   }
+  .ct-header-cell {
+    padding: 0;
+    margin: 0;
+  }
 }
 </style>

@@ -32,9 +32,11 @@
     >
       <!-- Before Cell -->
       <div class="ct-cell ct-cell--old">
-        <p class="ct-title">
-          <span class="ct-icon ct-icon--bad" aria-hidden="true">✕</span>
-          {{ item.oldTitle }}
+        <div class="ct-title-row">
+          <p class="ct-title">
+            <span class="ct-icon ct-icon--bad" aria-hidden="true">✕</span>
+            {{ item.oldTitle }}
+          </p>
           <span
             v-if="isMobile"
             class="ct-chevron"
@@ -42,8 +44,7 @@
             aria-hidden="true"
             >❯</span
           >
-        </p>
-
+        </div>
         <div
           class="ct-desc-wrap"
           :class="{ 'ct-desc-wrap--open': !isMobile || openIndex === index }"
@@ -173,13 +174,13 @@ onUnmounted(() => {
 .ct-header-old {
   color: #b04040;
   background: rgba(245, 245, 245, 0.6);
-  min-width: 12rem;
+  min-width: 14rem;
 }
 
 .ct-header-new {
   color: #2e7d57;
   background: rgba(255, 255, 255, 0.6);
-  min-width: 12rem;
+  min-width: 14rem;
 }
 
 .ct-header-icon {
@@ -338,26 +339,57 @@ onUnmounted(() => {
   }
 
   .ct-header-old {
-    border-bottom: 1px solid #e8e8e8;
+    min-width: 12rem;
+  }
+  .ct-header-new {
+    min-width: 12rem;
   }
 
   .ct-title {
+    display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .ct-title-row {
     align-items: center;
   }
   .ct-cell--new {
     display: grid;
-    width: 100%;
+    align-items: start;
+  }
+  .ct-cell--old {
+    display: grid;
+    align-items: start;
   }
   .ct-desc {
     text-align: center;
   }
   .ct-cell {
     padding: 1rem;
+  }
+}
+@media (max-width: 467px) {
+  .ct-header-old {
+    min-width: 10rem;
+    font-size: 0.9rem;
+  }
+  .ct-header-new {
+    min-width: 10rem;
+    font-size: 0.8rem;
+  }
+  .ct-title {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 367px) {
+  .ct-header-old {
+    min-width: 8rem;
+  }
+  .ct-header-new {
+    min-width: 8rem;
   }
 }
 </style>
