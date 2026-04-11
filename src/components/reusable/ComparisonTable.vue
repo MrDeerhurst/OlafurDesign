@@ -364,6 +364,7 @@ onUnmounted(() => {
   }
   .ct-desc {
     text-align: center;
+    display: flex;
   }
   .ct-cell {
     padding: 1rem;
@@ -388,7 +389,7 @@ onUnmounted(() => {
     align-items: center;
   }
 }
-@media (max-width: 367px) {
+@media (max-width: 340px) {
   .ct-header-old {
     min-width: 8rem;
   }

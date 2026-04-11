@@ -72,7 +72,7 @@ export const English = {
       "In modern machinery manufacturing, knowledge is your most valuable and most fragile asset. We see three critical points of failure in the current industrial model",
     compareTableHead: {
       before: "The Old Way",
-      after: "With Our Product",
+      after: "Our solution",
     },
     Cards: [
       {
@@ -103,7 +103,7 @@ export const English = {
       {
         icon: Waste,
         label: "Hardware costs",
-        desc: "Shipping a machine is a high-risk event. Incorrect customer setup or rookie operator errors lead to expensive service travel and eroded margins.",
+        desc: "Shipping a machine is a high-risk event. Static mauals and unfimilarity with expensive headsets can cause errors lead to expensive service travel and eroded margins.",
         items: [
           {
             oldTitle: "Static Manuals",
@@ -135,7 +135,7 @@ export const English = {
               "When a 30-year veteran leaves, their unwritten expertise walks out the door with them.",
             newTitle: "Expert Capture",
             newDesc:
-              "Turn unspoken mastery into a shared digital standard. The company owns the brilliance, not just the employee.",
+              "Turn unspoken mastery into a shared digital standard. The company benefits from the brilliance, not just the employee.",
           },
           {
             oldTitle: "Software Lock-in",
@@ -383,7 +383,7 @@ export const Icelandic = {
     ContactButton: "Hafa samband",
   },
   Hero: {
-    MainTitle: "Hraðari þjálfun allra hagsmunaaðila með AR í farsímanum",
+    MainTitle: "Hraðari þjálfun með AR í farsíma",
     SubTitle:
       "Handbókin heyrir sögunni til. Leiðandi framleiðslufyrirtæki heims nýta nú „sjónræna leiðbeiningatækni“. Enginn aukabúnaður, engar hindranir bara skilvirkari framleiðsla.",
     Button: "Bóka Sýnishorn",
@@ -393,7 +393,7 @@ export const Icelandic = {
     EyelashText: "Áhrif",
     MainTitle: "Flækustig Þekkingar",
     SubTitle:
-      "Í nútíma tækjaframleiðslu er þekking dýrmætasta en jafnframt viðkvæmasta eignin. Við sjáum þrjá veikleika í núverandi iðnaðarmódelum",
+      "Í nútíma tækjaframleiðslu er þekking dýrmætasta en jafnframt viðkvæmasti þátturinn. Við sjáum þrjá flokka semskapa hættur tengdar því í núverandi iðnaðarframleiðslu",
     compareTableHead: {
       before: "Ástandið Núna",
       after: "Okkar Lausn",
@@ -597,7 +597,7 @@ export const Icelandic = {
           {
             index: 5,
             icon: BLCSIcon,
-            title: "Þjónusta út líftíma vöru",
+            title: "Betri Þjónusta fyrir vörur",
             obf: "fill",
             images: [
               {
