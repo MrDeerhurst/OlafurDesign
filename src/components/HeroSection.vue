@@ -226,6 +226,7 @@ export default {
 .hero-content {
   z-index: 1;
   max-width: 800px;
+  min-width: 9rem;
   padding: 10px 10px 10px 10px;
 }
 /* Phone mockup */

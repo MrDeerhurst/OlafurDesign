@@ -1,5 +1,5 @@
 <template>
-  <section class="derisk" id="Sample">
+  <section id="Derisk" class="derisk">
     <!-- Noise texture overlay -->
     <div class="noise" aria-hidden="true"></div>
     <div class="eyebrow">

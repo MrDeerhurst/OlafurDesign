@@ -63,9 +63,9 @@ export const English = {
     ContactButton: "Get in touch",
   },
   Hero: {
-    MainTitle: "Minimize errors with visual-guided AR processes.",
+    MainTitle: "Visual-guided AR training",
     SubTitle:
-      "Empower every technician with expert knowledge. Our Augmented Reality (AR) platform provides real-time guidance for setup and troubleshooting, shortening the learning curve and reducing service costs.",
+      "Our Augmented Reality (AR) platform provides real-time guidance for setup and troubleshooting, shortening the learning curve and reducing service costs.",
     Button: "Book a pilot",
   },
 
@@ -553,10 +553,10 @@ export const Icelandic = {
     ContactButton: "Hafðu samband",
   },
   Hero: {
-    MainTitle: "Áreiðanlegri Þjálfun með AR-Þjálfun.",
+    MainTitle: "Áreiðanlegri Rekstur með AR-Þjálfun",
     SubTitle:
       "Viðbættur veruleiki (AR) veitir rauntíma leiðbeiningar við samsetningu, uppsetningu og bilanaleit, sem auðveldar upplýsingagjöf og lækkar þjónustukostnað.",
-    Button: "Dæmi um ávinning",
+    Button: "Hafðu Samband",
   },
 
   Value: {
@@ -1006,13 +1006,6 @@ export const Icelandic = {
         body: "Við sýnum ferlið á ykkar búnaði.",
       },
     ],
-
-    ActonBox: {
-      Title: "Tilbúin að byrja?",
-      subtext:
-        "Sendu okkur eitt CAD-skjal og verklagsreglur. Það er eina skuldbindingin.",
-      ButtonText: "Hefja prufuverkefni",
-    },
   },
 
   Contact: {
