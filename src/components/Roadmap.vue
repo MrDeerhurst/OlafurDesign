@@ -13,7 +13,7 @@
     <div class="inner">
       <!-- Header -->
       <header class="header" ref="headerEl">
-        <h2 class="title">{{ Languages.current.Roadmap.MainTitle }}</h2>
+        <h2 class="Announcer">{{ Languages.current.Roadmap.MainTitle }}</h2>
         <p class="subtitle">
           {{ Languages.current.Roadmap.SubTitle }}
         </p>
@@ -262,7 +262,11 @@ const scrollToSection = (sectionId) => {
   opacity: 1;
   transform: translateY(0);
 }
-
+.Announcer {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
 /* ─── Node ─── */
 .node {
   position: relative;

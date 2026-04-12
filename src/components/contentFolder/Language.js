@@ -48,20 +48,24 @@ import RECIcon from "@/assets/images/RECIcon.png";
 import BLCS from "@/assets/images/BLCS.png";
 import BLCSIcon from "@/assets/images/BLCSIcon.png";
 
+import QI from "@/assets/images/QIIcon.png";
+
+import AFRIcon from "@/assets/images/AFRIcon.png";
+
 import { reactive } from "vue";
 
 export const English = {
   Header: {
     FunctionLink: "Value",
-    ImpactLink: "Impact",
-    DeploymentLink: "Roadmap",
+    ImpactLink: "Roadmap",
+
     RoadmapLink: "Offer",
     ContactButton: "Get in touch",
   },
   Hero: {
-    MainTitle: "Train Any Stakeholder Faster Using Mobile AR",
+    MainTitle: "Minimize errors with visual-guided AR processes.",
     SubTitle:
-      "The End of the Manual. Why the World’s Best Manufacturers are Switching to 'Visual Guidance'. No headsets, no friction, just faster production.",
+      "Empower every technician with expert knowledge. Our Augmented Reality (AR) platform provides real-time guidance for setup and troubleshooting, shortening the learning curve and reducing service costs.",
     Button: "Book a pilot",
   },
 
@@ -157,7 +161,173 @@ export const English = {
       },
     ],
   },
+
   Impact: {
+    EyelashText: "Value",
+    MainTitle: "Service Impact Examples",
+    SubTitle:
+      "Here are a few practical ways to improve your production using the service with a standard mobile phone.",
+    processSteps: [
+      {
+        icon: GAIcon,
+        title: "Standardize Expert Performance",
+        obf: "fill",
+        images: [
+          {
+            src: MT_One,
+            alt: "Image 1",
+            caption: "Sample",
+            of: "fill",
+          },
+          {
+            src: MT_Two,
+            alt: "Image 2 - Baraba",
+            caption: "The Alps",
+            of: "fade",
+          },
+          {
+            src: MT_Three,
+            alt: "Image 3",
+            caption: "Sample",
+            of: "fill",
+          },
+        ],
+        description:
+          "Move from observation to action. Trainees follow AR instructions directly on the equipment, bridging the gap between theory and practice. This results in fewer errors, faster onboarding, and better compliance with standard procedures.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["direct", "direct"],
+        of: "fade",
+      },
+
+      {
+        icon: BLCSIcon,
+        title: "Identify Hidden Hazards",
+        obf: "fill",
+        images: [
+          {
+            src: imageOne,
+            alt: "Image 1",
+            caption: "Sample",
+            of: "fill",
+          },
+          {
+            src: imageTwo,
+            alt: "Image 2 - Baraba",
+            caption: "The Alps",
+            of: "fill",
+          },
+        ],
+        description:
+          "Keep your team safe. Our interface projects risk zones and historical fault data directly into the worker's field of view, turning safety protocols into a visual reality.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+
+      {
+        icon: QI,
+        title: "Quality Control Implimentation",
+        obf: "fill",
+        images: [
+          {
+            src: ASTwo_One,
+            alt: "Image 1",
+            caption: "Sample",
+            of: "fill",
+          },
+          {
+            src: ASTwo_Two,
+            alt: "Image 2 - Baraba",
+            caption: "The Alps",
+            of: "fill",
+          },
+        ],
+        description:
+          "Avoid the common headaches of manual measurement. Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed correctly the first time.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+
+      {
+        icon: RSTIcon,
+        title: "Clarify Complex Schematics",
+        obf: "fill",
+        images: [
+          {
+            src: FSTS_N,
+            alt: "Image 1",
+            caption: "Sample",
+            of: "fill",
+          },
+          {
+            src: FSTS_A,
+            alt: "Image 2 - Baraba",
+            caption: "The Alps",
+            of: "fill",
+          },
+        ],
+        description:
+          "Our AR system projects exact cable routes directly onto panels, increasing wiring accuracy and halving repair cycles.",
+        durnation: 400,
+        interval: 10,
+        transt: ["fade"],
+      },
+
+      {
+        icon: Time,
+        title: "Warehouse Speed and Precision",
+        obf: "fill",
+        images: [
+          {
+            src: WH_One,
+            alt: "Image 1",
+            caption: "Sample",
+            of: "fill",
+          },
+          {
+            src: WH_Three,
+            alt: "Image 2 - Baraba",
+            caption: "The Alps",
+            of: "fill",
+          },
+        ],
+        description:
+          "Make seasonal staff productive sooner. AR-guided routing and bin-highlighting minimize search time and picking errors, ensuring your facility stays on schedule without high training costs.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+
+      {
+        icon: AFRIcon,
+        title: "Adaptive Fault Recovery",
+        obf: "fill",
+        images: [
+          {
+            src: TS_One,
+            alt: "Image 1",
+            caption: "Sample",
+            of: "fill",
+          },
+          {
+            src: TS_Two,
+            alt: "Image 2 - Baraba",
+            caption: "The Alps",
+            of: "fill",
+          },
+        ],
+        description:
+          "Eliminate the guesswork. Our dynamic fault-tree overlays react to what the technician sees in real-time, guiding them through complex repairs with the precision of a senior engineer.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+    ],
+  },
+
+  ImpactOld: {
     EyelashText: "Impact",
     MainTitle: "Scalable Intelligence on Demand",
     SubTitle:
@@ -376,17 +546,17 @@ export const English = {
 
 export const Icelandic = {
   Header: {
-    FunctionLink: "Áhrif",
-    ImpactLink: "Dæmi",
+    FunctionLink: "Virkni",
+    ImpactLink: "Ávinningur",
     DeploymentLink: "Innleiðing",
-    RoadmapLink: "Tilboð",
-    ContactButton: "Hafa samband",
+    RoadmapLink: "Vegvísir",
+    ContactButton: "Hafðu samband",
   },
   Hero: {
-    MainTitle: "Hraðari þjálfun með AR í farsíma",
+    MainTitle: "Áreiðanlegri Þjálfun með AR-Þjálfun.",
     SubTitle:
-      "Handbókin heyrir sögunni til. Leiðandi framleiðslufyrirtæki heims nýta nú „sjónræna leiðbeiningatækni“. Enginn aukabúnaður, engar hindranir bara skilvirkari framleiðsla.",
-    Button: "Bóka Sýnishorn",
+      "Viðbættur veruleiki (AR) veitir rauntíma leiðbeiningar við samsetningu, uppsetningu og bilanaleit, sem auðveldar upplýsingagjöf og lækkar þjónustukostnað.",
+    Button: "Dæmi um ávinning",
   },
 
   Value: {
@@ -482,6 +652,173 @@ export const Icelandic = {
     ],
   },
   Impact: {
+    EyelashText: "Ávinningur",
+    MainTitle: "Dæmi um ávinning þjónustu",
+    SubTitle:
+      "Hér eru nokkrar leiðir til sem lausnin okkar bætir ykkar rekstur og þarfnast aðeins snjallsíma.",
+
+    processSteps: [
+      {
+        icon: GAIcon,
+        title: "Samræmdu Vinnubrögð Starfsmanna",
+        obf: "fill",
+        images: [
+          {
+            src: MT_One,
+            alt: "Mynd 1",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+          {
+            src: MT_Two,
+            alt: "Mynd 2 - Baraba",
+            caption: "Alparnir",
+
+            of: "fade",
+          },
+          {
+            src: MT_Three,
+            alt: "Mynd 3",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+        ],
+        description:
+          "Nýliðar fylgja AR-leiðbeiningum beint á vélbúnaði, sem brúar bilið milli þekkingar og framkvæmda. Þetta skilar sér í færri villum, hraðari þjálfun og fylgni við verkferla.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["direct", "direct"],
+        of: "fade",
+      },
+
+      {
+        icon: BLCSIcon,
+        title: "Greindu Duldar Hættur",
+        obf: "fill",
+        images: [
+          {
+            src: imageOne,
+            alt: "Mynd 1",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+          {
+            src: imageTwo,
+            alt: "Mynd 2 - Baraba",
+            caption: "Alparnir",
+            of: "fill",
+          },
+        ],
+        description:
+          "Viðmótið okkar varpar áhættusvæðum og gögnum um bilanir beint fyrir sjónir starfsmannsins. Öryggismál breytast úr þurrum tékklista í sjónrænan veruleika.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+
+      {
+        icon: QI,
+        title: "Innleiðing Gæðastýringar",
+        obf: "fill",
+        images: [
+          {
+            src: ASTwo_One,
+            alt: "Mynd 1",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+          {
+            src: ASTwo_Two,
+            alt: "Mynd 2 - Baraba",
+            caption: "Alparnir",
+            of: "fill",
+          },
+        ],
+        description:
+          "Sparaðu þér höfuðverkinn við mælingar. Varpaðu nákvæmri staðsetningu borholna og festinga beint á fleti til að tryggja að þungatæki séu rétt sett upp í fyrstu tilraun.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+
+      {
+        icon: RSTIcon,
+        title: "Skýrari Tækni Teikningar",
+        obf: "fill",
+        images: [
+          {
+            src: FSTS_N,
+            alt: "Mynd 1",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+          {
+            src: FSTS_A,
+            alt: "Mynd 2 - Baraba",
+            caption: "Alparnir",
+            of: "fill",
+          },
+        ],
+        description:
+          "AR-sjónrænt viðmótið okkar sýnir nákvæmar lagnaleiðir sem skýrir rafmagnstöflur, sem eykur nákvæmni og styttir viðgerðartíma.",
+        durnation: 400,
+        interval: 10,
+        transt: ["fade"],
+      },
+
+      {
+        icon: Time,
+        title: "Hraði og Gæði í Vöruhúsum",
+        obf: "fill",
+        images: [
+          {
+            src: WH_One,
+            alt: "Mynd 1",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+          {
+            src: WH_Three,
+            alt: "Mynd 2 - Baraba",
+            caption: "Alparnir",
+            of: "fill",
+          },
+        ],
+        description:
+          "Gerðu nýju starfsfólk afkastameira á svipstundu. AR-leiðbeiningar og auðkenning vörustaðsetninga lágmarkar leitartíma og tiltektarvillur, sem tryggir að allt sé á áætlun án mikils þjálfunarkostnaðar.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+
+      {
+        icon: AFRIcon,
+        title: "Gagnvirkir Viðgerðar Ferlar",
+        obf: "fill",
+        images: [
+          {
+            src: TS_One,
+            alt: "Mynd 1",
+            caption: "Sýnishorn",
+            of: "fill",
+          },
+          {
+            src: TS_Two,
+            alt: "Mynd 2 - Baraba",
+            caption: "Alparnir",
+            of: "fill",
+          },
+        ],
+        description:
+          "Gagnvirka bilanatré bregst við því sem tæknimaðurinn sér í rauntíma og leiðir hann í gegnum flóknar viðgerðir af sömu nákvæmni og reyndur verkfræðingur.",
+        durnation: 800,
+        interval: 4000,
+        transt: ["fade"],
+      },
+    ],
+  },
+
+  ImpactOld: {
     EyelashText: "Áhrif",
     MainTitle: "Snjalllausnir þegar þörf er á",
     SubTitle:

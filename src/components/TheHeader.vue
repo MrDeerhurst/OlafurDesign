@@ -75,13 +75,10 @@ onBeforeUnmount(() => {
             <a href="#Value">{{ Languages.current.Header.FunctionLink }}</a>
           </li>
           <li>
-            <a href="#Impact">{{ Languages.current.Header.ImpactLink }}</a>
+            <a href="#Onboarding">{{ Languages.current.Header.ImpactLink }}</a>
           </li>
           <li>
-            <a href="#Roadmap">{{ Languages.current.Header.DeploymentLink }}</a>
-          </li>
-          <li>
-            <a href="#Sample">{{ Languages.current.Header.RoadmapLink }}</a>
+            <a href="#Derisk">{{ Languages.current.Header.RoadmapLink }}</a>
           </li>
         </ul>
       </nav>
@@ -127,20 +124,16 @@ onBeforeUnmount(() => {
               }}</a>
             </li>
             <li>
-              <a href="#Impact" @click="closeMobileMenu">{{
+              <a href="#Onboarding" @click="closeMobileMenu">{{
                 Languages.current.Header.ImpactLink
               }}</a>
             </li>
             <li>
-              <a href="#Roadmap" @click="closeMobileMenu">{{
-                Languages.current.Header.DeploymentLink
-              }}</a>
-            </li>
-            <li>
-              <a href="#Sample" @click="closeMobileMenu">{{
+              <a href="#Derisk" @click="closeMobileMenu">{{
                 Languages.current.Header.RoadmapLink
               }}</a>
             </li>
+
             <li>
               <button
                 class="cta-button mobile-cta"

@@ -233,7 +233,7 @@ export default {
   display: flex;
   z-index: 1;
   display: inline-block;
-  width: 170px;
+
   min-width: 170px;
   background: #0a1e45;
   border-radius: 30px;
@@ -253,7 +253,7 @@ export default {
 }
 .phone-screen {
   border-radius: 18px;
-  height: 280px;
+  min-height: 300px;
   overflow: hidden;
   position: relative;
 }

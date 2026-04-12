@@ -59,7 +59,7 @@ onUnmounted(() => observers.forEach(o => o.disconnect()))
 </script>
 
 <template>
-  <section id="Roadmap" aria-hidden="false" >
+  <section id="Onboarding" aria-hidden="false" >
         <div class="eyebrow">
           <span class="eyebrow-line"></span>
           <span class="eyebrow-text">{{  Languages.current.Onboarding.EyelashText }}</span>
@@ -115,7 +115,7 @@ onUnmounted(() => observers.forEach(o => o.disconnect()))
   transform: translateY(0);
 }
 .Announcer{
- font-family: "Playfair Display", "Georgia", serif;
+ font-family: var(--font-heading);
  font-weight: 700;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
 }

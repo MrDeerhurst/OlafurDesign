@@ -139,7 +139,7 @@ const submitForm = async () => {
 }
 
 .Announcer {
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family: var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 .fa {
@@ -237,8 +237,6 @@ const submitForm = async () => {
 }
 
 .contact-info h3 {
-  font-family: "DM Serif Display", serif;
-
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: var(--primary-blue);

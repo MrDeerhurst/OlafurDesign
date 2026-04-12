@@ -1,7 +1,7 @@
 <script setup>
 import TheHeader from "@/components/TheHeader.vue";
 import HeroSection from "@/components/HeroSection.vue";
-import Value from "@/components/Value.vue";
+import Value from "@/components/ProcessSection.vue";
 import Impact from "@/components/Impact.vue";
 import Onboarding from "@/components/Onboarding.vue";
 import Roadmap from "@/components/Roadmap.vue";
@@ -13,8 +13,8 @@ import TheFooter from "@/components/TheFooter.vue";
   <TheHeader />
   <main>
     <HeroSection />
+
     <Value />
-    <Impact />
     <Onboarding />
     <Roadmap />
     <ContactSection />

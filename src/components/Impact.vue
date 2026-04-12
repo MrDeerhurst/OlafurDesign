@@ -3,17 +3,17 @@
     <div class="eyebrow">
       <span class="eyebrow-line"></span>
       <span class="eyebrow-text">{{
-        Languages.current.Impact.EyelashText
+        Languages.current.ImpactOld.EyelashText
       }}</span>
       <span class="eyebrow-line"></span>
     </div>
     <div class="container">
       <div class="block" :class="{ visible: el1Visible }" ref="el1">
-        <h2 class="Announcer">{{ Languages.current.Impact.MainTitle }}</h2>
-        <p class="section-intro">{{ Languages.current.Impact.SubTitle }}</p>
+        <h2 class="Announcer">{{ Languages.current.ImpactOld.MainTitle }}</h2>
+        <p class="section-intro">{{ Languages.current.ImpactOld.SubTitle }}</p>
       </div>
       <div class="block" :class="{ visible: el2Visible }" ref="el2">
-        <div v-for="(items) in Languages.current.Impact.processSteps" class="block-Container">
+        <div v-for="(items) in Languages.current.ImpactOld.processSteps" class="block-Container">
           <strong class="block-Title">{{ items.title }}</strong>
           <p class="section-intro">{{ items.subtitle }}</p>
           <div class="process-steps">
@@ -147,7 +147,7 @@ export default {
 }
 
 .Announcer {
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family:  var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 .eyebrow {

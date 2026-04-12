@@ -1,5 +1,5 @@
 <template>
-  <section id="Impact" class="process-section" aria-hidden="false">
+  <section id="Value" class="process-section" aria-hidden="false">
     <div class="eyebrow">
       <span class="eyebrow-line"></span>
       <span class="eyebrow-text">{{
@@ -20,12 +20,13 @@
             class="process-step"
           >
             <div class="step-header" @click="toggleAccordion(index)">
-              <div class="step-number">{{ step.icon }}</div>
+                <img class="step-number"
+                :src = "step.icon"></img>
               <h3>{{ step.title }}</h3>
               <span
                 class="accordion-icon"
                 :class="{ rotate: activeAccordionIndex === index }"
-                >&#9660;</span
+                >❯</span
               >
             </div>
 
@@ -142,7 +143,7 @@ export default {
 }
 
 .Announcer {
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family:var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 .eyebrow {
@@ -171,6 +172,7 @@ export default {
   padding: 10px 10px 40px 10px;
   background-color: #f9f9f9;
   text-align: center;
+  margin-top:4rem ;
 }
 
 .container {
@@ -225,23 +227,20 @@ h2 {
   margin-bottom: 12px;
 }
 
+
 .step-number {
-  background-color: var(--primary-blue);
-  color: var(--bg-white);
-  border-radius: 50%;
+  
+  
   width: 45px;
   height: 45px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.8em;
-  font-weight: bold;
+  
   margin-right: 15px;
   flex-shrink: 0;
-  box-shadow:
-    0 0 0 5px var(--bg-white),
-    0 0 0 7px var(--primary-blue);
+
 }
 
 .process-step h3 {
@@ -250,6 +249,10 @@ h2 {
   color: var(--text-charcoal);
   margin: 0;
   flex-grow: 1;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .process-step p {
@@ -270,12 +273,13 @@ h2 {
 .accordion-icon {
   display: none;
   font-size: 1.5em;
+  transform: rotate(90deg);
   transition: transform 0.3s ease;
   margin-left: 10px;
 }
 
 .accordion-icon.rotate {
-  transform: rotate(180deg);
+  transform: rotate(270deg);
 }
 
 .sub-container {

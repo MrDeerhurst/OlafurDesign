@@ -4,6 +4,7 @@ import expanedProjectCard from "./reusable/ExpanedProjectCard.vue";
 import { projectsList } from "./contentFolder/Content";
 import FullScreenOverlay from "./FullScreenOverlay.vue";
 import Portfolio from "./Portfolio.vue";
+import { Languages } from "./contentFolder/Language";
 
 // Reactive state to control the visibility of the overlay
 const showPortfolioOverlay = ref(false); // This line uses 'ref'
