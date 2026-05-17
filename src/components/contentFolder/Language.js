@@ -219,7 +219,7 @@ export const English = {
           },
         ],
         description:
-          "Keep your team safe. Our interface projects risk zones and historical fault data directly into the worker's field of view, turning safety protocols into a visual reality.",
+          "Our interface projects risk zones and historical fault data directly into the worker's field of view, turning safety protocols into a visual reality.",
         durnation: 800,
         interval: 4000,
         transt: ["fade"],
@@ -244,7 +244,7 @@ export const English = {
           },
         ],
         description:
-          "Avoid the common headaches of manual measurement. Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed correctly the first time.",
+          "Project exact bolt-hole locations and alignment markers directly onto mounting surfaces to ensure heavy equipment is installed correctly the first time.",
         durnation: 800,
         interval: 4000,
         transt: ["fade"],
@@ -294,7 +294,7 @@ export const English = {
           },
         ],
         description:
-          "Make seasonal staff productive sooner. AR-guided routing and bin-highlighting minimize search time and picking errors, ensuring your facility stays on schedule without high training costs.",
+          "AR-guided routing and bin-highlighting minimize search time and picking errors, ensuring your facility stays on schedule without high training costs.",
         durnation: 800,
         interval: 4000,
         transt: ["fade"],
@@ -319,7 +319,7 @@ export const English = {
           },
         ],
         description:
-          "Eliminate the guesswork. Our dynamic fault-tree overlays react to what the technician sees in real-time, guiding them through complex repairs with the precision of a senior engineer.",
+          "Reduce the guesswork. Our dynamic fault-tree overlays react to what the technician sees in real-time, guiding them through complex repairs with the precision of a senior engineer.",
         durnation: 800,
         interval: 4000,
         transt: ["fade"],
@@ -500,18 +500,18 @@ export const English = {
       "We don't expect you to overhaul everything at once. Let's prove the ROI with a single, simple high-impact procedure.",
     Cards: [
       {
-        days: "Days 1 – 3",
+        days: "Days 1 – 7",
         title: "Asset Audit",
-        body: "Send us a CAD file and a manual for one simple task. We analyze the scope and identify key anchor points.",
+        body: "Send us a message, together establish scope using CAD files and a existing manuals.",
       },
 
       {
-        days: "Days 4 – 10",
+        days: "Days 8 – 15",
         title: "AR Transformation",
         body: "We set up the logic and create spatial overlays, step annotations, and safety checkpoints in-context.",
       },
       {
-        days: "Days 11 – 14",
+        days: "Days 16 – 23",
         title: "Live Validation",
         body: "We demonstrate the guided procedure on your equipment. You see technicians complete tasks with measurable confidence.",
       },
