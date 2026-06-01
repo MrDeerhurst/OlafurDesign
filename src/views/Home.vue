@@ -16,7 +16,7 @@ import TheFooter from "@/components/TheFooter.vue";
 
     <Value />
     <Onboarding />
-    <Roadmap />
+
     <ContactSection />
   </main>
   <TheFooter />

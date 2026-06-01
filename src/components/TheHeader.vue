@@ -77,9 +77,6 @@ onBeforeUnmount(() => {
           <li>
             <a href="#Onboarding">{{ Languages.current.Header.ImpactLink }}</a>
           </li>
-          <li>
-            <a href="#Derisk">{{ Languages.current.Header.RoadmapLink }}</a>
-          </li>
         </ul>
       </nav>
       <div class="rightSideItems">
@@ -126,11 +123,6 @@ onBeforeUnmount(() => {
             <li>
               <a href="#Onboarding" @click="closeMobileMenu">{{
                 Languages.current.Header.ImpactLink
-              }}</a>
-            </li>
-            <li>
-              <a href="#Derisk" @click="closeMobileMenu">{{
-                Languages.current.Header.RoadmapLink
               }}</a>
             </li>
 
